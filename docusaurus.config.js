@@ -91,7 +91,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Tutorial',
+            title: 'Course',
             items: [
               {
                 label: 'Introduction',
@@ -107,16 +107,12 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'BBj Documentation',
-                href: 'https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm',
+                label: 'BASIS Online Help',
+                href: 'https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm',
               },
               {
-                label: 'DWC Components',
-                href: 'https://basishub.github.io/basis-next/#/dwc/',
-              },
-              {
-                label: 'BASIS International',
-                href: 'https://www.basis.cloud',
+                label: 'DWC Documentation',
+                href: 'https://documentation.basis.cloud/BASISHelp/WebHelp/dwc/DWC_Overview.htm',
               },
             ],
           },
