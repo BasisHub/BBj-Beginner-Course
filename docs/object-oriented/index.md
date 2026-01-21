@@ -6,10 +6,67 @@ If you know Object Orientation from other programming languages, you already kno
 
 This course does not explain much more than that but rather assumes that you know about Object Orientation from other programming languages. On a side note, you are not forced to use Object Orientation with BBj. Feel free to write programs in the scripted, procedural fashion the language offers.
 
-If you like to refresh your memories about Object Orientation or read about it for the first time, here are a few links (Google will unveil more, and there's a large supply of books if you're more a paper guy or girl):
+For a comprehensive tutorial, see the official [Custom Objects Tutorial](https://documentation.basis.cloud/BASISHelp/WebHelp/tutorials/custom_objects/custom_objects_01intro.htm) in the BASIS documentation.
 
-- [https://en.wikipedia.org/wiki/Object-oriented_programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
-- [https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
+## Quick Syntax Reference
+
+If you're coming from Java or another OO language, here's how BBj syntax maps to familiar concepts:
+
+### Class Definition
+
+```bbj
+class public MyClass extends ParentClass implements MyInterface
+    field public BBjString Name$
+    field private BBjNumber count%
+
+    method public void sayHello(BBjString name$)
+        print "Hello, ", name$
+    methodend
+classend
+```
+
+### Access Modifiers
+
+| Modifier | Meaning |
+|----------|---------|
+| `public` | Accessible from anywhere |
+| `private` | Only visible within the same file |
+| `protected` | Accessible within the same directory (BBj 21.0+) |
+
+### Methods
+
+```bbj
+method public BBjNumber calculateTotal(BBjNumber price, BBjNumber qty%)
+    methodret price * qty%
+methodend
+```
+
+- Use `methodret` to return a value (similar to `return`)
+- Constructors have the same name as the class and no return type
+- Add `static` keyword for static methods
+
+### Creating Objects
+
+```bbj
+declare MyClass obj!
+obj! = new MyClass()
+obj!.sayHello("World")
+```
+
+### Key Differences from Java
+
+- **Block delimiters**: Use `classend`, `methodend` instead of curly braces
+- **Field declarations**: Use `field` keyword, not just the type
+- **Variable suffixes**: `$` for strings, `%` for integers, `!` for objects
+- **Multiple classes per file**: Allowed but discouraged
+- **Java interop**: BBj classes can extend Java classes and implement Java interfaces
+
+## General OOP Resources
+
+If you need to refresh your OOP knowledge:
+
+- [Wikipedia: Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
+- [GeeksforGeeks: Introduction to OOP](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
 
 ## A first Class in BBj
 
