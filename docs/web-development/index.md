@@ -4,6 +4,10 @@
 
 This video gives a very brief introduction about what you will learn in this lesson. Watch it first, but don't worry if it's a little short and quick - the step-by-step instructions follow with more explanations in writing.
 
+:::tip Want to go deeper?
+For a comprehensive guide to DWC development, see the **[DWC Course](https://basishub.github.io/DWC-Course/)** which covers prerequisites, advanced topics, and more detailed examples.
+:::
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a33nWuuyX7o" title="DWC Web Development Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Basics
