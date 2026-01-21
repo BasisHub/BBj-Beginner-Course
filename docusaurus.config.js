@@ -71,7 +71,7 @@ const config = {
         logo: {
           alt: 'BBj Logo',
           src: 'img/logo.png',
-          href: '/introduction',
+          href: '/',
         },
         items: [
           {
@@ -95,7 +95,7 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/introduction',
+                to: '/',
               },
               {
                 label: 'Getting Started',

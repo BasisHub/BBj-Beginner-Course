@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Introduction - PLEASE READ FIRST!
 
 ## Structure of this Material
