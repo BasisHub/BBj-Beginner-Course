@@ -33,12 +33,11 @@ GIT_USER=<username> yarn deploy
 - `introduction/` - Course overview and links to official BBj documentation
 - `getting-started/` - Environment setup, basic syntax, variables, loops
 - `object-oriented/` - BBj's OOP syntax (classes, methods, object references)
-- `web-development/` - BBj DWC (Desktop Web Client) for web apps
-- `theming/` - Styling WebComponents, dark mode, shadow DOM with `::part`
+- `web-development/` - BBj DWC (Desktop Web Client) for web apps (links to DWC Course for advanced topics)
 
 **Key Configuration Files**:
 - `docusaurus.config.js` - Main config (site metadata, navbar, footer, Prism syntax highlighting with Java support)
-- `sidebars.js` - Tutorial navigation structure (5 ordered sections)
+- `sidebars.js` - Tutorial navigation structure (4 ordered sections)
 - `src/css/custom.css` - Infima CSS framework customizations (green/teal theme)
 
 **External Resources** (referenced in footer/navbar):

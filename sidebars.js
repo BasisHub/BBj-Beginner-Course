@@ -34,11 +34,6 @@ const sidebars = {
       id: 'web-development/index',
       label: 'Web Development with BBj\'s DWC',
     },
-    {
-      type: 'doc',
-      id: 'theming/index',
-      label: 'Theming and Styling the BBj WebComponents',
-    },
   ],
 };
 
