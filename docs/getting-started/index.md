@@ -2,6 +2,41 @@
 
 In this section, you start your journey in BBj. We cover installation, how to write your first program and how to work with the documentation. After this lesson, you should be able to write first simple graphical programs.
 
+## BBj for Java/.NET Developers
+
+If you're coming from Java, C#, or similar languages, here's what you need to know:
+
+### What is BBj?
+
+BBj is a **dynamic, interpreted language that runs on the JVM**. It has automatic garbage collection (Java's GC) and seamless Java interoperability - you can instantiate Java classes directly and BBj classes can extend Java classes.
+
+### Key Terminology
+
+| Java/.NET | BBj | Notes |
+|-----------|-----|-------|
+| keywords/statements | **verbs** | See [Alphabetical Verbs](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
+| CLASSPATH | **PREFIX** | Search path for classes. See [PREFIX verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bbj-commands/prefix_verb_set_file_system_search_paths_bbj.htm) |
+| `this.field` | **`#field`** | Instance field reference within methods |
+| ArrayList | **BBjVector** | `BBjAPI().makeVector()` - dynamic array |
+| try/catch | **SETERR/THROW** | `SETERR errHandler` sets handler, `THROW` raises errors |
+| static factory | **BBjAPI()** | Entry point for creating BBj objects (windows, vectors, etc.) |
+
+### Common Tasks
+
+| Task | BBj Approach |
+|------|--------------|
+| **Collections** | `vector! = BBjAPI().makeVector()` then `vector!.add(item)` |
+| **Error handling** | `SETERR handler` + label, or use `THROW "message", 256` |
+| **Database access** | `SQLOPEN`, `SQLPREP`, `SQLEXEC` verbs |
+| **String functions** | `LEN()`, `MID()`, `POS()`, `CVS()` - see [Functions list](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Functions.htm) |
+| **File I/O** | `OPEN`, `READ`, `WRITE`, `CLOSE` verbs |
+
+### Further Reading
+
+- [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBj_Object_Error_Handling.htm)
+- [Unit Testing in BBj](https://documentation.basis.cloud/advantage/v18-2014/14unittest.pdf) (PDF)
+- [BBjVector Methods](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/API/bbjvector/bbjvector.htm)
+
 ## Setup Java, BBj and Eclipse
 
 Visit [https://www.basis.com/eclipseplug-ins](https://www.basis.com/eclipseplug-ins) for detailed instructions on how to set up your environment.
