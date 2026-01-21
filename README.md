@@ -1,41 +1,32 @@
-# Website
+# BBj Beginner Tutorial
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A beginner's guide to BBj development for experienced programmers. Learn BBj programming from environment setup through web development with the DWC (Desktop Web Client).
 
-## Installation
+**Live Site:** https://BasisHub.github.io/BBj-Beginner-Course/
+
+## Development
 
 ```bash
+# Install dependencies
 yarn
-```
 
-## Local Development
-
-```bash
+# Start dev server with hot reload
 yarn start
-```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
+# Build for production
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
 ## Deployment
 
-Using SSH:
-
 ```bash
-USE_SSH=true yarn deploy
+GIT_USER=<your-github-username> yarn deploy
 ```
 
-Not using SSH:
+This builds the site and pushes to the `gh-pages` branch.
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+## Resources
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm)
+- [DWC Components](https://basishub.github.io/basis-next/#/dwc/)
+- [BASIS International](https://www.basis.cloud)
