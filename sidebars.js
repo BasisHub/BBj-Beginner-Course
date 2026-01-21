@@ -31,6 +31,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'file-io/index',
+      label: 'File I/O and Data Access',
+    },
+    {
+      type: 'doc',
       id: 'web-development/index',
       label: 'Web Development with BBj\'s DWC',
     },
