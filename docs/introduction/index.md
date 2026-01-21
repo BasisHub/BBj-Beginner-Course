@@ -23,16 +23,8 @@ You will need to have learned about all these things as part of your prior educa
 
 ## Please Contribute!
 
-You and your company have received access to this material and the first run of the mentoring sessions free of charge. All you need to invest is your time. In return, we request that you help to improve this material. Most surely it will miss information that turns out to be relevant to you for your learning, which was not obvious for us to anticipate when we created the material.
+Found a typo? Have a suggestion? We welcome contributions to improve this tutorial.
 
-We have created an email list for all the attendees that you can use for the time of this training to ask questions, help others, or send us your suggestions to improve this material. The address is:
+**[View Contributing Guidelines](https://github.com/BasisHub/BBj-Beginner-Course/blob/master/CONTRIBUTING.md)** | **[Open an Issue](https://github.com/BasisHub/BBj-Beginner-Course/issues)**
 
-**bbj-training-course@basis.com**
-
-For your contribution, we have created a scratchpad document:
-
-[https://docs.google.com/document/d/1AXaJY6Z6_JBFtism9JDO9UMXiNOv65w_H4XprH_Gl6I/edit?usp=sharing](https://docs.google.com/document/d/1AXaJY6Z6_JBFtism9JDO9UMXiNOv65w_H4XprH_Gl6I/edit?usp=sharing)
-
-Please use this document to collect all your corrections, suggestions and additional information you would like to see added to the material.
-
-**Any contribution is appreciated!** Please help us make this material better - maybe some time in the future, you will find it useful yourself when you are asked to mentor a new colleague in development with BBj!
+Your contributions help make this material better for future BBj developers!
