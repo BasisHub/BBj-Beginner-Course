@@ -1,8 +1,8 @@
 # File I/O and Record-Oriented Data Access
 
-If you're coming from a SQL or NoSQL background, BBj's file system will feel unfamiliar at first. Modern databases abstract away the physical storage layer - you think in tables, rows, and queries. BBj exposes you to the raw mechanics: channels, byte positions, field delimiters, and explicit pointer navigation.
+Modern BBj applications typically use SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm), which provides familiar table-based access to BBj files. However, if you're maintaining or extending code written before these abstractions existed—or working with systems that predate the Data Dictionary—you'll encounter BBj's native file I/O layer directly.
 
-This isn't a limitation - it's a design philosophy rooted in the 1980s when Business BASIC first emerged. Understanding this foundation is essential for maintaining legacy systems and making informed modernization decisions.
+This record-oriented approach exposes the raw mechanics: channels, byte positions, field delimiters, and explicit pointer navigation. It's a design philosophy rooted in the 1980s when Business BASIC first emerged, and understanding it remains essential for working with legacy systems.
 
 **Key mindset shift:** In SQL, you declare *what* you want. In BBj file I/O, you specify *how* to get it.
 
