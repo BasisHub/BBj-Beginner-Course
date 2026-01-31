@@ -26,16 +26,16 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Depends on**: Nothing (first phase)
 **Requirements**: INFRA-01, INFRA-02, INFRA-03, INFRA-04, INFRA-05, INFRA-06
 **Success Criteria** (what must be TRUE):
-  1. Running `yarn build` succeeds with TypeScript config files (docusaurus.config.ts, sidebars.ts)
+  1. Running `npm run build` succeeds with TypeScript config files (docusaurus.config.ts, sidebars.ts)
   2. Local search finds content when a user types a query on the built site
   3. A mermaid code block in any markdown file renders as a diagram
   4. BBj code blocks render with syntax highlighting distinct from plain text
   5. Image zoom and responsive image loading work on any page with images
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TypeScript migration and plugin installation
-- [ ] 01-02: BBj syntax highlighting and build verification
+- [ ] 01-01-PLAN.md -- TypeScript migration, plugin installation, theme, and docs updates
+- [ ] 01-02-PLAN.md -- Build verification and visual spot-check
 
 ### Phase 2: Structure
 **Goal**: Content is reorganized into numbered chapter directories with working sidebar navigation, a homepage with Hero/ChapterCards/Features components, and a samples directory for runnable code
