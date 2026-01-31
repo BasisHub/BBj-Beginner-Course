@@ -1,0 +1,548 @@
+# Architecture Research: Multi-Chapter Docusaurus Tutorial
+
+**Research Date:** 2026-01-31
+**Question:** How should a multi-chapter developer tutorial be structured in Docusaurus 3.x? What is the best directory layout, sidebar organization, and content architecture for a course that needs a clear reading order but also works as reference material?
+**Downstream Consumer:** Phase structure in roadmap. Includes component boundaries, data flow, and suggested build order.
+
+---
+
+## Executive Summary
+
+The BBj Beginner Tutorial needs to evolve from 5 flat doc sections into a numbered-chapter structure that matches the sibling DWC Course. The target architecture has six distinct component layers: Configuration, Content, Navigation, Presentation (Homepage), Styling, and Build/Deploy. The key architectural challenge is balancing linear reading order (sequential numbered chapters) with random-access reference use (collapsible sidebar categories, chapter-level index pages).
+
+The DWC Course at `/Users/beff/_workspace/bbj-dwc-tutorial` serves as the proven reference implementation. This research documents the patterns to replicate and the adaptations needed for the BBj beginner content.
+
+---
+
+## Component Inventory
+
+### 1. Configuration Layer
+
+**What it is:** TypeScript config files that define site metadata, plugin registration, and build behavior.
+
+**Current state:** JavaScript with JSDoc annotations (`docusaurus.config.js`, `sidebars.js`).
+
+**Target state (matching DWC Course):**
+- `docusaurus.config.ts` -- TypeScript configuration with `satisfies` type narrowing
+- `sidebars.ts` -- TypeScript sidebar definition using `SidebarsConfig` type
+- `tsconfig.json` -- Extends `@docusaurus/tsconfig` for editor experience
+- `package.json` -- Additional dependencies: `@docusaurus/theme-mermaid`, `@easyops-cn/docusaurus-search-local`, `@docusaurus/plugin-ideal-image`, `docusaurus-plugin-zooming`, `typescript`, `@docusaurus/tsconfig`
+
+**Boundaries:**
+- Configuration Layer reads from: nothing (it is the root)
+- Configuration Layer is consumed by: Docusaurus CLI (build/dev), Navigation Layer (sidebar config), Content Layer (plugin features like mermaid, ideal-image), Styling Layer (theme config)
+
+**Key decisions:**
+- `routeBasePath: '/'` -- docs served at site root (no `/docs/` prefix), matching current behavior
+- `markdown.mermaid: true` -- enables mermaid diagrams in markdown
+- Local search plugin (`@easyops-cn/docusaurus-search-local`) -- critical for reference-style access
+- `future.v4: true` -- maintain forward-compatibility flag from current config
+
+### 2. Content Layer
+
+**What it is:** Markdown files organized into numbered chapter directories under `docs/`.
+
+**Current state:** 5 flat directories, each with a single `index.md`:
+```
+docs/
+  introduction/index.md      (31 lines, course overview)
+  getting-started/index.md   (257 lines, monolithic)
+  object-oriented/index.md   (114 lines, thin)
+  file-io/index.md           (420 lines, comprehensive)
+  web-development/index.md   (41 lines, brief handoff)
+```
+
+**Target state (matching DWC Course pattern):**
+```
+docs/
+  index.md                           # Homepage (imports Hero, ChapterCards, HomepageFeatures)
+  prerequisites.md                   # Prerequisites page (standalone)
+  resources.md                       # External resources page (standalone)
+  samples.md                         # Sample code index page (standalone)
+  01-getting-started/
+    index.md                         # Chapter overview + section links
+    01-setup-environment.md          # Sub-page
+    02-hello-world.md                # Sub-page
+    03-variables-and-types.md        # Sub-page
+  02-syntax-fundamentals/
+    index.md
+    01-loops-and-conditions.md
+    02-input-controls.md
+    03-masks-and-formatting.md
+  03-object-oriented/
+    index.md
+    01-classes-and-methods.md
+    02-referencing-classes.md
+    03-oop-dialogs.md
+  04-error-handling/
+    index.md
+    01-seterr-and-throw.md
+    02-common-error-codes.md
+  05-strings-and-functions/
+    index.md
+    ...
+  06-collections/
+    index.md
+    ...
+  07-file-io/
+    index.md
+    01-channels-and-templates.md
+    02-reading-writing.md
+    03-sequential-processing.md
+    04-legacy-file-types.md
+  08-database-sql/
+    index.md
+    ...
+  09-java-interop/
+    index.md
+    ...
+  10-event-handling/
+    index.md
+    ...
+  11-debugging/
+    index.md
+    ...
+  12-web-deployment/
+    index.md                         # DWC handoff (brief, links to DWC Course)
+```
+
+**Key structural pattern from DWC Course:**
+- Each chapter directory: `NN-kebab-case-name/`
+- Chapter overview: `index.md` with `sidebar_position`, `title` frontmatter, mermaid diagrams, and a "Sections" link list
+- Sub-pages: `NN-kebab-case-name.md` with `sidebar_position` and `title` frontmatter
+- The number prefix (`01-`, `02-`) controls filesystem sort order AND reading order
+- `autogenerated` sidebar items use `dirName` to pull all pages from a chapter directory
+
+**Boundaries:**
+- Content Layer reads from: Static assets (`static/img/`), external URLs (documentation.basis.cloud, YouTube)
+- Content Layer is consumed by: Navigation Layer (sidebar reads doc IDs), Build Layer (transforms to HTML), Homepage (ChapterCards references chapter slugs)
+- Content Layer uses features from: Configuration Layer (mermaid, ideal-image, syntax highlighting)
+
+**Key decisions:**
+- Break the monolithic `getting-started/index.md` (257 lines) into 3-4 sub-pages
+- Break `file-io/index.md` (420 lines) into 4 sub-pages
+- `object-oriented/index.md` is already at appropriate length for expansion into sub-pages
+- New chapters (04 through 11) are net-new content, identified in PROJECT.md active requirements
+- `introduction/index.md` content moves into the homepage component + `prerequisites.md`
+- `web-development/index.md` becomes `12-web-deployment/index.md` (brief, DWC handoff)
+
+### 3. Navigation Layer (Sidebar)
+
+**What it is:** The sidebar configuration that defines reading order, grouping, and collapsibility.
+
+**Current state:** Manual flat list of 5 `type: 'doc'` entries in `sidebars.js`.
+
+**Target state (matching DWC Course pattern):**
+```typescript
+// sidebars.ts
+const sidebars: SidebarsConfig = {
+  tutorialSidebar: [
+    'index',                    // Homepage
+    'prerequisites',            // Standalone pages
+    'samples',
+    'resources',
+    {
+      type: 'category',
+      label: 'Foundations',
+      collapsible: true,
+      collapsed: false,         // First group open by default
+      items: [
+        {type: 'autogenerated', dirName: '01-getting-started'},
+        {type: 'autogenerated', dirName: '02-syntax-fundamentals'},
+        {type: 'autogenerated', dirName: '03-object-oriented'},
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Core Language',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {type: 'autogenerated', dirName: '04-error-handling'},
+        {type: 'autogenerated', dirName: '05-strings-and-functions'},
+        {type: 'autogenerated', dirName: '06-collections'},
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Data & Integration',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {type: 'autogenerated', dirName: '07-file-io'},
+        {type: 'autogenerated', dirName: '08-database-sql'},
+        {type: 'autogenerated', dirName: '09-java-interop'},
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Building Applications',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {type: 'autogenerated', dirName: '10-event-handling'},
+        {type: 'autogenerated', dirName: '11-debugging'},
+        {type: 'autogenerated', dirName: '12-web-deployment'},
+      ],
+    },
+  ],
+};
+```
+
+**How `autogenerated` works:**
+- Docusaurus scans the named directory and generates sidebar items from all `.md` files
+- `sidebar_position` frontmatter in each `.md` controls sort order within the chapter
+- `index.md` in each directory automatically becomes the category landing page
+- Sub-pages appear nested under the chapter in the sidebar
+- This eliminates the need to manually register every new page in the sidebar config
+
+**Dual-access pattern (course vs. reference):**
+- **Linear reading:** Prev/Next navigation automatically chains all pages across categories. A reader starting at Chapter 1 can click "Next" through the entire course without touching the sidebar.
+- **Random access:** Collapsible categories let experienced users jump directly to any chapter. The local search plugin enables keyword-based discovery.
+- **Chapter index pages:** Each `index.md` serves as both a chapter overview (for linear readers) and a table of contents (for random-access users).
+
+**Boundaries:**
+- Navigation Layer reads from: Content Layer (doc IDs, frontmatter), Configuration Layer (sidebar path reference in docusaurus.config.ts)
+- Navigation Layer is consumed by: Docusaurus theme (renders sidebar component, prev/next links)
+
+### 4. Presentation Layer (Homepage Components)
+
+**What it is:** Custom React/TSX components that render the landing page.
+
+**Current state:** No custom components. `src/pages/` is empty. Homepage is `docs/introduction/index.md` rendered as a plain doc page.
+
+**Target state (matching DWC Course):**
+```
+src/
+  components/
+    Hero/
+      index.tsx              # Banner with title, subtitle, "Start Learning" CTA
+      styles.module.css      # Hero-specific styles
+    ChapterCards/
+      index.tsx              # Grid of chapter cards grouped by sidebar category
+      styles.module.css      # Card layout styles
+    HomepageFeatures/
+      index.tsx              # 3-column feature highlights
+      styles.module.css      # Feature card styles
+  css/
+    custom.css               # Global Infima overrides (exists, needs updating)
+```
+
+**Homepage assembly pattern (from DWC Course `docs/index.md`):**
+```markdown
+---
+slug: /
+title: BBj Beginner Tutorial
+hide_table_of_contents: true
+---
+
+import Hero from '@site/src/components/Hero';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ChapterCards from '@site/src/components/ChapterCards';
+
+<Hero />
+<HomepageFeatures />
+<ChapterCards />
+```
+
+The homepage is an MDX file in `docs/` (not `src/pages/`) that imports React components. This keeps it in the docs plugin routing (served at `/` via `slug: /`) while rendering a rich component layout.
+
+**ChapterCards data structure:**
+- The `sections` array in `ChapterCards/index.tsx` mirrors the sidebar category structure
+- Each section has a `label` (matching the sidebar category name) and an array of `chapters` with `title`, `slug`, and `description`
+- This is a manual data structure that must stay synchronized with the sidebar categories
+- The DWC Course uses 4 sections with 12 total chapter cards
+
+**Boundaries:**
+- Presentation Layer reads from: Content Layer (chapter slugs for link targets), Styling Layer (CSS modules + Infima classes)
+- Presentation Layer is consumed by: Homepage MDX file (imported and rendered)
+- Presentation Layer does NOT read from: Navigation Layer (sidebar config) -- the chapter data is duplicated in the ChapterCards component
+
+**Important duplication:** Chapter metadata exists in three places:
+1. `sidebars.ts` -- categories and autogenerated directory references
+2. `ChapterCards/index.tsx` -- titles, slugs, descriptions for homepage cards
+3. `docs/NN-chapter/index.md` -- title in frontmatter and body
+
+This is an intentional pattern in the DWC Course (not a bug). Each serves a different rendering context.
+
+### 5. Styling Layer
+
+**What it is:** CSS customizations and theme configuration.
+
+**Current state:** `src/css/custom.css` with green/teal Infima variable overrides (11 CSS custom properties).
+
+**Target state:**
+- `src/css/custom.css` -- updated with external link icon styles (from DWC Course), plus any component-specific global styles
+- Component CSS modules (`styles.module.css`) in each component directory -- scoped styles for Hero, ChapterCards, HomepageFeatures
+- Theme config in `docusaurus.config.ts` -- Prism themes (github/dracula), mermaid theme (neutral/dark), zooming plugin config
+
+**Color differentiation decision:** The current BBj tutorial uses green/teal (`#2e8555` / `#25c2a0`) while the DWC Course uses blue (`#2563eb` / `#60a5fa`). This visual distinction helps users know which course they are on. **Keep the green/teal palette** for the BBj beginner tutorial.
+
+**Boundaries:**
+- Styling Layer reads from: Infima CSS framework defaults (bundled with Docusaurus)
+- Styling Layer is consumed by: All rendered pages, Presentation Layer components
+- Styling Layer is configured by: Configuration Layer (theme config in docusaurus.config.ts)
+
+### 6. Build & Deploy Layer
+
+**What it is:** CI/CD pipeline, build scripts, and deployment configuration.
+
+**Current state:** GitHub Actions workflow (`.github/workflows/deploy.yml`) deploys to GitHub Pages on push to `master`. Uses Node.js 20, npm.
+
+**Target state:** No structural changes needed to the CI/CD pipeline. The build process is agnostic to content structure -- `npm run build` processes whatever is in `docs/` and `src/`.
+
+**Changes required:**
+- `package.json` -- add new dependencies (mermaid theme, search plugin, ideal-image, zooming, typescript, docusaurus tsconfig)
+- Add `"typecheck": "tsc"` script (matching DWC Course)
+- No workflow file changes needed
+
+**Boundaries:**
+- Build Layer reads from: All other layers (processes config, content, components, styles into static HTML)
+- Build Layer outputs to: `build/` directory, then GitHub Pages
+
+### 7. Sample Code Layer (NEW)
+
+**What it is:** Runnable BBj source code organized by chapter.
+
+**Current state:** No samples directory. Code examples exist only inline in markdown.
+
+**Target state (matching DWC Course):**
+```
+samples/
+  01_GettingStarted/
+    HelloWorld.bbj
+    Calculator.bbj
+  02_SyntaxFundamentals/
+    LoopsDemo.bbj
+  03_ObjectOriented/
+    Car.bbj
+    CarApplication.bbj
+    MyDialog.bbj
+  07_FileIO/
+    CustomerOperations.bbj
+  ...
+  README.md
+  LICENSE
+```
+
+**Boundaries:**
+- Sample Code Layer reads from: nothing (standalone BBj source files)
+- Sample Code Layer is consumed by: Content Layer (markdown references sample files), `samples.md` standalone page (index of all samples)
+- Sample Code Layer is NOT processed by Build Layer (not in `docs/` or `src/`)
+
+---
+
+## Data Flow
+
+### Content Publishing Flow (Target)
+
+```
+Author writes .md files in docs/NN-chapter/
+         |
+         v
+docusaurus.config.ts defines plugins (mermaid, search, ideal-image, zoom)
+sidebars.ts defines navigation (categories + autogenerated from dirs)
+         |
+         v
+`yarn build` (or `yarn start` for dev)
+         |
+         v
+Docusaurus processes:
+  1. Reads sidebars.ts -> resolves autogenerated items by scanning chapter dirs
+  2. Reads each .md file -> parses frontmatter (sidebar_position, title, slug)
+  3. Processes MDX (imports React components in homepage, mermaid blocks)
+  4. Applies Prism syntax highlighting (java/bbj language)
+  5. Optimizes images via ideal-image plugin
+  6. Generates search index via local search plugin
+         |
+         v
+Static HTML/CSS/JS output in build/
+         |
+         v
+GitHub Actions deploys to GitHub Pages
+```
+
+### Navigation Resolution Flow
+
+```
+sidebars.ts category
+  -> {type: 'autogenerated', dirName: '01-getting-started'}
+  -> Docusaurus scans docs/01-getting-started/
+  -> Finds: index.md (sidebar_position: 1), 01-setup.md (sidebar_position: 2), ...
+  -> Generates ordered sidebar items
+  -> Renders sidebar with collapsible category
+  -> Generates prev/next links between consecutive pages
+```
+
+### Homepage Rendering Flow
+
+```
+docs/index.md (slug: /)
+  -> MDX parser encounters import statements
+  -> Loads Hero, HomepageFeatures, ChapterCards from src/components/
+  -> ChapterCards reads its internal sections[] data
+  -> Renders linked cards pointing to chapter slugs (/getting-started, etc.)
+  -> hide_table_of_contents: true suppresses right-side TOC
+```
+
+### Information Architecture (User Perspective)
+
+```
+User arrives at /
+  -> Sees Hero banner ("Start Learning" CTA)
+  -> Sees HomepageFeatures (3 highlights)
+  -> Sees ChapterCards grouped by section (Foundations, Core Language, etc.)
+  -> Clicks chapter card
+     -> Lands on chapter index.md (overview + section links)
+     -> Reads sub-pages via sidebar or prev/next navigation
+     -> Linear: follows prev/next through entire course
+     -> Reference: uses sidebar categories or search to jump anywhere
+```
+
+---
+
+## Suggested Build Order
+
+The layers have clear dependencies that dictate implementation sequence. Some phases can be parallelized.
+
+### Phase 0: Foundation (Configuration) -- Must be first
+**Dependencies:** None
+**Deliverables:**
+1. Convert `docusaurus.config.js` to `docusaurus.config.ts`
+2. Convert `sidebars.js` to `sidebars.ts`
+3. Add `tsconfig.json`
+4. Add new dependencies to `package.json` (mermaid, search, ideal-image, zooming, typescript)
+5. Verify `yarn build` succeeds with new config
+
+**Why first:** Every other layer depends on configuration. If the TypeScript migration or new plugins break the build, nothing else can proceed.
+
+### Phase 1: Content Restructure (Content + Navigation) -- Must follow Phase 0
+**Dependencies:** Phase 0 (working TypeScript config)
+**Deliverables:**
+1. Create numbered chapter directories under `docs/`
+2. Move existing content into chapter structure:
+   - `introduction/index.md` content -> `docs/index.md` (temporary, pending homepage)
+   - `getting-started/index.md` -> split into `01-getting-started/` sub-pages
+   - `object-oriented/index.md` -> `03-object-oriented/` sub-pages
+   - `file-io/index.md` -> `07-file-io/` sub-pages
+   - `web-development/index.md` -> `12-web-deployment/index.md`
+3. Add `sidebar_position` and `title` frontmatter to all pages
+4. Update `sidebars.ts` with category groups and `autogenerated` items
+5. Add standalone pages: `prerequisites.md`, `resources.md`, `samples.md`
+6. Verify all internal links resolve (Docusaurus `onBrokenLinks: 'throw'` catches this)
+7. Verify prev/next navigation chains correctly across all pages
+
+**Why second:** Content structure defines the skeleton. Homepage components and new content chapters build on top of this skeleton.
+
+### Phase 2a: Homepage Components (Presentation) -- Can parallel with 2b
+**Dependencies:** Phase 1 (chapter slugs and structure must exist)
+**Deliverables:**
+1. Create `src/components/Hero/` (index.tsx + styles.module.css)
+2. Create `src/components/HomepageFeatures/` (index.tsx + styles.module.css)
+3. Create `src/components/ChapterCards/` (index.tsx + styles.module.css)
+4. Convert `docs/index.md` to MDX homepage importing components
+5. Update `src/css/custom.css` with external link icon styles
+6. Verify homepage renders correctly
+
+### Phase 2b: Sample Code Directory (Samples) -- Can parallel with 2a
+**Dependencies:** Phase 1 (chapter numbering must be established)
+**Deliverables:**
+1. Create `samples/` directory with chapter-numbered subdirectories
+2. Extract inline code examples from existing docs into `.bbj` files
+3. Create `samples/README.md` and `samples/LICENSE`
+4. Update `docs/samples.md` to reference sample files
+
+### Phase 3: New Content Chapters -- Must follow Phase 1
+**Dependencies:** Phase 1 (directory structure), Phase 0 (mermaid plugin for diagrams)
+**Deliverables:** Create new chapter directories and content for:
+1. `04-error-handling/` (SETERR, THROW, ON ERR)
+2. `05-strings-and-functions/` (LEN, MID, POS, STR, NUM)
+3. `06-collections/` (BBjVector, BBjHashMap, Java collections interop)
+4. `08-database-sql/` (BBjRecordSet, SQLOPEN, modern alternative to file I/O)
+5. `09-java-interop/` (calling Java from BBj, using Java libraries)
+6. `10-event-handling/` (systematic event coverage)
+7. `11-debugging/` (BEM, BBj IDE debugging, common error codes)
+
+**Ordering within this phase:** Chapters 04-06 (Core Language) can be written in any order. Chapters 08-09 (Data & Integration) should come after 07 (File I/O) is restructured. Chapters 10-11 (Building Applications) can be written independently.
+
+### Phase 4: Polish and Sync -- Must follow all above
+**Dependencies:** All previous phases
+**Deliverables:**
+1. Synchronize ChapterCards data with final sidebar structure
+2. Update footer links in `docusaurus.config.ts` to reflect new chapter routes
+3. Update navbar items if needed
+4. Add "Reading Legacy Code" callout sections to relevant chapters
+5. Final link audit (internal and external)
+6. Production build and deployment verification
+
+---
+
+## Key Architectural Decisions
+
+### Decision 1: `autogenerated` sidebar items over manual doc IDs
+
+**Rationale:** The DWC Course uses `{type: 'autogenerated', dirName: 'NN-chapter'}` to auto-discover pages within chapter directories. This means adding a new sub-page to a chapter requires only creating the `.md` file with proper frontmatter -- no sidebar config update needed. The manual approach in the current BBj tutorial requires editing `sidebars.js` for every new page, which is error-prone as chapter count grows from 5 to 12+.
+
+**Trade-off:** `sidebar_position` frontmatter in each file is now required, adding a minor per-file overhead.
+
+### Decision 2: MDX homepage in `docs/` (not `src/pages/`)
+
+**Rationale:** The DWC Course places its homepage at `docs/index.md` with `slug: /` rather than using a custom page in `src/pages/`. This keeps the homepage within the docs plugin routing, which means it appears in the sidebar and benefits from docs-specific features (prev/next navigation to the first chapter). The `hide_table_of_contents: true` frontmatter removes the right-side TOC that would be inappropriate for a landing page.
+
+### Decision 3: Chapter metadata in three places (intentional duplication)
+
+**Rationale:** Sidebar config, ChapterCards component, and chapter index.md each serve different rendering contexts. The sidebar needs directory references, ChapterCards needs human-readable descriptions, and index.md needs full markdown content. Attempting to derive all three from a single source would require custom Docusaurus plugins that add complexity disproportionate to a 12-chapter site.
+
+**Mitigation:** Phase 4 includes an explicit synchronization step. The ChapterCards data structure should be treated as the "visual table of contents" and updated whenever chapters are added or renamed.
+
+### Decision 4: Category grouping for reference access
+
+**Rationale:** Grouping chapters into 4 sidebar categories (Foundations, Core Language, Data & Integration, Building Applications) serves the reference-access use case. A developer who needs to look up error handling doesn't need to scroll past 12 flat sidebar entries -- they open "Core Language" and find it immediately. The first category defaults to `collapsed: false` to guide new learners to the starting point.
+
+### Decision 5: Keep green/teal color palette
+
+**Rationale:** Visual differentiation from the blue-themed DWC Course helps users immediately recognize which course they are on. The BBj beginner tutorial and DWC Course may be open in adjacent browser tabs.
+
+---
+
+## Component Dependency Graph
+
+```
+Configuration Layer (docusaurus.config.ts, sidebars.ts, tsconfig.json, package.json)
+    |
+    +---> Navigation Layer (sidebar categories + autogenerated items)
+    |         |
+    |         +---> Content Layer (docs/NN-chapter/*.md)
+    |         |         |
+    |         |         +---> Sample Code Layer (samples/NN_Chapter/*.bbj)
+    |         |         |
+    |         |         +---> Static Assets (static/img/)
+    |         |
+    |         +---> Presentation Layer (src/components/*)
+    |                   |
+    |                   +---> Styling Layer (src/css/custom.css + *.module.css)
+    |
+    +---> Build & Deploy Layer (.github/workflows/deploy.yml)
+              |
+              +---> [output] build/ -> GitHub Pages
+```
+
+**Read direction:** Arrow means "is consumed by" / "feeds into."
+
+---
+
+## Risk Areas
+
+1. **Monolithic content splitting:** Breaking `getting-started/index.md` (257 lines) and `file-io/index.md` (420 lines) into sub-pages risks breaking existing external links to these URLs. Mitigation: Docusaurus `onBrokenLinks: 'throw'` will catch internal breaks; external links from outside the site (if any) should be handled with redirects or keeping original slugs.
+
+2. **YouTube embed dependency:** 8+ YouTube iframes exist in current content. These are not under project control. Mitigation: Add text fallback descriptions alongside all video embeds during the content restructure phase.
+
+3. **Three-place metadata synchronization:** ChapterCards, sidebars.ts, and chapter frontmatter must stay aligned. Mitigation: Include sync verification in Phase 4 and document the update process in CONTRIBUTING.md.
+
+4. **New plugin compatibility:** Adding mermaid, search, ideal-image, and zooming plugins simultaneously could introduce conflicts. Mitigation: Add plugins one at a time in Phase 0, running `yarn build` after each addition.
+
+5. **BBj syntax highlighting:** The current config uses `java` as the Prism language for BBj code. The DWC Course adds `bbj` to `additionalLanguages`. Verify whether Prism has a `bbj` language definition or if this is a custom registration, and ensure code blocks render correctly.
+
+---
+
+*Research completed: 2026-01-31*
