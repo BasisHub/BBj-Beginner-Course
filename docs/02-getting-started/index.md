@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Getting Started"
+---
+
 # Getting Started - First Steps in the New Tool
 
 In this section, you start your journey in BBj. We cover installation, how to write your first program and how to work with the documentation. After this lesson, you should be able to write first simple graphical programs.

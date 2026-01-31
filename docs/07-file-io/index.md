@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "File I/O and Data Access"
+---
+
 # File I/O and Record-Oriented Data Access
 
 Modern BBj applications typically use SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm), which provides familiar table-based access to BBj files. However, if you're maintaining or extending code written before these abstractions existed—or working with systems that predate the Data Dictionary—you'll encounter BBj's native file I/O layer directly.

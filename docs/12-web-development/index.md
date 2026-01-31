@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Web Development"
+---
+
 # Use BBj's DWC Client for Web Development
 
 ## Introduction

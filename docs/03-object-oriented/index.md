@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Object-Oriented BBj"
+---
+
 # Introduction to Object Oriented Syntax in BBj
 
 ## What is Object Oriented Programming?
