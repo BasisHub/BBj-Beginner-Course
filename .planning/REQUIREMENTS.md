@@ -22,14 +22,14 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **INFRA-11**: Homepage has HomepageFeatures component highlighting course value props
 - [ ] **INFRA-12**: samples/ directory exists with runnable .bbj files organized by chapter
 
-### Content — Existing (Improve)
+### Content -- Existing (Improve)
 
 - [ ] **CONT-01**: Getting Started section verified and updated (text fallbacks for video-dependent steps)
 - [ ] **CONT-02**: Object-Oriented chapter expanded with inheritance, interfaces, constructors, and practical patterns
 - [ ] **CONT-03**: File I/O chapter reviewed and adjusted (modern-first framing, legacy as context)
 - [ ] **CONT-04**: Web Development section maintained as brief DWC Course handoff
 
-### Content — New Chapters
+### Content -- New Chapters
 
 - [ ] **CONT-05**: Error handling chapter covering SETERR, THROW, ON ERR, error codes, try/catch patterns
 - [ ] **CONT-06**: String and numeric functions chapter (LEN, MID, POS, CVS, STR, NUM, MASK with examples)
@@ -39,7 +39,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **CONT-10**: Java interop chapter (calling Java from BBj, using Java libraries, extending Java interfaces)
 - [ ] **CONT-11**: Debugging chapter (BBj IDE debugger, BEM, error codes, common troubleshooting patterns)
 
-### Content — Differentiators
+### Content -- Differentiators
 
 - [ ] **DIFF-01**: Legacy code sidebars in each relevant chapter (collapsible sections showing legacy equivalents)
 - [ ] **DIFF-02**: Generation mapping guide (visual reference of all 4 BBj generations side-by-side)
@@ -76,8 +76,8 @@ Deferred to future release. Tracked but not in current roadmap.
 |---------|--------|
 | Comprehensive API reference | Official docs at documentation.basis.cloud serve this purpose |
 | Teaching basic programming concepts | Audience already knows loops, conditionals, OOP theory |
-| Character UI as a learning path | Legacy context only — shown in sidebars, not taught as primary |
-| Visual PRO/5 as a learning path | Legacy context only — shown in sidebars, not taught as primary |
+| Character UI as a learning path | Legacy context only -- shown in sidebars, not taught as primary |
+| Visual PRO/5 as a learning path | Legacy context only -- shown in sidebars, not taught as primary |
 | In-browser code playground | Commercial runtime, massive infrastructure cost, poor ROI |
 | Video-only content | Text-first with code examples; videos supplementary only |
 | DWC/web-specific content | Separate DWC Course handles this |
@@ -89,43 +89,43 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Pending | Pending |
-| INFRA-02 | Pending | Pending |
-| INFRA-03 | Pending | Pending |
-| INFRA-04 | Pending | Pending |
-| INFRA-05 | Pending | Pending |
-| INFRA-06 | Pending | Pending |
-| INFRA-07 | Pending | Pending |
-| INFRA-08 | Pending | Pending |
-| INFRA-09 | Pending | Pending |
-| INFRA-10 | Pending | Pending |
-| INFRA-11 | Pending | Pending |
-| INFRA-12 | Pending | Pending |
-| CONT-01 | Pending | Pending |
-| CONT-02 | Pending | Pending |
-| CONT-03 | Pending | Pending |
-| CONT-04 | Pending | Pending |
-| CONT-05 | Pending | Pending |
-| CONT-06 | Pending | Pending |
-| CONT-07 | Pending | Pending |
-| CONT-08 | Pending | Pending |
-| CONT-09 | Pending | Pending |
-| CONT-10 | Pending | Pending |
-| CONT-11 | Pending | Pending |
-| DIFF-01 | Pending | Pending |
-| DIFF-02 | Pending | Pending |
-| DIFF-03 | Pending | Pending |
-| DIFF-04 | Pending | Pending |
-| QUAL-01 | Pending | Pending |
-| QUAL-02 | Pending | Pending |
-| QUAL-03 | Pending | Pending |
-| QUAL-04 | Pending | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Pending |
+| INFRA-07 | Phase 2 | Pending |
+| INFRA-08 | Phase 2 | Pending |
+| INFRA-09 | Phase 2 | Pending |
+| INFRA-10 | Phase 2 | Pending |
+| INFRA-11 | Phase 2 | Pending |
+| INFRA-12 | Phase 2 | Pending |
+| CONT-01 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| CONT-05 | Phase 4 | Pending |
+| CONT-06 | Phase 4 | Pending |
+| CONT-07 | Phase 4 | Pending |
+| CONT-08 | Phase 5 | Pending |
+| CONT-09 | Phase 5 | Pending |
+| CONT-10 | Phase 5 | Pending |
+| CONT-11 | Phase 5 | Pending |
+| DIFF-01 | Phase 6 | Pending |
+| DIFF-02 | Phase 6 | Pending |
+| DIFF-03 | Phase 6 | Pending |
+| DIFF-04 | Phase 6 | Pending |
+| QUAL-01 | Phase 6 | Pending |
+| QUAL-02 | Phase 6 | Pending |
+| QUAL-03 | Phase 6 | Pending |
+| QUAL-04 | Phase 6 | Pending |
 
 **Coverage:**
 - v1 requirements: 31 total
-- Mapped to phases: 0
-- Unmapped: 31
+- Mapped to phases: 31
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-01-31 after initial definition*
+*Last updated: 2026-01-31 after roadmap creation*
