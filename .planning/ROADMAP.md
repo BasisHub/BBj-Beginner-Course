@@ -47,12 +47,12 @@ Plans:
   3. Homepage displays Hero component with course title, ChapterCards for all chapters, and feature highlights
   4. A samples/ directory exists with .bbj files organized by chapter, and a docs page explains how to run them
   5. Prev/next navigation chains work correctly through the entire course reading order
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Directory restructure and sidebar configuration
-- [ ] 02-02: Homepage components (Hero, ChapterCards, HomepageFeatures)
-- [ ] 02-03: Sample code directory and runner documentation
+- [ ] 02-01-PLAN.md -- Directory restructure, sidebar configuration, and samples directory
+- [ ] 02-02-PLAN.md -- Homepage components (Hero, ChapterCards, HomepageFeatures)
+- [ ] 02-03-PLAN.md -- Build verification and visual spot-check
 
 ### Phase 3: Existing Content
 **Goal**: The 4 existing content sections are reviewed, updated, and reframed so a reader encounters modern BBj patterns first with legacy as context
