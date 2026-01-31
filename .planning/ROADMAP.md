@@ -12,7 +12,7 @@ Transform the existing 5-section flat documentation site into a structured 12-ch
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - TypeScript migration, plugins, and build infrastructure matching DWC tutorial
+- [x] **Phase 1: Foundation** - TypeScript migration, plugins, and build infrastructure matching DWC tutorial
 - [ ] **Phase 2: Structure** - Content reorganization into numbered chapters, homepage components, and sample code directory
 - [ ] **Phase 3: Existing Content** - Review and improve the 4 existing content sections for modern-first framing
 - [ ] **Phase 4: Core Language Chapters** - Error handling, string/numeric functions, and collections chapters
@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- TypeScript migration, plugin installation, theme, and docs updates
-- [ ] 01-02-PLAN.md -- Build verification and visual spot-check
+- [x] 01-01-PLAN.md -- TypeScript migration, plugin installation, theme, and docs updates
+- [x] 01-02-PLAN.md -- Build verification and visual spot-check
 
 ### Phase 2: Structure
 **Goal**: Content is reorganized into numbered chapter directories with working sidebar navigation, a homepage with Hero/ChapterCards/Features components, and a samples directory for runnable code
@@ -128,7 +128,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 2/2 | Complete | 2026-01-31 |
 | 2. Structure | 0/3 | Not started | - |
 | 3. Existing Content | 0/3 | Not started | - |
 | 4. Core Language Chapters | 0/3 | Not started | - |
