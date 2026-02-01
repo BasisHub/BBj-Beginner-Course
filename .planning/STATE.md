@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 
 ## Current Position
 
-Phase: 3 of 6 (Existing Content)
+Phase: 3 of 6 (Existing Content) -- Complete
 Plan: 3 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-01 -- Completed 03-03-PLAN.md (File I/O and Web Development reframing)
+Status: Phase complete
+Last activity: 2026-02-01 -- Completed 03-02-PLAN.md (OOP chapter split into index + 3 subpages)
 
-Progress: [█████████░░░░░░░░░] ~50% (9/18 plans)
+Progress: [██████████░░░░░░░░] ~56% (10/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 3 min
-- Total execution time: 21 min
+- Total execution time: 24 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [█████████░░░░░░░░░] ~50% (9/18 pl
 |-------|-------|-------|----------|
 | 01-foundation | 2/2 | 6 min | 3 min |
 | 02-structure | 3/3 | 10 min | 3 min |
-| 03-existing-content | 2/3 | 5 min | 2.5 min |
+| 03-existing-content | 3/3 | 8 min | 2.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (3 min), 02-03 (4 min), 03-01 (3 min), 03-03 (2 min)
+- Last 5 plans: 02-03 (4 min), 03-01 (3 min), 03-03 (2 min), 03-02 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -66,6 +66,9 @@ Recent decisions affecting current work:
 - [03-03]: File I/O title "File I/O and Record Access" -- neutral framing, avoids stigmatizing "legacy" in title
 - [03-03]: Web Development heading "Web Development with DWC" -- concise, peer tone
 - [03-03]: SQL Equivalents table kept in File I/O as bridge for SQL-familiar developers
+- [03-02]: Three-layer OOP framing: language classes, Java interop, BBjAPI object model
+- [03-02]: Videos wrapped in <details>/<summary> HTML, all placed in 01-writing-classes.md
+- [03-02]: BBjAPI subpage is orientation-only -- depth deferred to later chapters
 
 ### Pending Todos
 
@@ -78,5 +81,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 03-03-PLAN.md -- File I/O and Web Development reframing
+Stopped at: Completed 03-02-PLAN.md -- Phase 3 complete (OOP chapter split, all existing content modernized)
 Resume file: None
