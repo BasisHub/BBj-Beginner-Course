@@ -1,0 +1,36 @@
+rem === Basic SQL Connection ===
+rem Demonstrates: SQLOPEN, simple SELECT, SQLFETCH iteration, SQLCLOSE
+rem Expected output: Lists first 5 customer names from ChileCompany database
+rem
+rem Requires: ChileCompany sample database
+
+rem Open connection to ChileCompany
+SQLOPEN(1)"ChileCompany"
+PRINT "Connected to ChileCompany"
+PRINT "---"
+
+rem Prepare a simple SELECT (no parameters)
+SQLPREP(1)"SELECT CUST_NUM, FIRST_NAME, LAST_NAME FROM CUSTOMER"
+
+rem Get result template and dimension record variable
+DIM rec$:SQLTMPL(1)
+
+rem Execute the prepared statement
+SQLEXEC(1)
+
+rem Fetch and display first 5 rows
+count = 0
+WHILE 1
+    rec$ = SQLFETCH(1, END=done)
+    PRINT rec.CUST_NUM$, "  ", rec.FIRST_NAME$, " ", rec.LAST_NAME$
+    count = count + 1
+    IF count >= 5 THEN GOTO done
+WEND
+
+done:
+PRINT "---"
+PRINT count, " customers listed"
+
+rem Always close the connection
+SQLCLOSE(1)
+PRINT "Connection closed"

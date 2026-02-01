@@ -1,0 +1,32 @@
+rem === Parameterized SELECT Query ===
+rem Demonstrates: SQLPREP with ? placeholder, SQLEXEC with parameter, SQLFETCH with END=
+rem Expected output: Lists customers whose last name starts with "S"
+rem
+rem Requires: ChileCompany sample database
+
+rem Open ChileCompany sample database
+SQLOPEN(1)"ChileCompany"
+
+rem Prepare parameterized query
+SQLPREP(1)"SELECT CUST_NUM, FIRST_NAME, LAST_NAME, COMPANY FROM CUSTOMER WHERE LAST_NAME LIKE ?"
+
+rem Get result template and dimension record variable
+DIM rec$:SQLTMPL(1)
+
+rem Execute with parameter (% is SQL wildcard)
+SQLEXEC(1)"S%"
+
+rem Fetch and display results
+PRINT "Customers with last name starting with S:"
+PRINT "---"
+count = 0
+WHILE 1
+    rec$ = SQLFETCH(1, END=done)
+    PRINT rec.CUST_NUM$, " ", rec.FIRST_NAME$, " ", rec.LAST_NAME$
+    count = count + 1
+WEND
+
+done:
+PRINT "---"
+PRINT count, " customers found"
+SQLCLOSE(1)

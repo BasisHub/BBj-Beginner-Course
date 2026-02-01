@@ -1,0 +1,50 @@
+rem === SQL Error Handling Patterns ===
+rem Demonstrates: SETERR with SQL operations, SQLERR for error messages, cleanup in handler
+rem Expected output: Shows successful query, then handles a deliberate bad query gracefully
+rem
+rem Requires: ChileCompany sample database
+
+rem --- Pattern 1: Successful query with SETERR safety net ---
+seterr sqlHandler
+
+SQLOPEN(1)"ChileCompany"
+SQLPREP(1)"SELECT FIRST_NAME, LAST_NAME FROM CUSTOMER"
+DIM rec$:SQLTMPL(1)
+SQLEXEC(1)
+
+PRINT "First 3 customers:"
+count = 0
+WHILE 1
+    rec$ = SQLFETCH(1, END=fetchDone)
+    PRINT "  ", rec.FIRST_NAME$, " ", rec.LAST_NAME$
+    count = count + 1
+    IF count >= 3 THEN GOTO fetchDone
+WEND
+
+fetchDone:
+SQLCLOSE(1)
+PRINT "---"
+
+rem --- Pattern 2: Deliberate bad query to show error handling ---
+PRINT "Attempting a bad query..."
+SQLOPEN(1)"ChileCompany"
+SQLPREP(1, ERR=badQuery)"SELECT * FROM NONEXISTENT_TABLE"
+GOTO afterBadQuery
+
+badQuery:
+    PRINT "Caught SQL error: ", SQLERR(1, ERR=*NEXT)
+    SQLCLOSE(1, ERR=*NEXT)
+    PRINT "Cleaned up after error"
+    RELEASE
+
+afterBadQuery:
+    SQLCLOSE(1)
+    PRINT "Done"
+    RELEASE
+
+rem Global error handler as safety net
+sqlHandler:
+    seterr sqlHandler
+    PRINT "Unexpected SQL error: ", SQLERR(1, ERR=*NEXT)
+    SQLCLOSE(1, ERR=*NEXT)
+    RELEASE

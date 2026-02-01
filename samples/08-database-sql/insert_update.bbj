@@ -1,0 +1,40 @@
+rem === INSERT, UPDATE, and DELETE Operations ===
+rem Demonstrates: Write operations with SQLPREP/SQLEXEC, cleanup after itself
+rem Expected output: Inserts a test record, updates it, then deletes it
+rem
+rem Requires: ChileCompany sample database
+rem Note: This sample modifies the database but cleans up after itself
+
+SQLOPEN(1)"ChileCompany"
+
+rem --- INSERT a test record ---
+SQLPREP(1)"INSERT INTO CUSTOMER (CUST_NUM, FIRST_NAME, LAST_NAME, COMPANY) VALUES (?, ?, ?, ?)"
+SQLEXEC(1)"999999", "Test", "User", "Example Corp"
+PRINT "Inserted: 999999 Test User - Example Corp"
+
+rem --- Verify the INSERT by reading it back ---
+SQLPREP(1)"SELECT FIRST_NAME, LAST_NAME, COMPANY FROM CUSTOMER WHERE CUST_NUM = ?"
+DIM rec$:SQLTMPL(1)
+SQLEXEC(1)"999999"
+rec$ = SQLFETCH(1, END=notFound)
+PRINT "Verified: ", rec.FIRST_NAME$, " ", rec.LAST_NAME$, " - ", rec.COMPANY$
+GOTO doUpdate
+
+notFound:
+    PRINT "ERROR: Record not found after insert"
+    GOTO cleanup
+
+doUpdate:
+rem --- UPDATE the record ---
+SQLPREP(1)"UPDATE CUSTOMER SET COMPANY = ? WHERE CUST_NUM = ?"
+SQLEXEC(1)"Updated Corp", "999999"
+PRINT "Updated: company changed to 'Updated Corp'"
+
+rem --- DELETE the test record (clean up) ---
+SQLPREP(1)"DELETE FROM CUSTOMER WHERE CUST_NUM = ?"
+SQLEXEC(1)"999999"
+PRINT "Deleted: test record removed"
+
+cleanup:
+SQLCLOSE(1)
+PRINT "Done"
