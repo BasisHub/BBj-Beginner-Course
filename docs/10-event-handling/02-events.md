@@ -84,7 +84,7 @@ Older code may use numeric constants instead of named properties: `CALLBACK(1, .
 </details>
 
 :::tip Further Reading
-- [BBj Events Reference](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/Window/BBjControl/BBjControl_Events.htm) -- Complete list of events per control type
-- [BBjButtonPushEvent](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/Window/bbjbuttonpushevent/BBjButtonPushEvent.htm) -- Button push event details
-- [BBjEditModifyEvent](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/Window/bbjeditmodifyevent/BBjEditModifyEvent.htm) -- Text modification event details
+- [BBj Events Reference](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "BBjControl Events" in the BBj documentation index
+- [BBjButtonPushEvent](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "BBjButtonPushEvent" in the BBj documentation index
+- [BBjEditModifyEvent](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "BBjEditModifyEvent" in the BBj documentation index
 :::

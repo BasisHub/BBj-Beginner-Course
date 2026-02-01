@@ -1,16 +1,11 @@
-rem /**
-rem  * bbjvector_basics.bbj - BBjVector creation and iteration
-rem  *
-rem  * Demonstrates creating a BBjVector, adding items, retrieving
-rem  * by index, and iterating with a for loop.
-rem  *
-rem  * Expected output:
-rem  *   Size: 3
-rem  *   alpha
-rem  *   beta
-rem  *   gamma
-rem  *   Contains alpha: 1
-rem  */
+rem === BBjVector Creation and Iteration ===
+rem Demonstrates: Creating a BBjVector, adding items, retrieving by index, iterating
+rem Expected output:
+rem   Size: 3
+rem   alpha
+rem   beta
+rem   gamma
+rem   Contains alpha: 1
 
 rem Create and populate a BBjVector
 vect! = BBjAPI().makeVector()

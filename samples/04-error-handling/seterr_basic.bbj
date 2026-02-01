@@ -1,12 +1,6 @@
-rem /**
-rem  * seterr_basic.bbj - Basic SETERR error trapping
-rem  *
-rem  * Demonstrates the fundamental SETERR + label pattern.
-rem  * When an error occurs, execution branches to the handler label.
-rem  *
-rem  * Expected output:
-rem  *   Error # 41  -  Invalid assignment
-rem  */
+rem === Basic SETERR Error Trapping ===
+rem Demonstrates: SETERR + label pattern; execution branches to handler on error
+rem Expected output: Error # 41  -  Invalid assignment
 
 seterr handler
 

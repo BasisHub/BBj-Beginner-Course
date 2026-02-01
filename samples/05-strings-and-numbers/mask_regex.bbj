@@ -1,9 +1,6 @@
-rem /**
-rem  * MASK() Regex Pattern Matching - BBj Tutorial Sample
-rem  *
-rem  * Demonstrates: MASK() with Perl 5 regex patterns, TCB(16) match length
-rem  * Chapter: Strings and Numbers > Searching Strings
-rem  */
+rem === MASK() Regex Pattern Matching ===
+rem Demonstrates: MASK() with Perl 5 regex patterns, TCB(16) match length
+rem Chapter: Strings and Numbers > Searching Strings
 
 rem --- Basic MASK() - pattern match ---
 a$ = "config.bbj"

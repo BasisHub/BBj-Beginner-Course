@@ -1,18 +1,12 @@
-rem /**
-rem  * contact_form.bbj - Complete Contact Form with Multiple Event Types
-rem  *
-rem  * Demonstrates a complete GUI application using a Custom Object class.
-rem  * Three input fields (Name, Email, Message) and two buttons (Submit, Clear).
-rem  * Both buttons share the same callback, distinguished by getControl().getID().
-rem  *
-rem  * Expected output:
-rem  *   A window with Name, Email, and Message fields plus Submit and Clear buttons.
-rem  *   Clicking Submit shows a msgbox with all field contents.
-rem  *   Clicking Clear empties all fields.
-rem  *   Closing the window terminates the program.
-rem  *
-rem  * Requires: BBj with GUI support (SYSGUI)
-rem  */
+rem === Complete Contact Form with Multiple Event Types ===
+rem Demonstrates: Custom Object GUI app, shared callback with getControl().getID()
+rem Expected output:
+rem   A window with Name, Email, and Message fields plus Submit and Clear buttons.
+rem   Clicking Submit shows a msgbox with all field contents.
+rem   Clicking Clear empties all fields.
+rem   Closing the window terminates the program.
+rem
+rem Requires: BBj with GUI support (SYSGUI)
 
 class public ContactForm
     field private BBjWindow window!

@@ -1,9 +1,6 @@
-rem /**
-rem  * POS() String Searching - BBj Tutorial Sample
-rem  *
-rem  * Demonstrates: POS() basic search, backward scan, occurrence counting
-rem  * Chapter: Strings and Numbers > Searching Strings
-rem  */
+rem === POS() String Searching ===
+rem Demonstrates: POS() basic search, backward scan, occurrence counting
+rem Chapter: Strings and Numbers > Searching Strings
 
 rem --- Basic POS() - find substring position ---
 a$ = "MONTUEWEDTHUFRISATSUN"

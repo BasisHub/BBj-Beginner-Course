@@ -1,9 +1,6 @@
-rem /**
-rem  * String Basics - BBj Tutorial Sample
-rem  *
-rem  * Demonstrates: LEN(), substring extraction, concatenation, CVS()
-rem  * Chapter: Strings and Numbers > String Basics
-rem  */
+rem === String Basics ===
+rem Demonstrates: LEN(), substring extraction, concatenation, CVS()
+rem Chapter: Strings and Numbers > String Basics
 
 rem --- LEN() - String length ---
 a$ = "Hello World"

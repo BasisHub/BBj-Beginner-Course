@@ -1,18 +1,13 @@
-rem /**
-rem  * setcallback_methods.bbj - Method-Based setCallback with Custom Object
-rem  *
-rem  * Demonstrates setCallback with method targets on a Custom Object class.
-rem  * Each callback method receives a typed event parameter.
-rem  * Registers ON_BUTTON_PUSH, ON_EDIT_MODIFY, and ON_CLOSE events.
-rem  *
-rem  * Expected output:
-rem  *   A window with a text input and "Click Me" button.
-rem  *   Typing in the input prints text changes to the console.
-rem  *   Clicking the button shows a msgbox with the current input text.
-rem  *   Closing the window terminates the program.
-rem  *
-rem  * Requires: BBj with GUI support (SYSGUI)
-rem  */
+rem === Method-Based setCallback with Custom Object ===
+rem Demonstrates: setCallback with method targets, typed event parameters
+rem Registers: ON_BUTTON_PUSH, ON_EDIT_MODIFY, ON_CLOSE events
+rem Expected output:
+rem   A window with a text input and "Click Me" button.
+rem   Typing in the input prints text changes to the console.
+rem   Clicking the button shows a msgbox with the current input text.
+rem   Closing the window terminates the program.
+rem
+rem Requires: BBj with GUI support (SYSGUI)
 
 class public MethodCallbackDemo
     field private BBjWindow window!

@@ -9,9 +9,9 @@ This section covers environment setup, your first BBj programs, variables, contr
 
 ## Setting Up Your Environment
 
-Visit [https://www.basis.com/eclipseplug-ins](https://www.basis.com/eclipseplug-ins) for detailed instructions on setting up your development environment.
+Visit [https://www.basis.cloud/eclipseplug-ins](https://www.basis.cloud/eclipseplug-ins) for detailed instructions on setting up your development environment.
 
-BBj development tooling has expanded since the video below was recorded. In addition to the Eclipse plug-in shown, [BDTStudio](https://www.basis.com/eclipseplug-ins) (a preconfigured Eclipse distribution) and a VSCode extension are now available options.
+BBj development tooling has expanded since the video below was recorded. In addition to the Eclipse plug-in shown, [BDTStudio](https://www.basis.cloud/eclipseplug-ins) (a preconfigured Eclipse distribution) and a VSCode extension are now available options.
 
 <details>
 <summary>Watch the video: Setting Up Your Environment</summary>
@@ -29,7 +29,7 @@ A=MSGBOX("Hello World")
 RELEASE
 ```
 
-`MSGBOX` shows the dialog and returns the user's button selection. `RELEASE` terminates the program. See the documentation for [MSGBOX](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/msgbox_function.htm) and [RELEASE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/release_verb.htm) (or its synonym [BYE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bye_verb.htm)).
+`MSGBOX` shows the dialog and returns the user's button selection. `RELEASE` terminates the program. See the documentation for [MSGBOX](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/msgbox_function.htm) and [RELEASE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/release_verb.htm).
 
 <details>
 <summary>Watch the video: A First Hello World</summary>
@@ -130,7 +130,7 @@ IF something THEN dosomething
 
 BBj supports `FOR...NEXT`, `WHILE...WEND`, and `REPEAT...UNTIL` loops. Use `BREAK` to exit a loop and `CONTINUE` to skip to the next iteration.
 
-Explore the [BBj verbs reference](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/index.htm) for additional control flow options.
+Explore the [BBj verbs reference](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) for additional control flow options.
 
 <details>
 <summary>Watch the video: Loops and IF Statements</summary>
@@ -226,7 +226,7 @@ In legacy code, fixed control IDs are often meaningful and referenced elsewhere.
 
 ### Keyboard Navigation
 
-By default, BBj GUI windows do not support Tab key navigation between controls. Enable keyboard navigation by setting the `$00010000$` flag in the `addWindow` call. See the [addWindow documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/SysGui/bbjsysgui/BBjSysGui_addWindow.htm) for all available window flags.
+By default, BBj GUI windows do not support Tab key navigation between controls. Enable keyboard navigation by setting the `$00010000$` flag in the `addWindow` call. See the [addWindow documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) for all available window flags.
 
 Flags are combined by addition. For example, to enable both Tab and Enter key navigation, add the respective flag values together.
 

@@ -1,16 +1,11 @@
-rem /**
-rem  * dump_example.bbj - DUMP: Variable Snapshot to File
-rem  *
-rem  * Demonstrates the DUMP verb to write all variables to a file
-rem  * and the filtered DUMP form for current scope only.
-rem  *
-rem  * Expected output:
-rem  *   Variables dumped to /tmp/debug_dump.txt
-rem  *   --- Filtered DUMP (current scope) ---
-rem  *   (variables printed to console)
-rem  *
-rem  * After running, inspect /tmp/debug_dump.txt to see all variables.
-rem  */
+rem === DUMP: Variable Snapshot to File ===
+rem Demonstrates: DUMP verb to write all variables to a file, filtered DUMP for current scope
+rem Expected output:
+rem   Variables dumped to /tmp/debug_dump.txt
+rem   --- Filtered DUMP (current scope) ---
+rem   (variables printed to console)
+rem
+rem After running, inspect /tmp/debug_dump.txt to see all variables.
 
 rem Create variables of different types
 name$ = "Alice"

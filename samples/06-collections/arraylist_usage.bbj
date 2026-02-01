@@ -1,14 +1,9 @@
-rem /**
-rem  * arraylist_usage.bbj - java.util.ArrayList creation and iteration
-rem  *
-rem  * Demonstrates creating an ArrayList, adding items,
-rem  * and iterating with a for loop.
-rem  *
-rem  * Expected output:
-rem  *   first
-rem  *   second
-rem  *   third
-rem  */
+rem === java.util.ArrayList Creation and Iteration ===
+rem Demonstrates: Creating an ArrayList, adding items, iterating with a for loop
+rem Expected output:
+rem   first
+rem   second
+rem   third
 
 use java.util.ArrayList
 

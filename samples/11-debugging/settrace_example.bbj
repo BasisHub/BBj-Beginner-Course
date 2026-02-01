@@ -1,19 +1,14 @@
-rem /**
-rem  * settrace_example.bbj - SETTRACE: Execution Trace to File
-rem  *
-rem  * Demonstrates SETTRACE/ENDTRACE to record line-by-line execution
-rem  * to a file. The trace captures every statement as it runs.
-rem  *
-rem  * Expected output:
-rem  *   Processing...
-rem  *   Loop iteration: 1
-rem  *   Loop iteration: 2
-rem  *   Loop iteration: 3
-rem  *   Value is small
-rem  *   Trace written to /tmp/debug_trace.txt
-rem  *
-rem  * After running, inspect /tmp/debug_trace.txt to see the execution trace.
-rem  */
+rem === SETTRACE: Execution Trace to File ===
+rem Demonstrates: SETTRACE/ENDTRACE to record line-by-line execution to a file
+rem Expected output:
+rem   Processing...
+rem   Loop iteration: 1
+rem   Loop iteration: 2
+rem   Loop iteration: 3
+rem   Value is small
+rem   Trace written to /tmp/debug_trace.txt
+rem
+rem After running, inspect /tmp/debug_trace.txt to see the execution trace.
 
 rem Open a file for the trace output
 open(8, mode="O_CREATE,O_TRUNC")"/tmp/debug_trace.txt"

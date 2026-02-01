@@ -78,6 +78,6 @@ See [Reading Legacy Code](./legacy-code) for legacy database patterns including 
 :::
 
 :::tip Further Reading
-- [BBjRecordSet](https://documentation.basis.com/BASISHelp/WebHelp/gridctrl3/bbjrecordset.htm) -- RecordSet API for data-bound GUI controls
+- [BBjRecordSet](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "BBjRecordSet" in the BBj documentation index; RecordSet API for data-bound GUI controls
 - [Connecting to a BBj Database](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/SQL/connecting_to_a_bbj_database.htm) -- Connection methods including JDBC
 :::

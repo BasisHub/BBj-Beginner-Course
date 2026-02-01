@@ -1,15 +1,10 @@
-rem /**
-rem  * array_to_vector.bbj - DIM array to BBjVector conversion
-rem  *
-rem  * Demonstrates populating a DIM array and converting it
-rem  * to a BBjVector using the VECTOR() function (BBj 16.0+).
-rem  *
-rem  * Expected output:
-rem  *   Vector size: 3
-rem  *   Alice
-rem  *   Bob
-rem  *   Charlie
-rem  */
+rem === DIM Array to BBjVector Conversion ===
+rem Demonstrates: Populating a DIM array, converting to BBjVector with VECTOR() (BBj 16.0+)
+rem Expected output:
+rem   Vector size: 3
+rem   Alice
+rem   Bob
+rem   Charlie
 
 rem DIM array (fixed size, typed)
 dim names$[2]

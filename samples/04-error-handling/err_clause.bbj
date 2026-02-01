@@ -1,13 +1,8 @@
-rem /**
-rem  * err_clause.bbj - ERR= clause on individual statements
-rem  *
-rem  * Demonstrates statement-level error handling with ERR=.
-rem  * ERR=*NEXT skips the error; ERR=label branches to a handler.
-rem  *
-rem  * Expected output:
-rem  *   Continued after error, x is: 0
-rem  *   Could not open file: File does not exist
-rem  */
+rem === ERR= Clause on Individual Statements ===
+rem Demonstrates: Statement-level error handling with ERR=*NEXT and ERR=label
+rem Expected output:
+rem   Continued after error, x is: 0
+rem   Could not open file: File does not exist
 
 rem ERR=*NEXT: skip and continue on the next line
 x = num("not a number", err=*next)

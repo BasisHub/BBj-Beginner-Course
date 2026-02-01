@@ -1,17 +1,11 @@
-rem /**
-rem  * setcallback_labels.bbj - Label-Based setCallback Example
-rem  *
-rem  * Demonstrates setCallback with label targets and getLastEvent().
-rem  * Creates a window with a button and input field. When the button
-rem  * is clicked, a msgbox shows the current input text.
-rem  *
-rem  * Expected output:
-rem  *   A window with a text input and "Click Me" button.
-rem  *   Clicking the button shows a msgbox with the input text.
-rem  *   Closing the window terminates the program.
-rem  *
-rem  * Requires: BBj with GUI support (SYSGUI)
-rem  */
+rem === Label-Based setCallback Example ===
+rem Demonstrates: setCallback with label targets, getLastEvent() to retrieve event object
+rem Expected output:
+rem   A window with a text input and "Click Me" button.
+rem   Clicking the button shows a msgbox with the input text.
+rem   Closing the window terminates the program.
+rem
+rem Requires: BBj with GUI support (SYSGUI)
 
 sysgui! = BBjAPI().openSysGui("X0")
 window! = sysgui!.addWindow(10, 10, 400, 200, "Label Callback Demo", $00100083$)

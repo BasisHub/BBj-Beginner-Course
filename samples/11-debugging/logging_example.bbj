@@ -1,20 +1,14 @@
-rem /**
-rem  * logging_example.bbj - Logging Techniques
-rem  *
-rem  * Demonstrates System.out.println for server-side debug logging
-rem  * and PRINT for console output. These techniques work when
-rem  * interactive console debugging is not available.
-rem  *
-rem  * Expected output:
-rem  *   === Logging Example ===
-rem  *   Processing order: 12345
-rem  *   Order total: 249.95
-rem  *   Processing complete.
-rem  *   === Done ===
-rem  *
-rem  * System.out.println output goes to the BBj debug log
-rem  * in the <bbj>/log directory, viewable in Enterprise Manager.
-rem  */
+rem === Logging Techniques ===
+rem Demonstrates: System.out.println for server-side debug logging, PRINT for console output
+rem Expected output:
+rem   === Logging Example ===
+rem   Processing order: 12345
+rem   Order total: 249.95
+rem   Processing complete.
+rem   === Done ===
+rem
+rem System.out.println output goes to the BBj debug log
+rem in the <bbj>/log directory, viewable in Enterprise Manager.
 
 use java.lang.System
 

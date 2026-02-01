@@ -1,12 +1,6 @@
-rem /**
-rem  * throw_validation.bbj - THROW from a class method
-rem  *
-rem  * Demonstrates raising custom errors with THROW inside a class.
-rem  * The error propagates to the caller's SETERR handler.
-rem  *
-rem  * Expected output:
-rem  *   Validation error # 256 : Input cannot be empty
-rem  */
+rem === THROW from a Class Method ===
+rem Demonstrates: Raising custom errors with THROW inside a class; propagation to SETERR handler
+rem Expected output: Validation error # 256 : Input cannot be empty
 
 class public Validator
     method public void validate(BBjString input$)

@@ -1,9 +1,6 @@
-rem /**
-rem  * STR() and NUM() Formatting - BBj Tutorial Sample
-rem  *
-rem  * Demonstrates: STR() numeric/string masks, NUM() conversion
-rem  * Chapter: Strings and Numbers > Formatting and Conversion
-rem  */
+rem === STR() and NUM() Formatting ===
+rem Demonstrates: STR() numeric/string masks, NUM() conversion
+rem Chapter: Strings and Numbers > Formatting and Conversion
 
 rem --- Basic STR() - number to string ---
 x = 42.5

@@ -1,14 +1,9 @@
-rem /**
-rem  * hashmap_iterator.bbj - java.util.HashMap with Iterator
-rem  *
-rem  * Demonstrates creating a HashMap, populating with put(),
-rem  * and iterating all entries using keySet().iterator().
-rem  *
-rem  * Expected output (order may vary):
-rem  *   name = Alice
-rem  *   role = Developer
-rem  *   team = Platform
-rem  */
+rem === java.util.HashMap with Iterator ===
+rem Demonstrates: Creating a HashMap, populating with put(), iterating with keySet().iterator()
+rem Expected output (order may vary):
+rem   name = Alice
+rem   role = Developer
+rem   team = Platform
 
 use java.util.HashMap
 use java.util.Iterator

@@ -53,7 +53,7 @@ BBj is a **dynamic, interpreted language that runs on the JVM**. It has automati
 
 ### Further Reading
 
-- [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBj_Object_Error_Handling.htm)
+- [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "Error Handling" in the BBj documentation index
 - [Unit Testing in BBj](https://documentation.basis.cloud/advantage/v18-2014/14unittest.pdf) (PDF)
 - [BBjVector Methods](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/API/bbjvector/bbjvector.htm)
 

@@ -53,7 +53,7 @@ BBj's object model is large. Three approaches help you navigate it:
 
 1. **IDE autocomplete.** The BBj IDE (BDTStudio or the Eclipse plugin) provides autocomplete when you type `api!.` or any object reference followed by a dot. This is the fastest way to explore available methods.
 
-2. **The BBjAPI documentation.** The [BBjAPI object reference](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/index.htm) provides the complete method listing for every object family. Bookmark this -- you will refer to it frequently.
+2. **The BBjAPI documentation.** The [BBjAPI object reference](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) provides the complete method listing for every object family. Bookmark this -- you will refer to it frequently.
 
 3. **Runtime exploration.** The `FIELD()` function lists available fields/methods on any object at runtime:
 

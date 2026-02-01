@@ -5,7 +5,7 @@ title: "File I/O and Record Access"
 
 # File I/O and Record Access
 
-For new BBj applications, SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm) is the recommended approach to data access. This chapter covers BBj's native record-oriented file I/O -- the system you will encounter when maintaining or extending legacy code.
+For new BBj applications, SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) is the recommended approach to data access. This chapter covers BBj's native record-oriented file I/O -- the system you will encounter when maintaining or extending legacy code.
 
 The record-oriented approach exposes the raw mechanics: channels, byte positions, field delimiters, and explicit pointer navigation. It's a design philosophy rooted in the 1980s when Business BASIC first emerged, and understanding it remains essential for working with existing systems.
 
@@ -43,8 +43,8 @@ If you're familiar with file streams or database access in other languages, here
 |------|---------|---------------|
 | OPEN | Open a file on a channel | [OPEN](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/open_verb.htm) |
 | READ | Read with field parsing | [READ](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/read_verb.htm) |
-| READ RECORD | Read raw bytes | [READ RECORD](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/read_record_verb.htm) |
-| WRITE RECORD | Write raw bytes | [WRITE RECORD](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/write_record_verb.htm) |
+| READ RECORD | Read raw bytes | [READ RECORD](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
+| WRITE RECORD | Write raw bytes | [WRITE RECORD](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
 | EXTRACT | Lock and read a record | [EXTRACT](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/extract_verb.htm) |
 | CLOSE | Close a channel | [CLOSE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/close_verb.htm) |
 | REMOVE | Delete a record | [REMOVE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/remove_verb.htm) |
@@ -434,7 +434,7 @@ See [Reading Legacy Code](/file-io/legacy-code) for the oldest file I/O patterns
 
 ## Further Reading
 
-- [BBj File System Overview](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/File_System_Overview.htm)
-- [String Templates](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/String_Templates.htm)
-- [MKEYED Files](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/MKEYED_Files.htm)
-- [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm) - for SQL access to BBj files
+- [BBj File System Overview](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "File System" in the BBj documentation index
+- [String Templates](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "String Templates" in the BBj documentation index
+- [MKEYED Files](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "MKEYED" in the BBj documentation index
+- [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "Data Dictionary" in the BBj documentation index; for SQL access to BBj files

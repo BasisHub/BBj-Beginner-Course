@@ -110,7 +110,7 @@ Label-based callbacks (`setCallback(event, "label")`) are still valid but older-
 </details>
 
 :::tip Further Reading
-- [setCallback Method](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/Window/BBjControl/BBjControl_setCallback.htm) -- Full reference for setCallback syntax
+- [setCallback Method](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "setCallback" in the BBj documentation index
 - [process_events Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/process_events_verb.htm) -- Event loop behavior and options
-- [BBjWindow](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/Window/bbjwindow/BBjWindow.htm) -- Window creation and control methods
+- [BBjWindow](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm) -- Search "BBjWindow" in the BBj documentation index
 :::

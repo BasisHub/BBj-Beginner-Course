@@ -1,19 +1,12 @@
-rem /**
-rem  * event_types.bbj - Multiple Event Type Demonstrations
-rem  *
-rem  * Demonstrates several event types in one program: ON_BUTTON_PUSH,
-rem  * ON_EDIT_MODIFY, ON_GAINED_FOCUS, and ON_LOST_FOCUS. Each handler
-rem  * prints to the console describing what happened, and updates a
-rem  * status label in the window.
-rem  *
-rem  * Expected output:
-rem  *   A window with a button, input field, and status label.
-rem  *   Console prints for each event: focus gained, focus lost,
-rem  *   text changed, and button pushed.
-rem  *   The status label updates to show the most recent event.
-rem  *
-rem  * Requires: BBj with GUI support (SYSGUI)
-rem  */
+rem === Multiple Event Type Demonstrations ===
+rem Demonstrates: ON_BUTTON_PUSH, ON_EDIT_MODIFY, ON_GAINED_FOCUS, ON_LOST_FOCUS
+rem Expected output:
+rem   A window with a button, input field, and status label.
+rem   Console prints for each event: focus gained, focus lost,
+rem   text changed, and button pushed.
+rem   The status label updates to show the most recent event.
+rem
+rem Requires: BBj with GUI support (SYSGUI)
 
 class public EventTypesDemo
     field private BBjWindow window!

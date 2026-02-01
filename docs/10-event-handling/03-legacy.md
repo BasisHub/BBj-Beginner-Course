@@ -74,5 +74,5 @@ Do not mix READ RECORD and PROCESS_EVENTS in the same program. READ RECORD consu
 
 :::tip Further Reading
 - [CALLBACK Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/callback_verb.htm) -- Complete syntax and parameter reference
-- [READ RECORD Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/read_record_verb.htm) -- Low-level record reading for SYSGUI events
+- [READ RECORD Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) -- Search "READ RECORD" in the alphabetical verbs reference
 :::
