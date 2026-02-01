@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 6 - Differentiators and Quality -- Complete (all plans done, including gap closure)
+**Current focus:** Milestone v1 complete -- all 6 phases done (exercises deferred to future milestone)
 
 ## Current Position
 
 Phase: 6 of 6 (Differentiators and Quality)
 Plan: 4 of 4 in current phase (includes gap closure plan)
-Status: All phases complete
-Last activity: 2026-02-01 -- Completed 06-04-PLAN.md (Sample file references gap closure)
+Status: Milestone v1 complete -- all 6 phases verified (QUAL-01 exercises deferred)
+Last activity: 2026-02-01 -- Phase 6 verified (4/5 truths, exercises deferred by user decision)
 
 Progress: [████████████████████████████] 100% (20/20 plans)
 
@@ -117,5 +117,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 06-04-PLAN.md -- All phases complete (20/20 plans including gap closure). Tutorial ready for deployment.
+Stopped at: Milestone v1 complete. All 6 phases executed and verified. 20/20 plans complete. QUAL-01 (exercises) deferred to future milestone by user decision.
 Resume file: None

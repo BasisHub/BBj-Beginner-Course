@@ -41,17 +41,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content -- Differentiators
 
-- [ ] **DIFF-01**: Legacy code sidebars in each relevant chapter (collapsible sections showing legacy equivalents)
-- [ ] **DIFF-02**: Generation mapping guide (visual reference of all 4 BBj generations side-by-side)
-- [ ] **DIFF-03**: Expanded translation tables per chapter (Java/.NET/Python to BBj mappings)
-- [ ] **DIFF-04**: Day-one tasks structure (task-oriented chapters: read existing program, fix legacy bug, add field)
+- [x] **DIFF-01**: Legacy code sidebars in each relevant chapter (collapsible sections showing legacy equivalents)
+- [x] **DIFF-02**: Generation mapping guide (visual reference of all 4 BBj generations side-by-side)
+- [x] **DIFF-03**: Expanded translation tables per chapter (Java/.NET/Python to BBj mappings)
+- [x] **DIFF-04**: Day-one tasks structure (task-oriented chapters: read existing program, fix legacy bug, add field)
 
 ### Quality
 
-- [ ] **QUAL-01**: Every chapter has structured exercises with clear objectives
-- [ ] **QUAL-02**: Every code example is copy-paste runnable in BBj IDE (no fragments without context)
-- [ ] **QUAL-03**: External links verified and working (CI link checking or manual audit)
-- [ ] **QUAL-04**: Consistent BBj code style across all chapters (casing, naming, indentation, comments)
+- [ ] **QUAL-01**: Every chapter has structured exercises with clear objectives (DEFERRED to future milestone)
+- [x] **QUAL-02**: Every code example is copy-paste runnable in BBj IDE (no fragments without context)
+- [x] **QUAL-03**: External links verified and working (CI link checking or manual audit)
+- [x] **QUAL-04**: Consistent BBj code style across all chapters (casing, naming, indentation, comments)
 
 ## v2 Requirements
 
@@ -112,14 +112,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-09 | Phase 5 | Complete |
 | CONT-10 | Phase 5 | Complete |
 | CONT-11 | Phase 5 | Complete |
-| DIFF-01 | Phase 6 | Pending |
-| DIFF-02 | Phase 6 | Pending |
-| DIFF-03 | Phase 6 | Pending |
-| DIFF-04 | Phase 6 | Pending |
-| QUAL-01 | Phase 6 | Pending |
-| QUAL-02 | Phase 6 | Pending |
-| QUAL-03 | Phase 6 | Pending |
-| QUAL-04 | Phase 6 | Pending |
+| DIFF-01 | Phase 6 | Complete |
+| DIFF-02 | Phase 6 | Complete |
+| DIFF-03 | Phase 6 | Complete |
+| DIFF-04 | Phase 6 | Complete |
+| QUAL-01 | Phase 6 | Deferred |
+| QUAL-02 | Phase 6 | Complete |
+| QUAL-03 | Phase 6 | Complete |
+| QUAL-04 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 31 total
@@ -128,4 +128,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-02-01 after Phase 5 completion*
+*Last updated: 2026-02-01 after Phase 6 completion*
