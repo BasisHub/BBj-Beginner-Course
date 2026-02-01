@@ -1,0 +1,80 @@
+rem /**
+rem  * event_types.bbj - Multiple Event Type Demonstrations
+rem  *
+rem  * Demonstrates several event types in one program: ON_BUTTON_PUSH,
+rem  * ON_EDIT_MODIFY, ON_GAINED_FOCUS, and ON_LOST_FOCUS. Each handler
+rem  * prints to the console describing what happened, and updates a
+rem  * status label in the window.
+rem  *
+rem  * Expected output:
+rem  *   A window with a button, input field, and status label.
+rem  *   Console prints for each event: focus gained, focus lost,
+rem  *   text changed, and button pushed.
+rem  *   The status label updates to show the most recent event.
+rem  *
+rem  * Requires: BBj with GUI support (SYSGUI)
+rem  */
+
+class public EventTypesDemo
+    field private BBjWindow window!
+    field private BBjButton button!
+    field private BBjInputE input!
+    field private BBjStaticText statusLabel!
+
+    method public void run()
+        sysgui! = BBjAPI().openSysGui("X0")
+        #window! = sysgui!.addWindow(10, 10, 450, 220, "Event Types Demo", $00100083$)
+
+        rem Controls
+        #window!.addStaticText(200, 20, 20, 80, 25, "Input:")
+        #input! = #window!.addInputE(201, 110, 20, 300, 25, "")
+        #button! = #window!.addButton(202, 110, 60, 120, 30, "Click Me")
+
+        rem Status label to display event info
+        #window!.addStaticText(203, 20, 120, 80, 25, "Status:")
+        #statusLabel! = #window!.addStaticText(204, 110, 120, 300, 25, "Waiting for events...")
+
+        rem Register multiple event types
+        #button!.setCallback(#button!.ON_BUTTON_PUSH, #this!, "onButtonPush")
+        #input!.setCallback(#input!.ON_EDIT_MODIFY, #this!, "onTextChange")
+        #input!.setCallback(#input!.ON_GAINED_FOCUS, #this!, "onFocus")
+        #input!.setCallback(#input!.ON_LOST_FOCUS, #this!, "onLostFocus")
+        #button!.setCallback(#button!.ON_GAINED_FOCUS, #this!, "onFocus")
+        #button!.setCallback(#button!.ON_LOST_FOCUS, #this!, "onLostFocus")
+        #window!.setCallback(#window!.ON_CLOSE, #this!, "onClose")
+
+        process_events
+    methodend
+
+    method public void onButtonPush(BBjButtonPushEvent event!)
+        print "Button pushed"
+        #statusLabel!.setText("Button was clicked")
+    methodend
+
+    method public void onTextChange(BBjEditModifyEvent event!)
+        text$ = event!.getText()
+        print "Text changed to: " + text$
+        #statusLabel!.setText("Text: " + text$)
+    methodend
+
+    method public void onFocus(BBjGainedFocusEvent event!)
+        ctrl! = event!.getControl()
+        id$ = str(ctrl!.getID())
+        print "Focus gained by control " + id$
+        #statusLabel!.setText("Focus gained: control " + id$)
+    methodend
+
+    method public void onLostFocus(BBjLostFocusEvent event!)
+        ctrl! = event!.getControl()
+        id$ = str(ctrl!.getID())
+        print "Focus lost by control " + id$
+        #statusLabel!.setText("Focus lost: control " + id$)
+    methodend
+
+    method public void onClose(BBjCloseEvent event!)
+        release
+    methodend
+classend
+
+app! = new EventTypesDemo()
+app!.run()

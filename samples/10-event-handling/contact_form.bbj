@@ -1,0 +1,79 @@
+rem /**
+rem  * contact_form.bbj - Complete Contact Form with Multiple Event Types
+rem  *
+rem  * Demonstrates a complete GUI application using a Custom Object class.
+rem  * Three input fields (Name, Email, Message) and two buttons (Submit, Clear).
+rem  * Both buttons share the same callback, distinguished by getControl().getID().
+rem  *
+rem  * Expected output:
+rem  *   A window with Name, Email, and Message fields plus Submit and Clear buttons.
+rem  *   Clicking Submit shows a msgbox with all field contents.
+rem  *   Clicking Clear empties all fields.
+rem  *   Closing the window terminates the program.
+rem  *
+rem  * Requires: BBj with GUI support (SYSGUI)
+rem  */
+
+class public ContactForm
+    field private BBjWindow window!
+    field private BBjInputE nameInput!
+    field private BBjInputE emailInput!
+    field private BBjInputE messageInput!
+    field private BBjButton submitBtn!
+    field private BBjButton clearBtn!
+
+    rem Control ID constants
+    field private static BBjNumber SUBMIT_ID = 205
+    field private static BBjNumber CLEAR_ID = 206
+
+    method public void run()
+        sysgui! = BBjAPI().openSysGui("X0")
+        #window! = sysgui!.addWindow(10, 10, 400, 250, "Contact Form", $00100083$)
+
+        rem Labels and input fields
+        #window!.addStaticText(200, 20, 20, 80, 25, "Name:")
+        #nameInput! = #window!.addInputE(201, 110, 20, 250, 25, "")
+
+        #window!.addStaticText(202, 20, 60, 80, 25, "Email:")
+        #emailInput! = #window!.addInputE(203, 110, 60, 250, 25, "")
+
+        #window!.addStaticText(204, 20, 100, 80, 25, "Message:")
+        #messageInput! = #window!.addInputE(207, 110, 100, 250, 25, "")
+
+        rem Buttons
+        #submitBtn! = #window!.addButton(#SUBMIT_ID, 110, 150, 100, 30, "Submit")
+        #clearBtn! = #window!.addButton(#CLEAR_ID, 220, 150, 100, 30, "Clear")
+
+        rem Both buttons share the same handler
+        #submitBtn!.setCallback(#submitBtn!.ON_BUTTON_PUSH, #this!, "onButton")
+        #clearBtn!.setCallback(#clearBtn!.ON_BUTTON_PUSH, #this!, "onButton")
+        #window!.setCallback(#window!.ON_CLOSE, #this!, "onClose")
+
+        process_events
+    methodend
+
+    method public void onButton(BBjButtonPushEvent event!)
+        id = event!.getControl().getID()
+
+        if id = #SUBMIT_ID
+            name$ = #nameInput!.getText()
+            email$ = #emailInput!.getText()
+            message$ = #messageInput!.getText()
+            summary$ = "Name: " + name$ + chr(10) + "Email: " + email$ + chr(10) + "Message: " + message$
+            a = msgbox(summary$, 0, "Contact Submitted")
+        fi
+
+        if id = #CLEAR_ID
+            #nameInput!.setText("")
+            #emailInput!.setText("")
+            #messageInput!.setText("")
+        fi
+    methodend
+
+    method public void onClose(BBjCloseEvent event!)
+        release
+    methodend
+classend
+
+app! = new ContactForm()
+app!.run()

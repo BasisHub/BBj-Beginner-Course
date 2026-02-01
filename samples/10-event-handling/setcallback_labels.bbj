@@ -1,0 +1,40 @@
+rem /**
+rem  * setcallback_labels.bbj - Label-Based setCallback Example
+rem  *
+rem  * Demonstrates setCallback with label targets and getLastEvent().
+rem  * Creates a window with a button and input field. When the button
+rem  * is clicked, a msgbox shows the current input text.
+rem  *
+rem  * Expected output:
+rem  *   A window with a text input and "Click Me" button.
+rem  *   Clicking the button shows a msgbox with the input text.
+rem  *   Closing the window terminates the program.
+rem  *
+rem  * Requires: BBj with GUI support (SYSGUI)
+rem  */
+
+sysgui! = BBjAPI().openSysGui("X0")
+window! = sysgui!.addWindow(10, 10, 400, 200, "Label Callback Demo", $00100083$)
+
+rem Add controls
+window!.addStaticText(200, 20, 20, 80, 25, "Enter text:")
+input! = window!.addInputE(201, 110, 20, 250, 25, "")
+button! = window!.addButton(202, 110, 70, 120, 30, "Click Me")
+
+rem Register label-based callbacks
+button!.setCallback(button!.ON_BUTTON_PUSH, "onButtonPush")
+window!.setCallback(window!.ON_CLOSE, "onClose")
+
+rem Start the event loop
+process_events
+
+onButtonPush:
+    event! = BBjAPI().getSysGui().getLastEvent()
+    text$ = input!.getText()
+    if text$ = "" then text$ = "(empty)"
+    a = msgbox("You entered: " + text$, 0, "Button Clicked")
+return
+
+onClose:
+    release
+return

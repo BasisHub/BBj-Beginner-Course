@@ -1,0 +1,55 @@
+rem /**
+rem  * setcallback_methods.bbj - Method-Based setCallback with Custom Object
+rem  *
+rem  * Demonstrates setCallback with method targets on a Custom Object class.
+rem  * Each callback method receives a typed event parameter.
+rem  * Registers ON_BUTTON_PUSH, ON_EDIT_MODIFY, and ON_CLOSE events.
+rem  *
+rem  * Expected output:
+rem  *   A window with a text input and "Click Me" button.
+rem  *   Typing in the input prints text changes to the console.
+rem  *   Clicking the button shows a msgbox with the current input text.
+rem  *   Closing the window terminates the program.
+rem  *
+rem  * Requires: BBj with GUI support (SYSGUI)
+rem  */
+
+class public MethodCallbackDemo
+    field private BBjWindow window!
+    field private BBjButton button!
+    field private BBjInputE input!
+
+    method public void run()
+        sysgui! = BBjAPI().openSysGui("X0")
+        #window! = sysgui!.addWindow(10, 10, 400, 200, "Method Callback Demo", $00100083$)
+
+        rem Add controls
+        #window!.addStaticText(200, 20, 20, 80, 25, "Enter text:")
+        #input! = #window!.addInputE(201, 110, 20, 250, 25, "")
+        #button! = #window!.addButton(202, 110, 70, 120, 30, "Click Me")
+
+        rem Register method-based callbacks
+        #button!.setCallback(#button!.ON_BUTTON_PUSH, #this!, "onButtonPush")
+        #input!.setCallback(#input!.ON_EDIT_MODIFY, #this!, "onTextChange")
+        #window!.setCallback(#window!.ON_CLOSE, #this!, "onClose")
+
+        process_events
+    methodend
+
+    method public void onButtonPush(BBjButtonPushEvent event!)
+        text$ = #input!.getText()
+        if text$ = "" then text$ = "(empty)"
+        a = msgbox("You entered: " + text$, 0, "Button Clicked")
+    methodend
+
+    method public void onTextChange(BBjEditModifyEvent event!)
+        print "Text changed to: " + event!.getText()
+    methodend
+
+    method public void onClose(BBjCloseEvent event!)
+        release
+    methodend
+classend
+
+app! = new MethodCallbackDemo()
+app!.run()
