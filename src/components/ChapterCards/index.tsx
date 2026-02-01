@@ -52,10 +52,10 @@ const chapters: ChapterItem[] = [
     comingSoon: true,
   },
   {
-    title: 'File I/O',
+    title: 'File I/O and Record Access',
     slug: '/file-io',
     description:
-      'Record-oriented file access, string templates, and data channels.',
+      'Record-oriented file access, string templates, and data channels. Context for legacy systems.',
   },
   {
     title: 'Database and SQL',

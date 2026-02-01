@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-title: "File I/O and Data Access"
+title: "File I/O and Record Access"
 ---
 
-# File I/O and Record-Oriented Data Access
+# File I/O and Record Access
 
-Modern BBj applications typically use SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm), which provides familiar table-based access to BBj files. However, if you're maintaining or extending code written before these abstractions existed—or working with systems that predate the Data Dictionary—you'll encounter BBj's native file I/O layer directly.
+For new BBj applications, SQL through the [BBj Data Dictionary](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBjDataDictionary.htm) is the recommended approach to data access. This chapter covers BBj's native record-oriented file I/O -- the system you will encounter when maintaining or extending legacy code.
 
-This record-oriented approach exposes the raw mechanics: channels, byte positions, field delimiters, and explicit pointer navigation. It's a design philosophy rooted in the 1980s when Business BASIC first emerged, and understanding it remains essential for working with legacy systems.
+The record-oriented approach exposes the raw mechanics: channels, byte positions, field delimiters, and explicit pointer navigation. It's a design philosophy rooted in the 1980s when Business BASIC first emerged, and understanding it remains essential for working with existing systems.
 
 **Key mindset shift:** In SQL, you declare *what* you want. In BBj file I/O, you specify *how* to get it.
 
