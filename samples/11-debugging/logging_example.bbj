@@ -1,0 +1,51 @@
+rem /**
+rem  * logging_example.bbj - Logging Techniques
+rem  *
+rem  * Demonstrates System.out.println for server-side debug logging
+rem  * and PRINT for console output. These techniques work when
+rem  * interactive console debugging is not available.
+rem  *
+rem  * Expected output:
+rem  *   === Logging Example ===
+rem  *   Processing order: 12345
+rem  *   Order total: 249.95
+rem  *   Processing complete.
+rem  *   === Done ===
+rem  *
+rem  * System.out.println output goes to the BBj debug log
+rem  * in the <bbj>/log directory, viewable in Enterprise Manager.
+rem  */
+
+use java.lang.System
+
+rem Log to the BBj debug log (server-side, persists after program ends)
+System.out.println("Debug: logging_example.bbj started")
+
+print "=== Logging Example ==="
+
+rem Simulate processing with logging at key points
+orderId = 12345
+System.out.println("Debug: processing order id=" + str(orderId))
+print "Processing order: ", orderId
+
+rem Simulate a calculation
+quantity = 5
+unitPrice = 49.99
+total = quantity * unitPrice
+System.out.println("Debug: order total calculated=" + str(total))
+print "Order total: ", total
+
+rem Log completion
+System.out.println("Debug: processing complete for order id=" + str(orderId))
+print "Processing complete."
+
+rem Note: MSGBOX(var$) is another option for quick visual debugging,
+rem but it pops up a dialog that blocks execution. It is most useful
+rem for one-off checks. Do not leave MSGBOX calls in production code.
+rem
+rem For BUI/DWC applications, you can also log to the browser console:
+rem   sysGui!.executeScript("console.log('debug message')")
+
+print "=== Done ==="
+
+System.out.println("Debug: logging_example.bbj finished")

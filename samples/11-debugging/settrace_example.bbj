@@ -1,0 +1,43 @@
+rem /**
+rem  * settrace_example.bbj - SETTRACE: Execution Trace to File
+rem  *
+rem  * Demonstrates SETTRACE/ENDTRACE to record line-by-line execution
+rem  * to a file. The trace captures every statement as it runs.
+rem  *
+rem  * Expected output:
+rem  *   Processing...
+rem  *   Loop iteration: 1
+rem  *   Loop iteration: 2
+rem  *   Loop iteration: 3
+rem  *   Value is small
+rem  *   Trace written to /tmp/debug_trace.txt
+rem  *
+rem  * After running, inspect /tmp/debug_trace.txt to see the execution trace.
+rem  */
+
+rem Open a file for the trace output
+open(8, mode="O_CREATE,O_TRUNC")"/tmp/debug_trace.txt"
+
+rem Start tracing -- every line executed from here is recorded
+settrace(8)
+
+print "Processing..."
+
+rem A loop: the trace shows each iteration
+for i = 1 to 3
+    print "Loop iteration: ", i
+next i
+
+rem A conditional: the trace shows which branch was taken
+value = 7
+if value > 10 then
+    print "Value is large"
+else
+    print "Value is small"
+endif
+
+rem Stop tracing
+endtrace
+close(8)
+
+print "Trace written to /tmp/debug_trace.txt"

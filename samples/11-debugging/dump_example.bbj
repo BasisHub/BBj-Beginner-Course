@@ -1,0 +1,36 @@
+rem /**
+rem  * dump_example.bbj - DUMP: Variable Snapshot to File
+rem  *
+rem  * Demonstrates the DUMP verb to write all variables to a file
+rem  * and the filtered DUMP form for current scope only.
+rem  *
+rem  * Expected output:
+rem  *   Variables dumped to /tmp/debug_dump.txt
+rem  *   --- Filtered DUMP (current scope) ---
+rem  *   (variables printed to console)
+rem  *
+rem  * After running, inspect /tmp/debug_dump.txt to see all variables.
+rem  */
+
+rem Create variables of different types
+name$ = "Alice"
+role$ = "Developer"
+count = 42
+total = 99.95
+active = 1
+
+rem Create an object reference (BBjVector)
+items! = BBjAPI().makeVector()
+items!.addItem("first")
+items!.addItem("second")
+items!.addItem("third")
+
+rem Dump all variables to a file
+open(7, mode="O_CREATE,O_TRUNC")"/tmp/debug_dump.txt"
+dump(7)
+close(7)
+print "Variables dumped to /tmp/debug_dump.txt"
+
+rem Filtered DUMP: show only variables at the current scope level
+print "--- Filtered DUMP (current scope) ---"
+dump(0, mode="vars,level="+str(tcb(13)))
