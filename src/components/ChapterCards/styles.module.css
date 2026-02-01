@@ -1,0 +1,58 @@
+.chapters {
+  padding: 2rem 0;
+}
+
+.cardCol {
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  display: block;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius, 0.5rem);
+  padding: 1.25rem;
+  height: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.comingSoon {
+  opacity: 0.7;
+}
+
+.chapterNumber {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content-secondary);
+  margin-left: 0.5rem;
+}
