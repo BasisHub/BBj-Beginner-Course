@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 3 - Existing Content (review and modernize the 4 existing content sections)
+**Current focus:** Phase 4 - Core Language Chapters (error handling, strings/numbers, collections)
 
 ## Current Position
 
-Phase: 3 of 6 (Existing Content) -- Complete
-Plan: 3 of 3 in current phase
-Status: Phase complete
-Last activity: 2026-02-01 -- Completed 03-02-PLAN.md (OOP chapter split into index + 3 subpages)
+Phase: 4 of 6 (Core Language Chapters)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-01 -- Completed 04-01-PLAN.md (Error handling chapter with index + 3 subpages + 4 samples)
 
-Progress: [██████████░░░░░░░░] ~56% (10/18 plans)
+Progress: [█████████████░░░░░] ~50% (9/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 3 min
-- Total execution time: 24 min
+- Total execution time: 27 min
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [██████████░░░░░░░░] ~56% (10/18 p
 | 01-foundation | 2/2 | 6 min | 3 min |
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
+| 04-core-language | 1/3 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (4 min), 03-01 (3 min), 03-03 (2 min), 03-02 (3 min)
+- Last 5 plans: 03-01 (3 min), 03-03 (2 min), 03-02 (3 min), 04-01 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -69,6 +70,9 @@ Recent decisions affecting current work:
 - [03-02]: Three-layer OOP framing: language classes, Java interop, BBjAPI object model
 - [03-02]: Videos wrapped in <details>/<summary> HTML, all placed in 01-writing-classes.md
 - [03-02]: BBjAPI subpage is orientation-only -- depth deferred to later chapters
+- [04-01]: No try/catch in BBj -- trap-and-branch model exclusively (SETERR, ERR=, THROW)
+- [04-01]: Error trapping priority: END= > DOM= > function ERR= > statement ERR= > SETERR
+- [04-01]: Sample .bbj file pattern: rem comment headers with expected output, self-contained runnable
 
 ### Pending Todos
 
@@ -81,5 +85,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 03-02-PLAN.md -- Phase 3 complete (OOP chapter split, all existing content modernized)
+Stopped at: Completed 04-01-PLAN.md -- Error handling chapter (index + 3 subpages + 4 samples)
 Resume file: None

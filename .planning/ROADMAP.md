@@ -82,7 +82,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md -- Error handling chapter (SETERR, ERR=, THROW, patterns)
+- [x] 04-01-PLAN.md -- Error handling chapter (SETERR, ERR=, THROW, patterns)
 - [ ] 04-02-PLAN.md -- Strings and numbers chapter (LEN, substrings, CVS, POS, MASK, STR, NUM)
 - [ ] 04-03-PLAN.md -- Collections chapter (BBjVector, java.util.HashMap, DIM arrays, VECTOR())
 
@@ -131,6 +131,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 1. Foundation | 2/2 | Complete | 2026-01-31 |
 | 2. Structure | 3/3 | Complete | 2026-02-01 |
 | 3. Existing Content | 3/3 | Complete | 2026-02-01 |
-| 4. Core Language Chapters | 0/3 | Not started | - |
+| 4. Core Language Chapters | 1/3 | In progress | - |
 | 5. Data and Application Chapters | 0/4 | Not started | - |
 | 6. Differentiators and Quality | 0/3 | Not started | - |
