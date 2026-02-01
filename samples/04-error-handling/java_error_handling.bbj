@@ -1,0 +1,21 @@
+rem /**
+rem  * java_error_handling.bbj - Handling Java exceptions in BBj
+rem  *
+rem  * When a Java method throws an exception, BBj traps it as error 252.
+rem  * Use ERR= or SETERR to catch it, and BBjAPI().getLastJavaException()
+rem  * to inspect the original Java exception.
+rem  *
+rem  * Expected output:
+rem  *   Error: 252  -  Java exception
+rem  */
+
+use java.util.HashMap
+
+map! = new HashMap()
+x$ = map!.get("missing_key", err=oops)
+print "Got value: ", x$
+release
+
+oops:
+    print "Error: ", err, " - ", errmes(-1)
+    release

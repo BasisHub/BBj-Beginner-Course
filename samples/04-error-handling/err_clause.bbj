@@ -1,0 +1,23 @@
+rem /**
+rem  * err_clause.bbj - ERR= clause on individual statements
+rem  *
+rem  * Demonstrates statement-level error handling with ERR=.
+rem  * ERR=*NEXT skips the error; ERR=label branches to a handler.
+rem  *
+rem  * Expected output:
+rem  *   Continued after error, x is: 0
+rem  *   Could not open file: File does not exist
+rem  */
+
+rem ERR=*NEXT: skip and continue on the next line
+x = num("not a number", err=*next)
+print "Continued after error, x is: ", x
+
+rem ERR= with a label: branch to handler on error
+open(1, err=fileErr)"nonexistent.dat"
+print "File opened"
+release
+
+fileErr:
+    print "Could not open file: ", errmes(-1)
+    release

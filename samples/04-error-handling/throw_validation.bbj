@@ -1,0 +1,30 @@
+rem /**
+rem  * throw_validation.bbj - THROW from a class method
+rem  *
+rem  * Demonstrates raising custom errors with THROW inside a class.
+rem  * The error propagates to the caller's SETERR handler.
+rem  *
+rem  * Expected output:
+rem  *   Validation error # 256 : Input cannot be empty
+rem  */
+
+class public Validator
+    method public void validate(BBjString input$)
+        if len(input$) = 0 then
+            throw "Input cannot be empty", 256
+        fi
+        if len(input$) > 100 then
+            throw "Input too long (max 100 characters)", 257
+        fi
+    methodend
+classend
+
+seterr handler
+declare Validator v!
+v! = new Validator()
+v!.validate("")
+release
+
+handler:
+    print "Validation error #", err, ": ", errmes(-1)
+    release

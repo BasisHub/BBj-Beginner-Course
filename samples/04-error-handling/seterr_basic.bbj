@@ -1,0 +1,20 @@
+rem /**
+rem  * seterr_basic.bbj - Basic SETERR error trapping
+rem  *
+rem  * Demonstrates the fundamental SETERR + label pattern.
+rem  * When an error occurs, execution branches to the handler label.
+rem  *
+rem  * Expected output:
+rem  *   Error # 41  -  Invalid assignment
+rem  */
+
+seterr handler
+
+rem Attempt to convert a non-numeric string to a number
+x = num("not a number")
+print "This line is never reached"
+release
+
+handler:
+    print "Error #", err, " - ", errmes(-1)
+    release
