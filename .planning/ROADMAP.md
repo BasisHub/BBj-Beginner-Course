@@ -96,13 +96,13 @@ Plans:
   3. A reader can wire up event callbacks using setCallback, handle common event types, and understand the process_events loop
   4. A reader can use the BBj IDE debugger, interpret BEM error information, look up common error codes, and apply PRINT-based debugging
   5. Each chapter has corresponding .bbj sample files in the samples/ directory that run without modification
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 05-01: Database/SQL access chapter
-- [ ] 05-02: Java interop chapter
-- [ ] 05-03: Event handling chapter
-- [ ] 05-04: Debugging chapter
+- [ ] 05-01-PLAN.md -- Database/SQL chapter (SQLOPEN, SQLPREP, SQLFETCH lifecycle)
+- [ ] 05-02-PLAN.md -- Java interop chapter (basics, advanced patterns, practical libraries)
+- [ ] 05-03-PLAN.md -- Event handling chapter (setCallback, event types, legacy patterns)
+- [ ] 05-04-PLAN.md -- Debugging chapter (console debugging, tracing, logging)
 
 ### Phase 6: Differentiators and Quality
 **Goal**: The tutorial delivers unique value no other BBj resource provides -- systematic legacy code reading training, generation mapping, cross-language translation -- and every chapter meets quality standards for exercises, runnable code, link integrity, and consistent style
