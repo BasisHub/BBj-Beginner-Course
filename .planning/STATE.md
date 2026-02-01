@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 ## Current Position
 
 Phase: 5 of 6 (Data and Application Chapters)
-Plan: 3 of 4 in current phase
+Plan: 4 of 4 in current phase (3 complete, 05-02 remaining)
 Status: In progress
-Last activity: 2026-02-01 -- Completed 05-03-PLAN.md (Event Handling chapter with index + 3 subpages + 4 samples)
+Last activity: 2026-02-01 -- Completed 05-04-PLAN.md (Debugging chapter with index + 2 subpages + 3 samples)
 
-Progress: [██████████████████████░░] ~78% (14/18 plans)
+Progress: [████████████████████████░░░] ~83% (15/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 14
+- Total plans completed: 15
 - Average duration: 3 min
-- Total execution time: 41 min
+- Total execution time: 44 min
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: [██████████████████████░
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
 | 04-core-language | 3/3 | 9 min | 3 min |
-| 05-data-and-application | 3/4 | 9 min | 3 min |
+| 05-data-and-application | 4/4 | 12 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (4 min), 05-01 (3 min), 05-04 (3 min), 05-03 (3 min)
+- Last 5 plans: 04-02 (4 min), 05-01 (3 min), 05-04 (3 min), 05-03 (3 min), 05-04 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -86,6 +86,9 @@ Recent decisions affecting current work:
 - [05-03]: setCallback is the sole recommended event pattern; CALLBACK verb and READ RECORD are legacy reference only
 - [05-03]: Core controls limited to BBjWindow, BBjButton, BBjInputE for all event examples
 - [05-03]: SYSGUI explained briefly as setup plumbing, not a standalone tutorial section
+- [05-04]: Console debugging is primary approach; IDE debugger mentioned briefly as alternative
+- [05-04]: Error codes cross-linked to error handling chapter, not duplicated in debugging chapter
+- [05-04]: SETESC verb mentioned in console access control context but not given full section
 
 ### Pending Todos
 
@@ -98,5 +101,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 05-03-PLAN.md -- Event Handling chapter done, Phase 5 in progress (05-02 remaining)
+Stopped at: Completed 05-04-PLAN.md -- Debugging chapter done, Phase 5 in progress (05-02 remaining)
 Resume file: None
