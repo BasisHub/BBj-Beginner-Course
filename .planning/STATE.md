@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 
 ## Current Position
 
-Phase: 2 of 6 (Structure) -- Complete
-Plan: 3 of 3 in current phase
-Status: Phase complete
-Last activity: 2026-02-01 -- Completed 02-03-PLAN.md (build verification and visual spot-check)
+Phase: 3 of 6 (Existing Content)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-01 -- Completed 03-01-PLAN.md (Getting Started text-first rewrite)
 
-Progress: [███████░░░░░░░░░░░] ~39% (7/18 plans)
+Progress: [████████░░░░░░░░░░] ~44% (8/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: 3 min
-- Total execution time: 16 min
+- Total execution time: 19 min
 
 **By Phase:**
 
@@ -29,9 +29,10 @@ Progress: [███████░░░░░░░░░░░] ~39% (7/18 pl
 |-------|-------|-------|----------|
 | 01-foundation | 2/2 | 6 min | 3 min |
 | 02-structure | 3/3 | 10 min | 3 min |
+| 03-existing-content | 1/3 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (2 min), 02-01 (3 min), 02-02 (3 min), 02-03 (4 min)
+- Last 5 plans: 02-01 (3 min), 02-02 (3 min), 02-03 (4 min), 03-01 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -59,6 +60,9 @@ Recent decisions affecting current work:
 - [02-02]: Component directory pattern established: src/components/Name/index.tsx + styles.module.css
 - [02-03]: Dark mode toggle works correctly; browser extension overriding data-theme was a false alarm
 - [02-03]: BBj documentation URL fixed (bbjobjects/bbjobjects.htm -> index.htm) across navbar and 7 placeholder pages
+- [03-01]: Used <details>/<summary> HTML for collapsible videos (zero dependencies, Docusaurus styles natively)
+- [03-01]: Comparison tables moved to Introduction as orientation content (not Getting Started)
+- [03-01]: Collapsible video pattern: <details><summary>Watch the video: [Title]</summary> with MDX blank line rules
 
 ### Pending Todos
 
@@ -71,5 +75,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 02-03-PLAN.md -- Phase 2 complete (build verification and visual spot-check approved)
+Stopped at: Completed 03-01-PLAN.md -- Getting Started text-first rewrite with collapsible videos
 Resume file: None
