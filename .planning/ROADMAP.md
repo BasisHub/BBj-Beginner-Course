@@ -50,7 +50,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Directory restructure, sidebar configuration, and samples directory
+- [x] 02-01-PLAN.md -- Directory restructure, sidebar configuration, and samples directory
 - [ ] 02-02-PLAN.md -- Homepage components (Hero, ChapterCards, HomepageFeatures)
 - [ ] 02-03-PLAN.md -- Build verification and visual spot-check
 
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-01-31 |
-| 2. Structure | 0/3 | Not started | - |
+| 2. Structure | 1/3 | In progress | - |
 | 3. Existing Content | 0/3 | Not started | - |
 | 4. Core Language Chapters | 0/3 | Not started | - |
 | 5. Data and Application Chapters | 0/4 | Not started | - |
