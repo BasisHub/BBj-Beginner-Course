@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 4 - Core Language Chapters -- Complete
+**Current focus:** Phase 5 - Data and Application Chapters
 
 ## Current Position
 
-Phase: 4 of 6 (Core Language Chapters) -- Complete
-Plan: 3 of 3 in current phase
-Status: Phase complete
-Last activity: 2026-02-01 -- Completed 04-02-PLAN.md (Strings and Numbers chapter with index + 3 subpages + 4 samples)
+Phase: 5 of 6 (Data and Application Chapters)
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-01 -- Completed 05-01-PLAN.md (Database and SQL chapter with index + 3 subpages + 4 samples)
 
-Progress: [████████████████░░] ~67% (12/18 plans)
+Progress: [██████████████████░░░] ~72% (13/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
+- Total plans completed: 13
 - Average duration: 3 min
-- Total execution time: 35 min
+- Total execution time: 38 min
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [████████████████░░] ~67% (12/18 p
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
 | 04-core-language | 3/3 | 9 min | 3 min |
+| 05-data-and-application | 1/4 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (3 min), 04-01 (3 min), 04-03 (2 min), 04-02 (4 min)
+- Last 5 plans: 04-01 (3 min), 04-03 (2 min), 04-02 (4 min), 05-01 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -79,6 +80,9 @@ Recent decisions affecting current work:
 - [04-03]: BBjHashMap mentioned only as deprecated -- java.util.HashMap is the replacement
 - [04-03]: contains() type sensitivity documented as gotcha (Java .equals() behavior)
 - [04-03]: VECTOR() function noted as BBj 16.0+ feature for version awareness
+- [05-01]: SQLFETCH is the primary SQL access pattern; BBjRecordSet mentioned briefly for GUI data-binding only
+- [05-01]: END= on SQLFETCH for end-of-data, ERR= reserved for actual SQL errors
+- [05-01]: Subpage 03 named "SQL Patterns and Alternatives" to reflect SQLFETCH-primary approach
 
 ### Pending Todos
 
@@ -86,10 +90,10 @@ None.
 
 ### Blockers/Concerns
 
-- Research flags Phase 5 chapters (Database/SQL, Java Interop) for deeper research during planning
+- Research flags Phase 5 chapters (Java Interop, Event Handling, Debugging) for deeper research during planning
 
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 04-02-PLAN.md -- Phase 4 complete (all 3 core language chapters written)
+Stopped at: Completed 05-01-PLAN.md -- Database and SQL chapter done, Phase 5 in progress
 Resume file: None
