@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - TypeScript migration, plugins, and build infrastructure matching DWC tutorial
 - [x] **Phase 2: Structure** - Content reorganization into numbered chapters, homepage components, and sample code directory
-- [ ] **Phase 3: Existing Content** - Review and improve the 4 existing content sections for modern-first framing
+- [x] **Phase 3: Existing Content** - Review and improve the 4 existing content sections for modern-first framing
 - [ ] **Phase 4: Core Language Chapters** - Error handling, string/numeric functions, and collections chapters
 - [ ] **Phase 5: Data and Application Chapters** - Database/SQL, Java interop, event handling, and debugging chapters
 - [ ] **Phase 6: Differentiators and Quality** - Legacy code sidebars, generation mapping, translation tables, exercises, and code quality
@@ -66,9 +66,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Getting Started text-first rewrite, comparison tables to Introduction, peer tone
-- [ ] 03-02-PLAN.md -- Object-Oriented chapter split into index + 3 subpages (classes, Java interop, BBjAPI)
-- [ ] 03-03-PLAN.md -- File I/O modern-first reframing and Web Development review
+- [x] 03-01-PLAN.md -- Getting Started text-first rewrite, comparison tables to Introduction, peer tone
+- [x] 03-02-PLAN.md -- Object-Oriented chapter split into index + 3 subpages (classes, Java interop, BBjAPI)
+- [x] 03-03-PLAN.md -- File I/O modern-first reframing and Web Development review
 
 ### Phase 4: Core Language Chapters
 **Goal**: Readers can handle errors, manipulate strings and numbers, and work with collections in BBj -- the three most frequently needed capabilities after basic syntax
@@ -130,7 +130,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 |-------|---------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-01-31 |
 | 2. Structure | 3/3 | Complete | 2026-02-01 |
-| 3. Existing Content | 0/3 | Not started | - |
+| 3. Existing Content | 3/3 | Complete | 2026-02-01 |
 | 4. Core Language Chapters | 0/3 | Not started | - |
 | 5. Data and Application Chapters | 0/4 | Not started | - |
 | 6. Differentiators and Quality | 0/3 | Not started | - |

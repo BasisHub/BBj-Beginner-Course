@@ -24,10 +24,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content -- Existing (Improve)
 
-- [ ] **CONT-01**: Getting Started section verified and updated (text fallbacks for video-dependent steps)
-- [ ] **CONT-02**: Object-Oriented chapter expanded with inheritance, interfaces, constructors, and practical patterns
-- [ ] **CONT-03**: File I/O chapter reviewed and adjusted (modern-first framing, legacy as context)
-- [ ] **CONT-04**: Web Development section maintained as brief DWC Course handoff
+- [x] **CONT-01**: Getting Started section verified and updated (text fallbacks for video-dependent steps)
+- [x] **CONT-02**: Object-Oriented chapter expanded with inheritance, interfaces, constructors, and practical patterns
+- [x] **CONT-03**: File I/O chapter reviewed and adjusted (modern-first framing, legacy as context)
+- [x] **CONT-04**: Web Development section maintained as brief DWC Course handoff
 
 ### Content -- New Chapters
 
@@ -101,10 +101,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFRA-10 | Phase 2 | Complete |
 | INFRA-11 | Phase 2 | Complete |
 | INFRA-12 | Phase 2 | Complete |
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
 | CONT-05 | Phase 4 | Pending |
 | CONT-06 | Phase 4 | Pending |
 | CONT-07 | Phase 4 | Pending |
@@ -128,4 +128,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-02-01 after Phase 2 completion*
+*Last updated: 2026-02-01 after Phase 3 completion*
