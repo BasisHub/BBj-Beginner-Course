@@ -34,10 +34,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **CONT-05**: Error handling chapter covering SETERR, THROW, ON ERR, error codes, and error trapping patterns
 - [x] **CONT-06**: String and numeric functions chapter (LEN, substrings, POS, CVS, STR, NUM, MASK with examples)
 - [x] **CONT-07**: Collections chapter (BBjVector, java.util.HashMap, Java collections interop, iteration patterns)
-- [ ] **CONT-08**: Event handling chapter (setCallback model, event objects, common events, process_events loop)
-- [ ] **CONT-09**: Database/SQL access chapter (SQLOPEN/SQLPREP/SQLEXEC, BBjRecordSet, Data Dictionary)
-- [ ] **CONT-10**: Java interop chapter (calling Java from BBj, using Java libraries, extending Java interfaces)
-- [ ] **CONT-11**: Debugging chapter (BBj IDE debugger, BEM, error codes, common troubleshooting patterns)
+- [x] **CONT-08**: Event handling chapter (setCallback model, event objects, common events, process_events loop)
+- [x] **CONT-09**: Database/SQL access chapter (SQLOPEN/SQLPREP/SQLEXEC, BBjRecordSet, Data Dictionary)
+- [x] **CONT-10**: Java interop chapter (calling Java from BBj, using Java libraries, extending Java interfaces)
+- [x] **CONT-11**: Debugging chapter (BBj IDE debugger, BEM, error codes, common troubleshooting patterns)
 
 ### Content -- Differentiators
 
@@ -108,10 +108,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-05 | Phase 4 | Complete |
 | CONT-06 | Phase 4 | Complete |
 | CONT-07 | Phase 4 | Complete |
-| CONT-08 | Phase 5 | Pending |
-| CONT-09 | Phase 5 | Pending |
-| CONT-10 | Phase 5 | Pending |
-| CONT-11 | Phase 5 | Pending |
+| CONT-08 | Phase 5 | Complete |
+| CONT-09 | Phase 5 | Complete |
+| CONT-10 | Phase 5 | Complete |
+| CONT-11 | Phase 5 | Complete |
 | DIFF-01 | Phase 6 | Pending |
 | DIFF-02 | Phase 6 | Pending |
 | DIFF-03 | Phase 6 | Pending |
@@ -128,4 +128,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-02-01 after Phase 4 completion*
+*Last updated: 2026-02-01 after Phase 5 completion*
