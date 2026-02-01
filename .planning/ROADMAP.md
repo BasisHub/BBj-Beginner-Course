@@ -91,10 +91,10 @@ Plans:
 **Depends on**: Phase 4 (database chapter needs error handling and collections; Java interop needs OOP from Phase 3)
 **Requirements**: CONT-08, CONT-09, CONT-10, CONT-11
 **Success Criteria** (what must be TRUE):
-  1. A reader can open a SQL connection, prepare and execute queries, and iterate a BBjRecordSet using working examples
+  1. A reader can open a SQL connection, prepare and execute queries, and iterate results using SQLFETCH with working examples
   2. A reader can call Java classes from BBj, use Java libraries, and extend Java interfaces with BBj code
   3. A reader can wire up event callbacks using setCallback, handle common event types, and understand the process_events loop
-  4. A reader can use the BBj IDE debugger, interpret BEM error information, look up common error codes, and apply PRINT-based debugging
+  4. A reader can use console debugging techniques (dot-stepping, DUMP, SETTRACE), interpret BEM error information, look up common error codes, and apply PRINT-based debugging
   5. Each chapter has corresponding .bbj sample files in the samples/ directory that run without modification
 **Plans**: 4 plans
 
