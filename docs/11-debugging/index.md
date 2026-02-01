@@ -9,4 +9,4 @@ title: "Debugging"
 This chapter is coming soon. It will cover the BBj IDE debugger, BEM, common error codes, and PRINT-based debugging techniques.
 :::
 
-In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm).
+In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm).

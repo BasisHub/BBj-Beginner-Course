@@ -9,4 +9,4 @@ title: "Database and SQL"
 This chapter is coming soon. It will cover SQLOPEN, SQLPREP, BBjRecordSet, and parameterized queries in BBj.
 :::
 
-In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm).
+In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm).

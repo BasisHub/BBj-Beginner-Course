@@ -9,4 +9,4 @@ title: "Strings and Numbers"
 This chapter is coming soon. It will cover LEN, MID, POS, CVS, STR, NUM, MASK, and string templates in BBj.
 :::
 
-In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm).
+In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm).

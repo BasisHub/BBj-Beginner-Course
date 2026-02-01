@@ -9,4 +9,4 @@ title: "Collections"
 This chapter is coming soon. It will cover BBjVector, BBjHashMap, Java collections interop, and iteration patterns in BBj.
 :::
 
-In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm).
+In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm).

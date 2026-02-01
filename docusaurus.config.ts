@@ -97,7 +97,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
-          href: 'https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm',
+          href: 'https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm',
           label: 'BBj Documentation',
           position: 'right',
         },
