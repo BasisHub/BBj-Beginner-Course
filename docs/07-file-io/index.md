@@ -11,7 +11,19 @@ The record-oriented approach exposes the raw mechanics: channels, byte positions
 
 **Key mindset shift:** In SQL, you declare *what* you want. In BBj file I/O, you specify *how* to get it.
 
-## File I/O for Java/.NET Developers
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Open file | `new FileInputStream(f)` | `open(f)` | `File.Open(f)` | `OPEN(chan) f$` |
+| Read record | `reader.readLine()` | `f.readline()` | `reader.ReadLine()` | `READ RECORD(chan) rec$` |
+| Write record | `writer.write(data)` | `f.write(data)` | `writer.Write(data)` | `WRITE RECORD(chan) rec$` |
+| Close file | `stream.close()` | `f.close()` | `stream.Close()` | `CLOSE(chan)` |
+| Check exists | `Files.exists(path)` | `os.path.exists(f)` | `File.Exists(f)` | `OPEN(chan,ERR=notfound) f$` |
+
+BBj file I/O uses channels (integer handles) and string templates (field layout definitions that live in code, not in the file). For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+### Concept Mapping
 
 If you're familiar with file streams or database access in other languages, here's how BBj concepts map:
 

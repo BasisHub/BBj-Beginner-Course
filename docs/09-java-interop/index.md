@@ -19,3 +19,16 @@ BBj runs on the JVM and gives you direct access to any Java class. You can creat
 | Get exception | `BBjAPI().getLastJavaException()` | Inspect the Java exception object |
 
 This chapter covers three tiers: **basics** (importing and using Java classes), **advanced patterns** (interfaces, generics, classpath configuration), and **practical libraries** (JSON, HTTP, hashing, and more).
+
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Import class | `import java.util.HashMap;` | `from collections import OrderedDict` | `using System.Collections;` | `use java.util.HashMap` |
+| Create instance | `new HashMap()` | `OrderedDict()` | `new Dictionary()` | `new HashMap()` |
+| Call method | `obj.put("k", "v")` | `obj.update({"k": "v"})` | `obj.Add("k", "v")` | `obj!.put("k", "v")` |
+| Implement interface | `class X implements Y` | `class X(Y):` | `class X : Y` | `class public X implements Y` |
+| Cast object | `(String) obj` | N/A (duck typing) | `(string) obj` | `cast(String, obj!)` |
+| Get Java exception | N/A (native) | N/A | N/A | `BBjAPI().getLastJavaException()` |
+
+Since BBj runs on the JVM, you use Java classes directly -- no bridge or FFI layer needed. `use` statements work like Java imports, and `new` creates Java objects the same way. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).

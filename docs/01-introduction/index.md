@@ -22,9 +22,9 @@ This material is written for experienced software developers who are new to BBj.
 
 The material **does not** cover general programming concepts. If you need to strengthen any of these areas, address those gaps before starting.
 
-## BBj for Java/.NET Developers
+## BBj for Java, Python, and C# Developers
 
-If you are coming from Java, C#, or similar languages, this section maps familiar concepts to their BBj equivalents.
+If you are coming from Java, Python, C#, or similar languages, this section maps familiar concepts to their BBj equivalents. For a comprehensive task-by-task translation reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
 
 ### What is BBj?
 
@@ -32,14 +32,14 @@ BBj is a **dynamic, interpreted language that runs on the JVM**. It has automati
 
 ### Key Terminology
 
-| Java/.NET | BBj | Notes |
-|-----------|-----|-------|
-| keywords/statements | **verbs** | See [Alphabetical Verbs](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
-| CLASSPATH | **PREFIX** | Search path for classes. See [PREFIX verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bbj-commands/prefix_verb_set_file_system_search_paths_bbj.htm) |
-| `this.field` | **`#field`** | Instance field reference within methods |
-| ArrayList | **BBjVector** | `BBjAPI().makeVector()` - dynamic array |
-| try/catch | **SETERR/THROW** | `SETERR errHandler` sets handler, `THROW` raises errors |
-| static factory | **BBjAPI()** | Entry point for creating BBj objects (windows, vectors, etc.) |
+| Java/C# | Python | BBj | Notes |
+|----------|--------|-----|-------|
+| keywords/statements | keywords/statements | **verbs** | See [Alphabetical Verbs](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
+| CLASSPATH | `sys.path` | **PREFIX** | Search path for classes. See [PREFIX verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bbj-commands/prefix_verb_set_file_system_search_paths_bbj.htm) |
+| `this.field` | `self.field` | **`#field`** | Instance field reference within methods |
+| ArrayList / List | `list` | **BBjVector** | `BBjAPI().makeVector()` - dynamic array |
+| try/catch | try/except | **SETERR/THROW** | `SETERR errHandler` sets handler, `THROW` raises errors |
+| static factory | module function | **BBjAPI()** | Entry point for creating BBj objects (windows, vectors, etc.) |
 
 ### Common Tasks
 

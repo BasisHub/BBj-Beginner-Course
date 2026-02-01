@@ -20,3 +20,14 @@ BBj programs respond to user actions -- button clicks, text changes, window clos
 | ON_EDIT_MODIFY | `ctrl!.ON_EDIT_MODIFY` | Text change event constant |
 
 BBj event handling evolved through three generations. **READ RECORD** polling loops (Visual PRO/5 era) gave way to the **CALLBACK verb** (procedural BBj), and finally to **setCallback** (modern OO BBj). This chapter teaches setCallback first as the recommended approach, with legacy patterns in a separate reference page for reading existing code.
+
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Register handler | `btn.addActionListener(l)` | `btn.bind("<Click>", fn)` | `btn.Click += handler;` | `btn!.setCallback(btn!.ON_BUTTON_PUSH, obj!, "onClick")` |
+| Handle click | `void actionPerformed(ActionEvent e)` | `def on_click(event):` | `void OnClick(object s, EventArgs e)` | `method public void onClick(BBjButtonPushEvent ev!)` |
+| Event loop | Swing EDT (automatic) | `root.mainloop()` | `Application.Run()` | `process_events` |
+| Remove handler | `btn.removeActionListener(l)` | `btn.unbind("<Click>")` | `btn.Click -= handler;` | `btn!.clearCallback(btn!.ON_BUTTON_PUSH)` |
+
+BBj uses `setCallback` with a string method name and an object reference. The event handler method receives a typed event parameter (e.g., `BBjButtonPushEvent`). For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).

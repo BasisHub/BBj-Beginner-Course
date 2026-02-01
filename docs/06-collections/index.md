@@ -16,3 +16,18 @@ BBj gives you two families of collections: its own BBjVector (a dynamic list cre
 | java.util.ArrayList | `new ArrayList()` | Dynamic list (Java native) |
 | DIM array | `dim a$[10]` | Fixed-size typed array |
 | VECTOR() | `vector(array[])` | Convert DIM array to BBjVector |
+
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Create list | `new ArrayList()` | `[]` | `new List<T>()` | `BBjAPI().makeVector()` |
+| Add item | `list.add(item)` | `list.append(item)` | `list.Add(item)` | `vec!.add(item)` |
+| Get by index | `list.get(i)` | `list[i]` | `list[i]` | `vec!.get(i)` |
+| Iterate list | `for (var x : list)` | `for x in list:` | `foreach (var x in list)` | `for i=0 to vec!.size()-1 ... next i` |
+| Create map | `new HashMap()` | `{}` | `new Dictionary<K,V>()` | `new HashMap()` (Java) |
+| Get by key | `map.get(k)` | `d[k]` | `d[k]` | `map!.get(k)` |
+| Check contains | `map.containsKey(k)` | `k in d` | `d.ContainsKey(k)` | `map!.containsKey(k)` |
+| Collection size | `list.size()` | `len(list)` | `list.Count` | `vec!.size()` |
+
+BBj uses `BBjVector` for ordered lists and `java.util.HashMap` for key-value maps. Since BBj runs on the JVM, you can use Java collection classes directly. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).

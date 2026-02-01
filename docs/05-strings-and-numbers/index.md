@@ -18,3 +18,18 @@ BBj's string and numeric functions are more powerful than they first appear. A s
 | MASK | `mask(a$, "regex")` | Perl 5 regex pattern match |
 | STR | `str(num:"mask")` | Format number or string |
 | NUM | `num(a$)` | Convert string to number |
+
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Get length | `s.length()` | `len(s)` | `s.Length` | `len(s$)` |
+| Substring | `s.substring(1, 4)` | `s[1:4]` | `s.Substring(1, 3)` | `s$(2, 3)` (1-based) |
+| Find in string | `s.indexOf("x")` | `s.find("x")` | `s.IndexOf("x")` | `pos("x" = s$)` |
+| Replace | `s.replace("a", "b")` | `s.replace("a", "b")` | `s.Replace("a", "b")` | `stbl("!REPLACE", s$, "a", "b")` |
+| Trim whitespace | `s.trim()` | `s.strip()` | `s.Trim()` | `cvs(s$, 3)` |
+| String to number | `Integer.parseInt(s)` | `int(s)` | `int.Parse(s)` | `num(s$)` |
+| Number to string | `String.valueOf(n)` | `str(n)` | `n.ToString()` | `str(n)` |
+| Regex match | `Pattern.matches(p, s)` | `re.match(p, s)` | `Regex.IsMatch(s, p)` | `mask(s$, p$)` |
+
+BBj string positions are 1-based, not 0-based. `pos()` uses the syntax `pos(needle$ = haystack$)` with the needle on the left side of the `=` sign. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).

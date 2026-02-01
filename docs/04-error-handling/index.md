@@ -17,3 +17,17 @@ BBj uses a **trap-and-branch** model for error handling: you set error traps (`S
 | ERR | `err` | Last error number |
 | ERRMES | `errmes(-1)` | Last error message |
 | RETRY | `retry` | Re-execute the statement that errored |
+
+## For Java, Python, and C# Developers
+
+| Task | Java | Python | C# | BBj |
+|------|------|--------|----|-----|
+| Set error handler | `try {` | `try:` | `try {` | `seterr handler` |
+| Catch specific error | `catch (IOException e)` | `except IOError as e:` | `catch (IOException e)` | `if err = 17 then ...` |
+| Catch all errors | `catch (Exception e)` | `except Exception as e:` | `catch (Exception e)` | `seterr handler` (global) |
+| Get error message | `e.getMessage()` | `str(e)` | `e.Message` | `errmes(-1)` |
+| Raise/throw | `throw new Exception("msg")` | `raise Exception("msg")` | `throw new Exception("msg")` | `throw "msg", 256` |
+| Skip on error | `catch (E e) { }` | `except: pass` | `catch { }` | `err=*next` |
+| Cleanup | `finally { }` | `finally:` | `finally { }` | Fall-through to cleanup label |
+
+BBj does not have try/catch blocks. All error handling uses `seterr` to set a handler label, `err=` on individual statements for inline trapping, and `throw` to raise custom errors. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
