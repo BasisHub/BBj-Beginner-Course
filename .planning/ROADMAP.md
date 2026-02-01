@@ -13,7 +13,7 @@ Transform the existing 5-section flat documentation site into a structured 12-ch
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - TypeScript migration, plugins, and build infrastructure matching DWC tutorial
-- [ ] **Phase 2: Structure** - Content reorganization into numbered chapters, homepage components, and sample code directory
+- [x] **Phase 2: Structure** - Content reorganization into numbered chapters, homepage components, and sample code directory
 - [ ] **Phase 3: Existing Content** - Review and improve the 4 existing content sections for modern-first framing
 - [ ] **Phase 4: Core Language Chapters** - Error handling, string/numeric functions, and collections chapters
 - [ ] **Phase 5: Data and Application Chapters** - Database/SQL, Java interop, event handling, and debugging chapters
@@ -51,8 +51,8 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md -- Directory restructure, sidebar configuration, and samples directory
-- [ ] 02-02-PLAN.md -- Homepage components (Hero, ChapterCards, HomepageFeatures)
-- [ ] 02-03-PLAN.md -- Build verification and visual spot-check
+- [x] 02-02-PLAN.md -- Homepage components (Hero, ChapterCards, HomepageFeatures)
+- [x] 02-03-PLAN.md -- Build verification and visual spot-check
 
 ### Phase 3: Existing Content
 **Goal**: The 4 existing content sections are reviewed, updated, and reframed so a reader encounters modern BBj patterns first with legacy as context
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-01-31 |
-| 2. Structure | 1/3 | In progress | - |
+| 2. Structure | 3/3 | Complete | 2026-02-01 |
 | 3. Existing Content | 0/3 | Not started | - |
 | 4. Core Language Chapters | 0/3 | Not started | - |
 | 5. Data and Application Chapters | 0/4 | Not started | - |

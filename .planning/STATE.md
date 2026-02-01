@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 2 - Structure (directory reorganization, homepage components, build verification)
+**Current focus:** Phase 3 - Existing Content (review and modernize the 4 existing content sections)
 
 ## Current Position
 
-Phase: 2 of 6 (Structure) -- In progress
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-01 -- Completed 02-02-PLAN.md (homepage components: Hero, ChapterCards, HomepageFeatures)
+Phase: 2 of 6 (Structure) -- Complete
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-02-01 -- Completed 02-03-PLAN.md (build verification and visual spot-check)
 
-Progress: [████░░░░░░░░░░░░░░] ~22% (4/18 plans)
+Progress: [███████░░░░░░░░░░░] ~39% (7/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 5
 - Average duration: 3 min
-- Total execution time: 12 min
+- Total execution time: 16 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 2/2 | 6 min | 3 min |
-| 02-structure | 2/3 | 6 min | 3 min |
+| 02-structure | 3/3 | 10 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (2 min), 02-01 (3 min), 02-02 (3 min)
+- Last 5 plans: 01-02 (2 min), 02-01 (3 min), 02-02 (3 min), 02-03 (4 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -57,6 +57,8 @@ Recent decisions affecting current work:
 - [02-02]: Coming-soon cards use reduced opacity + badge (not disabled links) for visual distinction
 - [02-02]: HomepageFeatures renders before ChapterCards (value props before course outline)
 - [02-02]: Component directory pattern established: src/components/Name/index.tsx + styles.module.css
+- [02-03]: Dark mode toggle works correctly; browser extension overriding data-theme was a false alarm
+- [02-03]: BBj documentation URL fixed (bbjobjects/bbjobjects.htm -> index.htm) across navbar and 7 placeholder pages
 
 ### Pending Todos
 
@@ -69,5 +71,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 02-02-PLAN.md -- homepage components (Hero, ChapterCards, HomepageFeatures)
+Stopped at: Completed 02-03-PLAN.md -- Phase 2 complete (build verification and visual spot-check approved)
 Resume file: None
