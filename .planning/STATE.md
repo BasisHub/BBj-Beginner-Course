@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 6 - Differentiators and Quality -- Complete
+**Current focus:** Phase 6 - Differentiators and Quality -- Complete (all plans done)
 
 ## Current Position
 
 Phase: 6 of 6 (Differentiators and Quality)
-Plan: 2 of 2 in current phase
-Status: Phase complete
-Last activity: 2026-02-01 -- Completed 06-02-PLAN.md (Legacy subpages ch 07-09 + translation tables)
+Plan: 3 of 3 in current phase
+Status: All phases complete
+Last activity: 2026-02-01 -- Completed 06-03-PLAN.md (Translation tables, code style audit, link verification)
 
-Progress: [████████████████████████████] 100% (18/18 plans)
+Progress: [████████████████████████████] 100% (19/19 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 18
-- Average duration: 3.3 min
-- Total execution time: 60 min
+- Total plans completed: 19
+- Average duration: 3.7 min
+- Total execution time: 71 min
 
 **By Phase:**
 
@@ -32,11 +32,11 @@ Progress: [███████████████████████
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
 | 04-core-language | 3/3 | 9 min | 3 min |
 | 05-data-and-application | 4/4 | 16 min | 4 min |
-| 06-differentiators-and-quality | 2/2 | 12 min | 6 min |
+| 06-differentiators-and-quality | 3/3 | 23 min | 7.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-04 (3 min), 05-02 (4 min), 06-01 (6 min), 06-02 (6 min)
-- Trend: slight increase for cross-cutting content work
+- Last 5 plans: 05-02 (4 min), 06-01 (6 min), 06-02 (6 min), 06-03 (11 min)
+- Trend: final quality pass took longest due to full-site link verification
 
 *Updated after each plan completion*
 
@@ -99,10 +99,14 @@ Recent decisions affecting current work:
 - [06-02]: File I/O legacy subpage uses 02-legacy-code.md (ch 07 only has index.md)
 - [06-02]: Translation tables use 8 categories with concise single-line code per cell
 - [06-02]: Removed broken debugging legacy link from generations page (ch 11 keeps inline callouts)
+- [06-03]: Broken documentation.basis.cloud links updated to index pages with search guidance
+- [06-03]: eclipseplug-ins URL corrected from basis.com to basis.cloud domain
+- [06-03]: All 28 sample .bbj files now use rem === Title === header format (no JavaDoc)
+- [06-03]: basishub.github.io canonical URL 404s are expected false positives (resolve on deployment)
 
 ### Pending Todos
 
-None.
+None -- all phases and plans complete.
 
 ### Blockers/Concerns
 
@@ -111,5 +115,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 06-02-PLAN.md -- All phases complete (18/18 plans)
+Stopped at: Completed 06-03-PLAN.md -- All phases complete (19/19 plans). Tutorial ready for deployment.
 Resume file: None
