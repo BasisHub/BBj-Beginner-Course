@@ -3,56 +3,59 @@ sidebar_position: 1
 title: "Getting Started"
 ---
 
-# Getting Started - First Steps in the New Tool
+# Getting Started
 
-In this section, you start your journey in BBj. We cover installation, how to write your first program and how to work with the documentation. After this lesson, you should be able to write first simple graphical programs.
+This section covers environment setup, your first BBj programs, variables, control flow, input fields, and event handling. By the end, you will be able to write simple graphical BBj applications.
 
-## Setup Java, BBj and Eclipse
+## Setting Up Your Environment
 
-Visit [https://www.basis.com/eclipseplug-ins](https://www.basis.com/eclipseplug-ins) for detailed instructions on how to set up your environment.
+Visit [https://www.basis.com/eclipseplug-ins](https://www.basis.com/eclipseplug-ins) for detailed instructions on setting up your development environment.
 
-This video shows the steps.
+BBj development tooling has expanded since the video below was recorded. In addition to the Eclipse plug-in shown, [BDTStudio](https://www.basis.com/eclipseplug-ins) (a preconfigured Eclipse distribution) and a VSCode extension are now available options.
+
+<details>
+<summary>Watch the video: Setting Up Your Environment</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ovk8kznQfGs" title="Setup for BBj Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Follow these steps to set up your environment. When you're done, you should have BBj and Eclipse running on your computer.
+</details>
 
-## A first "Hello World"
+## A First "Hello World"
 
-"Hello World" is for many languages the first step you may do. Our Hello World will use the BBj Message Box (MSGBOX) to greet the user.
-
-Here is a video to get you inspired:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fF9LaVXJGuA" title="A First Hello World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-The Sample uses the following verbs, here are their links to the documentation:
-- [MSGBOX](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/msgbox_function.htm)
-- [RELEASE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/release_verb.htm) or [BYE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bye_verb.htm)
-
-Read the documentation about these verbs to get familiar with the documentation.
-
-### Sample Program
+BBj's `MSGBOX` function displays a modal dialog. The simplest BBj program:
 
 ```bbj
 A=MSGBOX("Hello World")
 RELEASE
 ```
 
-## Basics about Syntax and Variables in BBj
+`MSGBOX` shows the dialog and returns the user's button selection. `RELEASE` terminates the program. See the documentation for [MSGBOX](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/msgbox_function.htm) and [RELEASE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/release_verb.htm) (or its synonym [BYE](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bye_verb.htm)).
 
-There are a few rules of thumb in the BBj language that you might find useful in the beginning:
+<details>
+<summary>Watch the video: A First Hello World</summary>
 
-- No or squiggles or similar - BBj is structured by its keywords (`CLASS - CLASSEND`, `METHOD - METHODEND` etc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fF9LaVXJGuA" title="A First Hello World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+## Syntax and Variables
+
+BBj syntax differs from C-family languages in several ways:
+
+- No braces or squiggles -- BBj uses keyword pairs for structure (`CLASS - CLASSEND`, `METHOD - METHODEND`, etc.)
 - No semicolons at the end of lines
-- BBj is a dynamic language. Variables can be used without formal declaration, but you can declare variables that are Object-Types
-- BBj knows a few "built-in" Variables: Numbers, Whole Numbers and Strings. Plus Objects.
-- Comments are in lines that start with `REM` (for "Remark")
-- Variable names and keywords are Case-Insensitive
-- But references to (Java) Classes retain their case-sensitivity
+- BBj is a dynamic language. Variables can be used without formal declaration, though object-type variables can be explicitly declared
+- Built-in variable types: Numbers, Integers, and Strings, plus Objects
+- Comments start with `REM` (for "Remark")
+- Variable names and keywords are case-insensitive
+- References to Java classes retain their case-sensitivity
 
-Watch this video about Variables in BBj:
+<details>
+<summary>Watch the video: Variables in BBj</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DRjpwGLKzQA" title="Variables in BBj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
 
 ### BBj Variables Cheat Sheet
 
@@ -94,27 +97,24 @@ declare HashMap myMap!
 myMap! = new HashMap()
 ```
 
-## A Better Version of "Hello World"
+## A Better Hello World
 
-Now it's time to write a better version of your "Hello World", with a true Window and a Button. When the user pushes the button, we want to show our MessageBox:
+This example creates a window with a button that displays a message box when clicked. It introduces `BBjAPI().openSysGui()` for GUI access, `addWindow` for creating windows, and `setCallback` for event handling.
+
+Create this program in your IDE, building it incrementally to understand each step.
+
+<details>
+<summary>Watch the video: A Better Hello World</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oG1Q5wVf3u4" title="A Better Hello World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Write the program in your IDE. I suggest you develop it step by step, like in the video, and play with the syntax, and the KeywordHelp that links you to the documentation.
+</details>
 
-You can find a copy of the program in the Files-Section of this Section.
+## Loops and IF Statements
 
-## Loops and IF-Statements
+BBj provides standard control flow structures for conditionals and iteration.
 
-Now it's time to learn how you do Loops in BBj, and how you can create IF-statements.
-
-Again, let's start with a short video:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jxSfPOuj_nk" title="Loops and IF-Statements" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Summary
-
-IF-Statements are either multi-line:
+IF statements are either multi-line:
 ```bbj
 IF something THEN
     dosomething
@@ -123,49 +123,54 @@ ELSE
 ENDIF
 ```
 
-or a single line:
+or single-line:
 ```bbj
 IF something THEN dosomething
 ```
 
-- BBj knows `FOR...NEXT`, `WHILE...WEND` and `REPEAT...UNTIL`
-- The keyword to exit a loop is `BREAK`
-- The keyword to skip to the next iteration inside a loop is `CONTINUE`
+BBj supports `FOR...NEXT`, `WHILE...WEND`, and `REPEAT...UNTIL` loops. Use `BREAK` to exit a loop and `CONTINUE` to skip to the next iteration.
 
-Now visit this [documentation page](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/index.htm) and locate the keywords. Have a look around - what else could be used for the flow structure of a program?
+Explore the [BBj verbs reference](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/index.htm) for additional control flow options.
+
+<details>
+<summary>Watch the video: Loops and IF Statements</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jxSfPOuj_nk" title="Loops and IF-Statements" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
 
 ## Types of Input Fields
 
-In our better version of "Hello World" we have learned how to implement a callback for a Button-Push. This is already "user input". Taking user input from fields is pretty similar.
+The Better Hello World example demonstrated button callbacks. Text input fields follow the same event-driven pattern.
 
-### Types of Input Fields
+### Available Input Controls
 
-BBj knows a few different types of Input Fields, where users can directly enter data:
+BBj provides several input field types for different data entry needs:
 
-- **BBjEditBox** - a simple, single line edit (which also has options to act as a password input)
-- **BBjCEdit** - a simple Multi-Line edit
-- **BBjInputN** - a control especially to enter numbers
-- **BBjInputD** - an input for dates
-- **BBjInputE** - an input control for Strings
-- **BBjHTMLEdit** - a built-in HTML Editor
+- **BBjEditBox** -- a single-line text input (also supports password mode)
+- **BBjCEdit** -- a multi-line text editor
+- **BBjInputN** -- numeric input with formatting
+- **BBjInputD** -- date input
+- **BBjInputE** -- string input with mask support
+- **BBjHTMLEdit** -- a rich text (HTML) editor
 
-Take some time to visit the documentation pages for each of these controls. Have a look at the method signatures, the events they offer, and the sample code that is listed in some of the chapters. You can copy and paste the sample code into your IDE, run it there and examine it further. Do so for some of the examples from the docs to become more familiar with the documentation, BBj source code and the IDE.
+Review the documentation for each control type. The method signatures, available events, and sample code demonstrate typical usage patterns.
 
 ### Masks
 
-BBjInputE and BBjInputN use Masks to format user input. Read the documentation page about masks. Read about String Output Masking and Numeric Masks in the Documentation.
+BBjInputE and BBjInputN use masks to format user input. See the documentation on String Output Masking and Numeric Masks.
 
 :::note
-Please recognize that some topics (like these two) are BBj-specific and come with links to the original, legacy topics that also apply for BBj.
+Some BBj topics link to original legacy documentation pages that remain applicable to BBj. The mask documentation is one such case -- the underlying formatting rules carry over from earlier versions.
 :::
 
-BBjInputD takes a Date Mask which is documented with the DATE function; also read about the input taking itself for this control.
+BBjInputD uses a date mask documented with the DATE function. See the BBjInputD documentation for details on its input behavior.
 
-## Next Sample: A multiplying Calculator
+## A Multiplying Calculator
 
-This sample shows a simple calculator that multiplies two numbers. It updates with every keystroke due to the EDIT_MODIFY event that is registered for the two BBjInputN.
+This calculator multiplies two numbers and updates in real time via the `ON_EDIT_MODIFY` event registered on each `BBjInputN` control.
 
-Create a new program in your IDE and copy this program into your editor. Examine and run it, and play with it. Try to understand how the events work.
+Copy this program into your IDE and run it. The calculator recalculates on every keystroke:
 
 ```bbj
 wnd! = BBjAPI().openSysGui("X0").addWindow(50,50,400,200,"Multiply")
@@ -203,24 +208,28 @@ return
 
 ### Exercise
 
-Can you enhance it? Add a button to clear the input in both fields.
+Add a "Clear" button that resets both input fields to zero. Use `setValue()` on each `BBjInputN` control.
 
 :::tip
-The `setValue()` method for BBjInputN can be used to set their value to "0". Find it in the documentation!
+The `setValue()` method on `BBjInputN` accepts a numeric value -- pass `0` to reset the field.
 :::
 
-## Some more hints
+## Additional Notes
 
-A few more things are noteworthy about BBj that can be explained at the hand of the calculator sample:
+The calculator example illustrates two additional concepts worth understanding.
 
 ### Control IDs
 
-You see that the original sample uses fixed IDs for each control. In many cases, the control ID may not play a role to your control logic. In these cases, you can use the Method `getAvailableControlID` of BBjWindow to simply get a unique one that has not been used.
+The calculator uses fixed numeric IDs for each control (100, 101, 103, etc.). These IDs must be unique within a window. When the specific ID value does not matter, use `BBjWindow.getAvailableControlID()` to generate a unique one automatically.
 
-If you have the pleasure of working on legacy code though, you might need to recognize fixed control IDs that had been used in the past. Since they need to be unique, you will need to avoid conflicts when you add new controls to existing programs, so this particular method may not be useful in such scenarios.
+In legacy code, fixed control IDs are often meaningful and referenced elsewhere. When modifying existing programs, avoid ID conflicts by checking which IDs are already in use before adding new controls.
 
 ### Keyboard Navigation
 
-Did you notice that (in GUI) you couldn't use the Tab-Key to navigate the form? This is because we didn't set any flags on the BBjWindow. Have a look at the documentation page of `addWindow` and find the flag for keyboard navigation (`$00010000$`).
+By default, BBj GUI windows do not support Tab key navigation between controls. Enable keyboard navigation by setting the `$00010000$` flag in the `addWindow` call. See the [addWindow documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/SysGui/bbjsysgui/BBjSysGui_addWindow.htm) for all available window flags.
 
-Have a look at the other flags (they're combined by adding). Play with them. Can you make the Window also allow navigating the fields with the Enter-key?
+Flags are combined by addition. For example, to enable both Tab and Enter key navigation, add the respective flag values together.
+
+### Exercise
+
+Combine the keyboard navigation flag with the Enter-key navigation flag to enable both Tab and Enter navigation in the calculator window.
