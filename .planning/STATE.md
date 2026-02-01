@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 ## Current Position
 
 Phase: 4 of 6 (Core Language Chapters)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase (04-02 remaining)
 Status: In progress
-Last activity: 2026-02-01 -- Completed 04-01-PLAN.md (Error handling chapter with index + 3 subpages + 4 samples)
+Last activity: 2026-02-01 -- Completed 04-03-PLAN.md (Collections chapter with index + 3 subpages + 4 samples)
 
-Progress: [█████████████░░░░░] ~50% (9/18 plans)
+Progress: [███████████████░░░] ~61% (11/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 11
 - Average duration: 3 min
-- Total execution time: 27 min
+- Total execution time: 31 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [█████████████░░░░░] ~50% (9/18 pl
 | 01-foundation | 2/2 | 6 min | 3 min |
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
-| 04-core-language | 1/3 | 3 min | 3 min |
+| 04-core-language | 2/3 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3 min), 03-03 (2 min), 03-02 (3 min), 04-01 (3 min)
-- Trend: consistent ~3 min per plan
+- Last 5 plans: 03-01 (3 min), 03-03 (2 min), 03-02 (3 min), 04-01 (3 min), 04-03 (2 min)
+- Trend: consistent ~2.5 min per plan
 
 *Updated after each plan completion*
 
@@ -73,6 +73,9 @@ Recent decisions affecting current work:
 - [04-01]: No try/catch in BBj -- trap-and-branch model exclusively (SETERR, ERR=, THROW)
 - [04-01]: Error trapping priority: END= > DOM= > function ERR= > statement ERR= > SETERR
 - [04-01]: Sample .bbj file pattern: rem comment headers with expected output, self-contained runnable
+- [04-03]: BBjHashMap mentioned only as deprecated -- java.util.HashMap is the replacement
+- [04-03]: contains() type sensitivity documented as gotcha (Java .equals() behavior)
+- [04-03]: VECTOR() function noted as BBj 16.0+ feature for version awareness
 
 ### Pending Todos
 
@@ -85,5 +88,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 04-01-PLAN.md -- Error handling chapter (index + 3 subpages + 4 samples)
+Stopped at: Completed 04-03-PLAN.md -- Collections chapter (index + 3 subpages + 4 samples)
 Resume file: None
