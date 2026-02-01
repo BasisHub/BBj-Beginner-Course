@@ -128,20 +128,9 @@ greeting$ = "Hello, " + name$
 
 Numeric variables have no suffix (or `%` for integers), and object references use `!`. See the [Getting Started](/getting-started) chapter for the full variable type system.
 
-<details>
-<summary>Reading Legacy Code: String Operations Across Generations</summary>
-
-String operations have been consistent across BBx, PRO/5, and BBj. The functions (`LEN`, `CVS`, substring notation) work identically in all generations.
-
-The main differences you will see in older code:
-
-- **All-uppercase keywords**: `PRINT LEN(A$)` instead of `print len(a$)` -- both compile identically
-- **Line numbers**: `0100 LET A$ = "HELLO"` -- the line number and `LET` keyword are optional in modern BBj
-- **Tighter spacing**: `A$(1,5)` with no spaces, versus modern readability conventions
-
-The string operations themselves have not changed, so legacy code involving `LEN()`, `CVS()`, and substring notation works exactly as written in modern BBj.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for uppercase keywords, line numbers, `MID$`/`LEFT$`/`RIGHT$`, and other historical string patterns.
+:::
 
 :::tip Further Reading
 - [CVS() Function](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/cvs_function.htm) -- full bitmask reference

@@ -80,35 +80,9 @@ dim a$:tmpl$
 
 String templates are covered in detail in the [File I/O and Record Access](/file-io) chapter.
 
-<details>
-<summary>Reading Legacy Code: DIM Arrays as Collections</summary>
-
-Before BBjVector existed, all dynamic data had to be stored in oversized DIM arrays with a manual size counter:
-
-```bbj
-rem Legacy pattern: oversized array as "collection"
-dim items$[999]
-count = 0
-
-rem Add items
-items$[count] = "first"
-count = count + 1
-items$[count] = "second"
-count = count + 1
-
-rem Iterate
-for i = 0 to count - 1
-    print items$[i]
-next i
-```
-
-Other legacy patterns you may encounter:
-
-- **REDIM** to resize arrays (available in some BBx dialects)
-- **String templates** (`dim a$:tmpl$`) used as pseudo-records for structured data
-- **VECTOR() function** (BBj 16.0+) bridges this gap -- convert legacy arrays to BBjVector without rewriting the population logic
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for DIM-as-collection, `REDIM`, parallel arrays, and other historical collection patterns.
+:::
 
 :::tip Further Reading
 - [VECTOR() Function](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/VECTOR()_Function_Convert_Array_to_Vector.htm) -- official reference

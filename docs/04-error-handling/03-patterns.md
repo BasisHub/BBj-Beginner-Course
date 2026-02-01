@@ -107,31 +107,9 @@ Key points:
 
 A common pattern in production code is to set a global `SETERR` handler at program start for unexpected errors, then use `ERR=` on specific statements where you expect and handle known failure modes.
 
-<details>
-<summary>Reading Legacy Code: Error Handling with ON ERR</summary>
-
-`ON ERR GOTO` was an alternative to `SETERR` that some codebases preferred:
-
-```bbj
-on err goto handler
-```
-
-This is functionally identical to `seterr handler` in modern BBj. You may also encounter the `ON ERR GOSUB` variant:
-
-```bbj
-on err gosub handler
-
-rem ... code ...
-release
-
-handler:
-    print "Error: ", errmes(-1)
-    return; rem Returns to the statement after the one that errored
-```
-
-`ON ERR GOSUB` uses `RETURN` (instead of `RETRY`) to continue execution after the handler. Both `ON ERR` forms still work in BBj but `SETERR` with labels is the modern convention.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for `ON ERR GOTO`, `ON ERR GOSUB`, and other historical error handling patterns.
+:::
 
 :::tip Further Reading
 - [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/gridctrl/error_handling.htm) -- Error handling patterns in BBj object programs

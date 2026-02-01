@@ -408,6 +408,10 @@ OPEN_ERROR:
 Look at the [FIN()](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/fin_function.htm) function to get information about an open file, including the record count.
 :::
 
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](/file-io/legacy-code) for the oldest file I/O patterns including direct access modes, string-packed records, IOLIST field mapping, and hardcoded channel numbers.
+:::
+
 ## Key Takeaways
 
 1. **Channels are file handles** - open, use, close. Use `UNT` to get available channel numbers.

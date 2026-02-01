@@ -108,28 +108,9 @@ See the [Error Handling](/error-handling) chapter for details on `ERR=` and othe
 | `XXX-XX-XXXX` | `123456789` | `123-45-6789` | SSN format |
 | `##,##0` | `1500` | ` 1,500` | Integer with commas |
 
-<details>
-<summary>Reading Legacy Code: Numeric Formatting</summary>
-
-`STR()` with masks has been consistent across BBx, PRO/5, and BBj. The mask syntax has not changed.
-
-In older code, you may see formatting done inline with `PRINT` using a mask directly:
-
-```bbj
-rem Legacy inline mask syntax
-print (0)"Price: $##,##0.00",total
-```
-
-This prints the value of `total` formatted with the mask. Modern BBj code more commonly uses `STR()` for formatting, which separates the formatting from the output and is easier to read:
-
-```bbj
-rem Modern approach
-print "Price: ", str(total:"$##,##0.00")
-```
-
-Both produce the same result. When reading legacy code, recognize the inline `PRINT` mask pattern as equivalent to `STR()` formatting.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for inline `PRINT` masks, uppercase keywords, and other historical formatting patterns.
+:::
 
 :::tip Further Reading
 - [STR() Function](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/str_function.htm) -- full conversion and masking reference

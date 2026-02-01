@@ -73,22 +73,9 @@ The ChileCompany database can be accessed both ways -- the CUSTOMER table is bac
 - Standard query syntax (WHERE, JOIN, ORDER BY)
 - Column-level field access via SQLTMPL (no manual offset math)
 
-<details>
-<summary>Reading Legacy Code: Direct File Access Instead of SQL</summary>
-
-Before BBj added SQL support, all data access was via `OPEN`/`READ RECORD`/`WRITE RECORD` with fixed-format records. Programs used `DIM` templates for record layout, similar to `SQLTMPL` but manually defined:
-
-```bbj
-rem Legacy file access pattern
-DIM rec$:"CUST_NUM:C(6),FIRST_NAME:C(20),LAST_NAME:C(30),COMPANY:C(30)"
-OPEN(1)"CUSTOMER"
-READ RECORD(1, END=done)rec$
-PRINT rec.FIRST_NAME$
-```
-
-You may encounter code that opens a data file and reads records directly. This is the file I/O approach to the same data that SQL queries access. Both methods work, but SQL is preferred for new development.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy database patterns including direct file access and BBjRecordSet navigation.
+:::
 
 :::tip Further Reading
 - [BBjRecordSet](https://documentation.basis.com/BASISHelp/WebHelp/gridctrl3/bbjrecordset.htm) -- RecordSet API for data-bound GUI controls

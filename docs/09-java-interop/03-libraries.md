@@ -189,25 +189,9 @@ With Java 21, you have access to the entire JDK standard library. BBj 25.x also 
 
 If you need a library beyond what is bundled, add its JAR to the classpath via Enterprise Manager (see the [Advanced Patterns](/java-interop/advanced) page for details).
 
-<details>
-<summary>Reading Legacy Code: String-Based Data Exchange</summary>
-
-Before JSON libraries were bundled with BBj, programs used delimited strings or fixed-width fields for data exchange between systems:
-
-```bbj
-rem Legacy style -- pipe-delimited data exchange
-data$ = "Alice|Developer|Platform"
-name$ = data$(1, pos("|" = data$) - 1)
-
-rem Fixed-width extraction
-record$ = "Alice               Developer           "
-name$ = cvs(record$(1, 20), 3)
-role$ = cvs(record$(21, 20), 3)
-```
-
-You may encounter custom serialization using `SEP` (the field separator character, CHR(254)) or pipe-delimited strings. These patterns work but are fragile compared to JSON -- prefer `org.json` for any new data exchange code.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy Java interop patterns including string-based data exchange and procedural Java usage.
+:::
 
 :::tip Further Reading
 - [BBj 25.x Classpath Overview](https://documentation.basis.cloud/BASISHelp/WebHelp/b3odbc/Classpath_Overviews/BBj_25.x_Classpath_Overview.htm) -- complete list of bundled JARs

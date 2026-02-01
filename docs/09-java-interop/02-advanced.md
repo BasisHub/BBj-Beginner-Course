@@ -147,26 +147,9 @@ The classpath change applies to all BBj programs running on that BBjServices ins
 | Java exceptions become error 252 | Handle with ERR= or SETERR, inspect with `getLastJavaException()` |
 | Object identity differences | Comparing object identity across the BBj/Java boundary can produce unexpected results |
 
-<details>
-<summary>Reading Legacy Code: Pre-Use Import Patterns</summary>
-
-Before the `use` statement was added to BBj, all Java classes required fully qualified names on every reference:
-
-```bbj
-rem Legacy style -- no use statement available
-map! = new java.util.HashMap()
-map!.put("key", "value")
-
-iter! = map!.keySet().iterator()
-while iter!.hasNext()
-    key! = iter!.next()
-    print key!, " = ", map!.get(key!)
-wend
-```
-
-Some very old programs may also use `ADDR()` and `CALL` for Java method invocation -- a lower-level approach that predates the direct method call syntax. Modern BBj code should always use `use` statements and direct method calls.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy Java interop patterns including pre-`use` fully-qualified names and ADDR()/CALL callbacks.
+:::
 
 :::tip Further Reading
 - [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/gridctrl/error_handling.htm) -- Error handling patterns in BBj object programs

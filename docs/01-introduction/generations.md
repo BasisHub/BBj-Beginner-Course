@@ -35,7 +35,7 @@ BBx (Business BASIC eXtended) was a character-mode language built for business d
 9010 release
 ```
 
-**See also:** [Error handling legacy patterns](../error-handling/04-legacy-code) | [Collections legacy patterns](../collections/04-legacy-code)
+**See also:** [Error handling legacy patterns](../error-handling/legacy-code) | [Collections legacy patterns](../collections/legacy-code)
 
 ## 2nd Generation: PRO/5 and Visual PRO/5 (1995--2002)
 
@@ -52,7 +52,7 @@ release
 return
 ```
 
-**See also:** [Event handling legacy patterns](../event-handling/03-legacy)
+**See also:** [Event handling legacy patterns](../event-handling/legacy)
 
 ## 3rd Generation: Early BBj (2002--2006)
 
@@ -65,7 +65,7 @@ map!.put("role", "Developer")
 print "Name: ", map!.get("name")
 ```
 
-**See also:** [Java interop legacy patterns](../java-interop/04-legacy-code) | [Database legacy patterns](../database-sql/04-legacy-code) | [String/number legacy patterns](../strings-and-numbers/04-legacy-code)
+**See also:** [Java interop legacy patterns](../java-interop/legacy-code) | [Database legacy patterns](../database-sql/legacy-code) | [String/number legacy patterns](../strings-and-numbers/legacy-code)
 
 ## 4th Generation: Modern BBj (2006--present)
 
@@ -87,7 +87,7 @@ class public Greeter
 classend
 ```
 
-**See also:** [File I/O legacy patterns](../file-io/04-legacy-code) | [Debugging legacy patterns](../debugging/04-legacy-code)
+**See also:** [File I/O legacy patterns](../file-io/legacy-code)
 
 ## Mixed-Generation Codebases
 

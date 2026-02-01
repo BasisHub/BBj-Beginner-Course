@@ -121,29 +121,9 @@ class public Service
 classend
 ```
 
-<details>
-<summary>Reading Legacy Code: Error Handling Before THROW</summary>
-
-Before BBj added the `THROW` verb, programs could not raise custom errors directly. You may encounter these older mechanisms:
-
-**!THROWERROR STBL (BBj 6.0+):**
-```bbj
-rem Set up the throw-error mechanism
-stbl("!THROWERROR","TRUE")
-```
-
-This was an early way to enable error throwing behavior. It required setting a system table variable before the feature was available as a language verb.
-
-**!ERROR_HANDLER STBL (BBj 17.0+):**
-```bbj
-stbl("!ERROR_HANDLER","myHandler")
-```
-
-This registered a global error handler by name, providing another way to centralize error handling before the language syntax was refined.
-
-Both mechanisms still work but are superseded by the `THROW` verb and modern `SETERR` label patterns.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for `!THROWERROR` STBL patterns and other pre-`THROW` error handling mechanisms.
+:::
 
 :::tip Further Reading
 - [Custom Objects Tutorial: Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/tutorials/custom_objects/custom_objects_10program4.htm) -- THROW patterns in class-based code

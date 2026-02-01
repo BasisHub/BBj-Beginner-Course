@@ -79,16 +79,9 @@ The Data Dictionary maps logical table names to physical file paths. When you wr
 
 This is configuration-level knowledge managed through Enterprise Manager -- not something you deal with in daily programming. For new BBj databases, Enterprise Manager creates and manages dictionaries automatically.
 
-<details>
-<summary>Reading Legacy Code: SQL.INI Configuration</summary>
-
-Older BBj code may reference a `SQL.INI` file for database connection configuration. This file mapped database names to connection parameters and dictionary paths.
-
-Modern BBj uses the Data Dictionary and Enterprise Manager for connection setup. `SQLOPEN(1)"ChileCompany"` works without SQL.INI for local BBj databases registered in the dictionary.
-
-If you encounter SQL.INI references in legacy code, they serve the same purpose as the dictionary entries you see in Enterprise Manager today.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy database patterns including SQL.INI configuration, string-concatenated SQL, and manual field extraction.
+:::
 
 :::tip Further Reading
 - [SQLOPEN Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bbj-commands/sqlopen_verb_open_sql_channel_bbj.htm) -- Full reference for SQLOPEN syntax and options

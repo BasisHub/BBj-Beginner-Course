@@ -117,30 +117,9 @@ These are the error codes you will encounter most often:
 
 For the complete list, see the [List of Errors](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/Errors/Errors.htm) in the official documentation.
 
-<details>
-<summary>Reading Legacy Code: Line-Number Error Trapping</summary>
-
-In older BBj and Business BASIC code, you will see `SETERR` with line numbers instead of labels:
-
-```bbj
-0010 seterr 9500
-0020 x = num("not a number")
-0030 print "This line is never reached"
-0040 release
-9500 rem Error handler
-9510 print "Error #", err, " - ", errmes(-1)
-9520 release
-```
-
-You may also see `ON ERR GOTO`:
-
-```bbj
-on err goto 9500
-```
-
-Both patterns still work in BBj. Modern code uses labels (`seterr handler`) instead of line numbers for readability and maintainability.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for line-number error trapping, `ON ERR GOTO`, and other historical patterns.
+:::
 
 :::tip Further Reading
 - [SETERR Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/seterr_verb.htm) -- Full reference for SETERR syntax and behavior

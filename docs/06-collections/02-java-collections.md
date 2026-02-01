@@ -86,16 +86,9 @@ Use `java.util.HashMap` instead. It provides the same functionality, is well-doc
 
 For broader context on using Java classes from BBj, see the [Java Interop chapter](/java-interop).
 
-<details>
-<summary>Reading Legacy Code: BBjHashMap</summary>
-
-Code written before BBj 20.10 may use `BBjHashMap` for key-value storage. This class was renamed to `BBjspHashMap` and is now restricted to the BBJSP subsystem. If you encounter `BBjHashMap` in legacy code:
-
-- It functions similarly to `java.util.HashMap`
-- Consider migrating to `java.util.HashMap` during maintenance
-- The API differences are minimal -- `put()`, `get()`, and `remove()` work the same way
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for `BBjHashMap` deprecation details and other historical collection patterns.
+:::
 
 :::tip Further Reading
 - [Calling Java from BBj](https://documentation.basis.cloud/BASISHelp/WebHelp/gridctrl/calling_java_from_bbj.htm) -- general Java interop guide

@@ -105,31 +105,9 @@ Since `MASK()` uses standard Perl 5 syntax, any regex reference applies. If you 
 
 **Rule of thumb:** Use `POS()` unless you need pattern matching. It is simpler to read and covers most search tasks.
 
-<details>
-<summary>Reading Legacy Code: String Searching Before MASK()</summary>
-
-`MASK()` was added in BBj. In earlier BBx and PRO/5 programs, all pattern matching was done with nested `POS()` calls and conditional logic.
-
-For example, checking if a string contains only digits in legacy code:
-
-```bbj
-rem Legacy approach: check each character class with POS()
-valid% = 1
-for i = 1 to len(input$)
-    if pos(input$(i,1) = "0123456789") = 0 then valid% = 0; break
-next i
-```
-
-The modern equivalent:
-
-```bbj
-rem Modern BBj: one MASK() call
-if mask(input$, "^[0-9]+$") then valid% = 1 else valid% = 0
-```
-
-When maintaining legacy code, you will see these multi-line `POS()` patterns where a single `MASK()` call would suffice today. Both approaches produce correct results.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for pre-`MASK()` string searching patterns and other historical approaches.
+:::
 
 :::tip Further Reading
 - [POS() Function](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/pos_function.htm) -- full syntax with all argument combinations

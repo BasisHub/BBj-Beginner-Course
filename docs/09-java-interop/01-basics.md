@@ -148,29 +148,9 @@ The `!` suffix tells BBj that this variable holds an object reference (either a 
 
 For more on BBj's class syntax, constructors, and methods, see the [Object-Oriented Programming chapter](/object-oriented).
 
-<details>
-<summary>Reading Legacy Code: Java Interop Before Custom Objects</summary>
-
-Before BBj Custom Objects were introduced, Java interop was limited to creating Java objects and calling methods procedurally. There was no `class` keyword and no `use` statement in early BBj versions:
-
-```bbj
-rem Legacy style -- fully qualified class names everywhere
-map! = new java.util.HashMap()
-map!.put("key", "value")
-
-rem All code was procedural with labels and GOSUBs
-rem No class definitions, no methods, no encapsulation
-gosub process_data
-release
-
-process_data:
-    print map!.get("key")
-return
-```
-
-You may encounter this style in older codebases. The Java API calls are the same -- only the program structure around them differs.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy Java interop patterns including pre-`use` fully-qualified names, ADDR()/CALL callbacks, and procedural Java usage.
+:::
 
 :::tip Further Reading
 - [Types in BBj](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBj_Enhancements/types_in_bbj.htm) -- how BBj handles Java types, casting, and type resolution

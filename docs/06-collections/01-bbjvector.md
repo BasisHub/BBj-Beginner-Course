@@ -80,24 +80,9 @@ print "Contains 42: ", vect!.contains(42)
 
 If you are building a vector from user input or mixed sources, be consistent about the types you store. When in doubt, store and search as strings using `str()`.
 
-<details>
-<summary>Reading Legacy Code: Before BBjVector</summary>
-
-Before BBj, the only data structure available was the DIM array -- fixed size, single type. Dynamic lists were simulated by allocating oversized DIM arrays and tracking a size counter manually:
-
-```bbj
-rem Legacy pattern: DIM array as dynamic list
-dim items$[999]
-count = 0
-items$[count] = "first item"
-count = count + 1
-items$[count] = "second item"
-count = count + 1
-```
-
-BBjVector was introduced with BBj (1999+) and eliminated this workaround. If you encounter DIM-plus-counter patterns in legacy code, they are candidates for migration to BBjVector.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for DIM-as-collection, `REDIM`, parallel arrays, and other historical collection patterns.
+:::
 
 :::tip Further Reading
 - [BBjVector Methods](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/API/bbjvector/bbjvector.htm) -- full method reference

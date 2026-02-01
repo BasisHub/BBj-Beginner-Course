@@ -206,20 +206,9 @@ cleanup:
     SQLCLOSE(1)
 ```
 
-<details>
-<summary>Reading Legacy Code: String-Based SQL Without Templates</summary>
-
-Early BBj code may build SQL strings dynamically using string concatenation rather than `SQLPREP` with parameter placeholders. This approach is vulnerable to SQL injection and harder to maintain:
-
-```bbj
-rem Legacy pattern -- avoid in new code
-sql$ = "SELECT * FROM CUSTOMER WHERE LAST_NAME = '" + name$ + "'"
-SQLPREP(1)sql$
-```
-
-You may also encounter result parsing using `MID()` to extract fixed-width fields from `SQLFETCH` results instead of using `SQLTMPL` dot notation. The template-based approach is always preferred in modern BBj code.
-
-</details>
+:::tip[Reading Legacy Code]
+See [Reading Legacy Code](./legacy-code) for legacy database patterns including string-concatenated SQL and MID() extraction from result strings.
+:::
 
 :::tip Further Reading
 - [SQLPREP Verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/sqlprep_verb.htm) -- Prepare SQL statements with parameter placeholders
