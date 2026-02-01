@@ -5,8 +5,16 @@ title: "Database and SQL"
 
 # Database and SQL
 
-:::info Under Development
-This chapter is coming soon. It will cover SQLOPEN, SQLPREP, BBjRecordSet, and parameterized queries in BBj.
-:::
+BBj accesses databases through a family of SQL verbs: `SQLOPEN` opens a connection, `SQLPREP` prepares a statement, `SQLEXEC` executes it, and `SQLFETCH` retrieves results row by row. This chapter uses the **ChileCompany** sample database that ships with every BBj installation -- no setup required.
 
-In the meantime, see the official [BBj Documentation](https://documentation.basis.cloud/BASISHelp/WebHelp/index.htm).
+## At a Glance
+
+| Verb/Function | Syntax | Purpose |
+|---------------|--------|---------|
+| SQLOPEN | `SQLOPEN(chan)"dbname"` | Open database connection |
+| SQLPREP | `SQLPREP(chan)"sql$"` | Prepare SQL statement |
+| SQLTMPL | `DIM rec$:SQLTMPL(chan)` | Get result template for field access |
+| SQLEXEC | `SQLEXEC(chan)args` | Execute prepared statement |
+| SQLFETCH | `rec$=SQLFETCH(chan,END=done)` | Fetch next result row |
+| SQLCLOSE | `SQLCLOSE(chan)` | Close connection |
+| SQLERR | `SQLERR(chan)` | Get last SQL error text |
