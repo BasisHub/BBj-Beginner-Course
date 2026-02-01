@@ -63,12 +63,12 @@ Plans:
   2. Object-Oriented chapter covers inheritance, interfaces, constructors, and at least 2 practical patterns with working examples
   3. File I/O chapter opens with modern framing (SQL as recommended path) and positions record-oriented access as legacy context
   4. Web Development section remains brief and clearly routes the reader to the DWC Course for anything beyond the overview
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Getting Started review and text fallbacks
-- [ ] 03-02: Object-Oriented chapter expansion
-- [ ] 03-03: File I/O reframing and Web Development review
+- [ ] 03-01-PLAN.md -- Getting Started text-first rewrite, comparison tables to Introduction, peer tone
+- [ ] 03-02-PLAN.md -- Object-Oriented chapter split into index + 3 subpages (classes, Java interop, BBjAPI)
+- [ ] 03-03-PLAN.md -- File I/O modern-first reframing and Web Development review
 
 ### Phase 4: Core Language Chapters
 **Goal**: Readers can handle errors, manipulate strings and numbers, and work with collections in BBj -- the three most frequently needed capabilities after basic syntax
