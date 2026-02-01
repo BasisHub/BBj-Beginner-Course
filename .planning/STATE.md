@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 5 - Data and Application Chapters
+**Current focus:** Phase 5 - Data and Application Chapters -- Complete
 
 ## Current Position
 
-Phase: 5 of 6 (Data and Application Chapters)
-Plan: 4 of 4 in current phase (3 complete, 05-02 remaining)
-Status: In progress
-Last activity: 2026-02-01 -- Completed 05-04-PLAN.md (Debugging chapter with index + 2 subpages + 3 samples)
+Phase: 5 of 6 (Data and Application Chapters) -- Complete
+Plan: 4 of 4 in current phase
+Status: Phase complete
+Last activity: 2026-02-01 -- Completed 05-02-PLAN.md (Java Interop chapter with index + 3 subpages + 5 samples)
 
-Progress: [████████████████████████░░░] ~83% (15/18 plans)
+Progress: [█████████████████████████░░] ~89% (16/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
+- Total plans completed: 16
 - Average duration: 3 min
-- Total execution time: 44 min
+- Total execution time: 48 min
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: [███████████████████████
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
 | 04-core-language | 3/3 | 9 min | 3 min |
-| 05-data-and-application | 4/4 | 12 min | 3 min |
+| 05-data-and-application | 4/4 | 16 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (4 min), 05-01 (3 min), 05-04 (3 min), 05-03 (3 min), 05-04 (3 min)
+- Last 5 plans: 05-01 (3 min), 05-04 (3 min), 05-03 (3 min), 05-04 (3 min), 05-02 (4 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -89,6 +89,9 @@ Recent decisions affecting current work:
 - [05-04]: Console debugging is primary approach; IDE debugger mentioned briefly as alternative
 - [05-04]: Error codes cross-linked to error handling chapter, not duplicated in debugging chapter
 - [05-04]: SETESC verb mentioned in console access control context but not given full section
+- [05-02]: Cross-links in error-handling and collections updated to point directly to /java-interop
+- [05-02]: org.json as primary JSON library (bundled with BBj 25.x, simplest API)
+- [05-02]: No try/catch anywhere -- OOP page had incorrect examples, all corrected to ERR=/SETERR
 
 ### Pending Todos
 
@@ -96,10 +99,10 @@ None.
 
 ### Blockers/Concerns
 
-- Research flags Phase 5 chapters (Java Interop) for deeper research during planning
+None.
 
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 05-04-PLAN.md -- Debugging chapter done, Phase 5 in progress (05-02 remaining)
+Stopped at: Completed 05-02-PLAN.md -- Phase 5 complete (all 4 data/application chapters written)
 Resume file: None
