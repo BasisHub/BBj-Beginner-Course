@@ -3,19 +3,22 @@ sidebar_position: 1
 title: "Web Development"
 ---
 
-# Use BBj's DWC Client for Web Development
+# Web Development with DWC
 
-## Introduction
+BBj's Dynamic Web Client (DWC) allows BBj programs to run in a web browser with no frontend code required. Any BBj GUI program can be deployed to the web through the BBj Enterprise Manager.
 
-This video gives a very brief introduction about what you will learn in this lesson. Watch it first, but don't worry if it's a little short and quick - the step-by-step instructions follow with more explanations in writing.
+<details>
+<summary>Watch the video: DWC Web Development Introduction</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a33nWuuyX7o" title="DWC Web Development Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+</details>
+
 ## Deploying Your First DWC App
 
-BBj's DWC web client allows you to develop for the Web using BBj's comprehensive, simple language. BBj handles backend and frontend, so you can simply write a BBj program, register events, and run it in the browser. BBj will do the rest.
+BBj handles both backend and frontend -- write a BBj program, register events, and run it in the browser. BBj does the rest.
 
-Any of the programs you wrote in this course can be started in the DWC client. To deploy your program on the web, follow these steps:
+Any of the programs from this course can be deployed to the DWC client. Follow these steps:
 
 1. Start Enterprise Manager: [http://localhost:8888/bbjem/em](http://localhost:8888/bbjem/em)
 2. Log in using `admin / admin123` as credentials
@@ -24,7 +27,7 @@ Any of the programs you wrote in this course can be started in the DWC client. T
 
 The URL pattern would be `http://localhost:8888/webapp/Sample` for the parameters above.
 
-Try to configure one of your prior sample programs from the prior sessions. Does it run?
+Deploy one of the programs from the earlier chapters to verify your configuration.
 
 :::tip
 The Spiderweb-Button in Eclipse does the deployment steps for you, but starts the (older) BUI version of the program. You might still find it useful to skip the manual setup in Enterprise Manager.
