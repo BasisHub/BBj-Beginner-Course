@@ -5,6 +5,12 @@ title: Introduction to BBj Development
 hide_table_of_contents: true
 ---
 
-# Introduction to BBj Development
+import Hero from '@site/src/components/Hero';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ChapterCards from '@site/src/components/ChapterCards';
 
-A hands-on course for experienced developers new to BBj.
+<Hero />
+
+<HomepageFeatures />
+
+<ChapterCards />
