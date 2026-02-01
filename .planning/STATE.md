@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 ## Current Position
 
 Phase: 5 of 6 (Data and Application Chapters)
-Plan: 1 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-01 -- Completed 05-01-PLAN.md (Database and SQL chapter with index + 3 subpages + 4 samples)
+Last activity: 2026-02-01 -- Completed 05-03-PLAN.md (Event Handling chapter with index + 3 subpages + 4 samples)
 
-Progress: [██████████████████░░░] ~72% (13/18 plans)
+Progress: [██████████████████████░░] ~78% (14/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: 3 min
-- Total execution time: 38 min
+- Total execution time: 41 min
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: [██████████████████░░░] ~72%
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
 | 04-core-language | 3/3 | 9 min | 3 min |
-| 05-data-and-application | 1/4 | 3 min | 3 min |
+| 05-data-and-application | 3/4 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3 min), 04-03 (2 min), 04-02 (4 min), 05-01 (3 min)
+- Last 5 plans: 04-02 (4 min), 05-01 (3 min), 05-04 (3 min), 05-03 (3 min)
 - Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
@@ -83,6 +83,9 @@ Recent decisions affecting current work:
 - [05-01]: SQLFETCH is the primary SQL access pattern; BBjRecordSet mentioned briefly for GUI data-binding only
 - [05-01]: END= on SQLFETCH for end-of-data, ERR= reserved for actual SQL errors
 - [05-01]: Subpage 03 named "SQL Patterns and Alternatives" to reflect SQLFETCH-primary approach
+- [05-03]: setCallback is the sole recommended event pattern; CALLBACK verb and READ RECORD are legacy reference only
+- [05-03]: Core controls limited to BBjWindow, BBjButton, BBjInputE for all event examples
+- [05-03]: SYSGUI explained briefly as setup plumbing, not a standalone tutorial section
 
 ### Pending Todos
 
@@ -90,10 +93,10 @@ None.
 
 ### Blockers/Concerns
 
-- Research flags Phase 5 chapters (Java Interop, Event Handling, Debugging) for deeper research during planning
+- Research flags Phase 5 chapters (Java Interop) for deeper research during planning
 
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 05-01-PLAN.md -- Database and SQL chapter done, Phase 5 in progress
+Stopped at: Completed 05-03-PLAN.md -- Event Handling chapter done, Phase 5 in progress (05-02 remaining)
 Resume file: None
