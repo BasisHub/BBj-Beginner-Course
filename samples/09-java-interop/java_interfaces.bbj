@@ -1,0 +1,38 @@
+rem === Implementing Java Interfaces in BBj ===
+rem Demonstrates: BBj class implementing java.util.Comparator, passed to Collections.sort()
+rem Expected output: List of names sorted by string length (shortest first)
+
+use java.util.Comparator
+use java.util.Collections
+use java.util.ArrayList
+
+class public LengthComparator implements Comparator
+    method public int compare(Object o1!, Object o2!)
+        len1 = len(str(o1!))
+        len2 = len(str(o2!))
+        if len1 < len2 then methodret -1
+        if len1 > len2 then methodret 1
+        methodret 0
+    methodend
+classend
+
+rem Create a list of names
+list! = new ArrayList()
+list!.add("banana")
+list!.add("fig")
+list!.add("cherry")
+list!.add("apple")
+
+print "Before sort:"
+for i = 0 to list!.size() - 1
+    print "  ", list!.get(i)
+next i
+
+rem Sort using the BBj Comparator implementation
+Collections.sort(list!, new LengthComparator())
+
+print ""
+print "After sort (by length):"
+for i = 0 to list!.size() - 1
+    print "  ", list!.get(i)
+next i

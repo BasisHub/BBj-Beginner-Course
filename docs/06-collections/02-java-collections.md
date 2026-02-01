@@ -84,7 +84,7 @@ Older BBj code may use `BBjHashMap` for key-value storage. In BBj 20.10, `BBjHas
 
 Use `java.util.HashMap` instead. It provides the same functionality, is well-documented, and is the standard across the Java ecosystem.
 
-For broader context on using Java classes from BBj, see [Using Java Classes from BBj](/object-oriented/using-java).
+For broader context on using Java classes from BBj, see the [Java Interop chapter](/java-interop).
 
 <details>
 <summary>Reading Legacy Code: BBjHashMap</summary>

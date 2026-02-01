@@ -146,6 +146,8 @@ rem map = new HashMap()    : rem WRONG -- would cause an error
 
 The `!` suffix tells BBj that this variable holds an object reference (either a BBj custom object or a Java object). Variables without `!` hold primitive values (strings with `$`, numbers with no suffix).
 
+For more on BBj's class syntax, constructors, and methods, see the [Object-Oriented Programming chapter](/object-oriented).
+
 <details>
 <summary>Reading Legacy Code: Java Interop Before Custom Objects</summary>
 

@@ -1,0 +1,27 @@
+rem === HTTP Request with HttpURLConnection ===
+rem Demonstrates: Making an HTTP GET request to a public API endpoint
+rem Expected output: HTTP response code and response body from httpbin.org
+
+use java.net.URL
+use java.net.HttpURLConnection
+use java.io.BufferedReader
+use java.io.InputStreamReader
+
+rem Simple GET request
+url! = new URL("https://httpbin.org/get")
+conn! = cast(HttpURLConnection, url!.openConnection())
+conn!.setRequestMethod("GET")
+
+code = conn!.getResponseCode()
+print "Response code: ", code
+print ""
+
+rem Read response body line by line
+reader! = new BufferedReader(new InputStreamReader(conn!.getInputStream()))
+line! = reader!.readLine()
+while line! <> null()
+    print line!
+    line! = reader!.readLine()
+wend
+reader!.close()
+conn!.disconnect()

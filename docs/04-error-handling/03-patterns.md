@@ -65,7 +65,7 @@ oops:
 
 `BBjAPI().getLastJavaException()` returns the actual Java exception object, so you can call `.getMessage()`, `.getClass().getName()`, or any other Java exception method on it.
 
-For more on working with Java classes from BBj, see [Using Java Classes from BBj](/object-oriented/using-java).
+For more on working with Java classes from BBj, see the [Java Interop chapter](/java-interop).
 
 ## Cleanup Patterns
 

@@ -1,0 +1,46 @@
+rem === JSON with org.json (Bundled with BBj 25.x) ===
+rem Demonstrates: Creating and parsing JSON using org.json.JSONObject and JSONArray
+rem Expected output: Pretty-printed JSON object, then parsed values from a JSON string
+
+use org.json.JSONObject
+use org.json.JSONArray
+
+rem --- Create JSON ---
+print "=== Creating JSON ==="
+json! = new JSONObject()
+json!.put("name", "Alice")
+json!.put("role", "Developer")
+json!.put("active", BBjAPI.TRUE)
+
+rem Add nested array
+skills! = new JSONArray()
+skills!.put("BBj")
+skills!.put("Java")
+skills!.put("SQL")
+json!.put("skills", skills!)
+
+rem Pretty-print with 2-space indent
+print json!.toString(2)
+
+rem --- Parse JSON ---
+print ""
+print "=== Parsing JSON ==="
+parsed! = new JSONObject("{""name"":""Bob"",""age"":30,""active"":true}")
+print "Name: ", parsed!.getString("name")
+print "Age: ", str(parsed!.getInt("age"))
+print "Active: ", str(parsed!.getBoolean("active"))
+
+rem Check for optional key
+if parsed!.has("email") then
+    print "Email: ", parsed!.getString("email")
+else
+    print "No email on record"
+fi
+
+rem --- Parse JSON array ---
+print ""
+print "=== Parsing JSON Array ==="
+arr! = new JSONArray("[""red"",""green"",""blue""]")
+for i = 0 to arr!.length() - 1
+    print "  Color: ", arr!.getString(i)
+next i

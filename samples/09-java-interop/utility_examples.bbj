@@ -1,0 +1,36 @@
+rem === Java Utility Examples: Base64, Hashing, UUID ===
+rem Demonstrates: Base64 encode/decode, SHA-256 hash, UUID generation
+rem Expected output: Encoded/decoded strings, SHA-256 hex digest, random UUID
+
+use java.util.Base64
+use java.security.MessageDigest
+use java.util.UUID
+
+rem --- Base64 Encoding/Decoding ---
+print "=== Base64 ==="
+encoder! = Base64.getEncoder()
+encoded$ = encoder!.encodeToString(new java.lang.String("Hello BBj").getBytes())
+print "Encoded: ", encoded$
+
+decoder! = Base64.getDecoder()
+decoded! = new java.lang.String(decoder!.decode(encoded$))
+print "Decoded: ", decoded!
+
+rem --- SHA-256 Hashing ---
+print ""
+print "=== SHA-256 ==="
+md! = MessageDigest.getInstance("SHA-256")
+hash! = md!.digest(new java.lang.String("password123").getBytes())
+
+rem Convert bytes to hex string
+sb! = new StringBuilder()
+for i = 0 to hash!.length - 1
+    sb!.append(String.format("%02x", hash![i]))
+next i
+print "SHA-256: ", sb!.toString()
+
+rem --- UUID Generation ---
+print ""
+print "=== UUID ==="
+uuid! = UUID.randomUUID()
+print "UUID: ", uuid!.toString()

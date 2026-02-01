@@ -1,0 +1,43 @@
+rem === Java Basics from BBj ===
+rem Demonstrates: Creating Java objects, calling methods, iterating collections
+rem Expected output: HashMap entries and ArrayList items printed to console
+
+use java.util.HashMap
+use java.util.Iterator
+use java.util.ArrayList
+
+rem --- HashMap: create, populate, retrieve, iterate ---
+print "=== HashMap ==="
+map! = new HashMap()
+map!.put("name", "Alice")
+map!.put("role", "Developer")
+map!.put("team", "Platform")
+
+print "Name: ", map!.get("name")
+print "Size: ", map!.size()
+
+rem Iterate all entries using keySet().iterator()
+print ""
+print "All entries:"
+iter! = map!.keySet().iterator()
+while iter!.hasNext()
+    key! = iter!.next()
+    print "  ", key!, " = ", map!.get(key!)
+wend
+
+rem --- ArrayList: create, populate, access by index, iterate ---
+print ""
+print "=== ArrayList ==="
+list! = new ArrayList()
+list!.add("first")
+list!.add("second")
+list!.add("third")
+
+print "First item: ", list!.get(0)
+print "Size: ", list!.size()
+
+print ""
+print "All items:"
+for i = 0 to list!.size() - 1
+    print "  [", str(i), "] ", list!.get(i)
+next i
