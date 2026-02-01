@@ -3,24 +3,59 @@ sidebar_position: 1
 title: "Introduction"
 ---
 
-# Introduction - PLEASE READ FIRST!
+# Introduction
 
-## Structure of this Material
+## Structure of This Material
 
-This course is in wide parts a Meta-Material that intends to "set you on the right track". Instead of repeating information that is in the documentation, it tries to explain concepts, sometimes with some videos, sometimes with text, but very often by linking into existing product documentation. That way, you will learn from this course "how to fish", it will not just show you "one particular fish".
+This is a meta-course: it introduces concepts and links directly into the official BBj documentation rather than duplicating reference material. The goal is to orient you in the BBj ecosystem so you can find and use the official resources effectively.
 
-## Who can use this course
+Each section covers a topic area with explanations, working code examples, and links to the relevant documentation pages. The official docs are comprehensive -- this course shows you where to look and what to look for.
 
-This training material is a work in progress (September 2021) and is intended to introduce software developers into the professional development with BBj, which they might need for their new position.
+## Prerequisites
 
-This training assumes that its consumers know already how to write software in some other programming language. The material **does not** explain:
+This material is written for experienced software developers who are new to BBj. It assumes familiarity with:
 
-- what a computer program is.
-- what loops and IF-conditions are.
-- Object Orientation.
-- How to use an IDE or a Code Editor.
+- Programming fundamentals (variables, functions, control flow)
+- Loops and conditional statements
+- Object-oriented programming concepts
+- Working with an IDE or code editor
 
-You will need to have learned about all these things as part of your prior education or work experience. Check with your manager or mentor if you feel you need to close some gaps in these areas, to receive recommendations for books or online courses.
+The material **does not** cover general programming concepts. If you need to strengthen any of these areas, address those gaps before starting.
+
+## BBj for Java/.NET Developers
+
+If you are coming from Java, C#, or similar languages, this section maps familiar concepts to their BBj equivalents.
+
+### What is BBj?
+
+BBj is a **dynamic, interpreted language that runs on the JVM**. It has automatic garbage collection (Java's GC) and seamless Java interoperability -- you can instantiate Java classes directly, and BBj classes can extend Java classes.
+
+### Key Terminology
+
+| Java/.NET | BBj | Notes |
+|-----------|-----|-------|
+| keywords/statements | **verbs** | See [Alphabetical Verbs](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Verbs.htm) |
+| CLASSPATH | **PREFIX** | Search path for classes. See [PREFIX verb](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/bbj-commands/prefix_verb_set_file_system_search_paths_bbj.htm) |
+| `this.field` | **`#field`** | Instance field reference within methods |
+| ArrayList | **BBjVector** | `BBjAPI().makeVector()` - dynamic array |
+| try/catch | **SETERR/THROW** | `SETERR errHandler` sets handler, `THROW` raises errors |
+| static factory | **BBjAPI()** | Entry point for creating BBj objects (windows, vectors, etc.) |
+
+### Common Tasks
+
+| Task | BBj Approach |
+|------|--------------|
+| **Collections** | `vector! = BBjAPI().makeVector()` then `vector!.add(item)` |
+| **Error handling** | `SETERR handler` + label, or use `THROW "message", 256` |
+| **Database access** | `SQLOPEN`, `SQLPREP`, `SQLEXEC` verbs |
+| **String functions** | `LEN()`, `MID()`, `POS()`, `CVS()` - see [Functions list](https://documentation.basis.cloud/BASISHelp/WebHelp/commands/Alphabetical_Functions.htm) |
+| **File I/O** | `OPEN`, `READ`, `WRITE`, `CLOSE` verbs |
+
+### Further Reading
+
+- [BBj Object Error Handling](https://documentation.basis.cloud/BASISHelp/WebHelp/usr/BBj_Object_Error_Handling.htm)
+- [Unit Testing in BBj](https://documentation.basis.cloud/advantage/v18-2014/14unittest.pdf) (PDF)
+- [BBjVector Methods](https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/API/bbjvector/bbjvector.htm)
 
 ## Please Contribute!
 
