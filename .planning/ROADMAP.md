@@ -114,12 +114,13 @@ Plans:
   3. Each chapter that covers a concept with Java/.NET/Python equivalents has a translation table
   4. Every chapter has structured exercises with clear objectives that a reader can complete
   5. Every code example across the entire site is copy-paste runnable in BBj IDE, all external links work, and code style is consistent
-**Plans**: 3 plans
+**Plans**: 4 plans
 
 Plans:
-- [ ] 06-01-PLAN.md -- Generations reference page + legacy code subpages for chapters 04-06
-- [ ] 06-02-PLAN.md -- Legacy code subpages for chapters 07-09 + comprehensive translation reference
-- [ ] 06-03-PLAN.md -- Per-chapter translation tables + code style audit + link verification + build check
+- [x] 06-01-PLAN.md -- Generations reference page + legacy code subpages for chapters 04-06
+- [x] 06-02-PLAN.md -- Legacy code subpages for chapters 07-09 + comprehensive translation reference
+- [x] 06-03-PLAN.md -- Per-chapter translation tables + code style audit + link verification + build check
+- [ ] 06-04-PLAN.md -- Gap closure: sample file references in chapter pages + build verification
 
 ## Progress
 
@@ -133,4 +134,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 3. Existing Content | 3/3 | Complete | 2026-02-01 |
 | 4. Core Language Chapters | 3/3 | Complete | 2026-02-01 |
 | 5. Data and Application Chapters | 4/4 | Complete | 2026-02-01 |
-| 6. Differentiators and Quality | 0/3 | Planned | - |
+| 6. Differentiators and Quality | 3/4 | Gap closure | - |
