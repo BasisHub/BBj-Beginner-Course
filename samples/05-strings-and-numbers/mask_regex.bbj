@@ -1,0 +1,40 @@
+rem /**
+rem  * MASK() Regex Pattern Matching - BBj Tutorial Sample
+rem  *
+rem  * Demonstrates: MASK() with Perl 5 regex patterns, TCB(16) match length
+rem  * Chapter: Strings and Numbers > Searching Strings
+rem  */
+
+rem --- Basic MASK() - pattern match ---
+a$ = "config.bbj"
+print "String: ", a$
+print "Matches .*\.bbj: ", mask(a$, ".*\.bbj")
+print ""
+
+rem --- Check for digits in a string ---
+b$ = "order-12345-draft"
+print "String: ", b$
+if mask(b$, "[0-9]+") then print "Contains digits, match length: ", tcb(16)
+print ""
+
+rem --- Validate: string is all digits ---
+c$ = "12345"
+d$ = "123abc"
+print c$, " all digits? ", mask(c$, "^[0-9]+$")
+print d$, " all digits? ", mask(d$, "^[0-9]+$")
+print ""
+
+rem --- Match file extensions ---
+files$ = "report.pdf"
+if mask(files$, "\.pdf$") then print files$, " is a PDF"
+files$ = "data.csv"
+if mask(files$, "\.csv$") then print files$, " is a CSV"
+print ""
+
+rem --- Check string starts with uppercase ---
+e$ = "Hello"
+f$ = "hello"
+print e$, " starts uppercase? ", mask(e$, "^[A-Z]")
+print f$, " starts uppercase? ", mask(f$, "^[A-Z]")
+
+release

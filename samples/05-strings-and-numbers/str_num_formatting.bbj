@@ -1,0 +1,37 @@
+rem /**
+rem  * STR() and NUM() Formatting - BBj Tutorial Sample
+rem  *
+rem  * Demonstrates: STR() numeric/string masks, NUM() conversion
+rem  * Chapter: Strings and Numbers > Formatting and Conversion
+rem  */
+
+rem --- Basic STR() - number to string ---
+x = 42.5
+print "str(42.5) = ", str(x)
+print ""
+
+rem --- STR() with numeric masks ---
+print "Currency:    ", str(3352.3:"$##,##0.00")
+print "Zero-padded: ", str(42:"000")
+print "With commas: ", str(1500000:"##,###,##0")
+print ""
+
+rem --- STR() with string masks ---
+print "Phone:  ", str("5551234567":"(XXX) XXX-XXXX")
+print "SSN:    ", str("123456789":"XXX-XX-XXXX")
+print ""
+
+rem --- NUM() - string to number ---
+print "num('123.45') = ", num("123.45")
+print "num('  42  ') = ", num("  42  ")
+print ""
+
+rem --- NUM() with error handling ---
+x = num("abc", err=bad_number)
+print "This line won't execute if error occurs"
+stop
+
+bad_number:
+print "Error: 'abc' is not a valid number (error ", err, ")"
+
+release

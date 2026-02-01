@@ -1,0 +1,39 @@
+rem /**
+rem  * POS() String Searching - BBj Tutorial Sample
+rem  *
+rem  * Demonstrates: POS() basic search, backward scan, occurrence counting
+rem  * Chapter: Strings and Numbers > Searching Strings
+rem  */
+
+rem --- Basic POS() - find substring position ---
+a$ = "MONTUEWEDTHUFRISATSUN"
+print "String: ", a$
+print "Position of WED: ", pos("WED" = a$)
+print "Position of XYZ: ", pos("XYZ" = a$), " (0 = not found)"
+print ""
+
+rem --- Search from a starting position ---
+b$ = "hello world hello"
+print "String: ", b$
+print "First 'hello': ", pos("hello" = b$)
+print "'hello' from pos 7: ", pos("hello" = b$, 7)
+print ""
+
+rem --- Backward scan ---
+print "Last 'hello' (backward): ", pos("hello" = b$, -1)
+print ""
+
+rem --- Count occurrences ---
+print "Count of 'hello': ", pos("hello" = b$, 1, 0)
+print ""
+
+rem --- Practical example: parse day abbreviations ---
+days$ = "MONTUEWEDTHUFRISATSUN"
+search$ = "FRI"
+p = pos(search$ = days$)
+if p > 0 then
+    dayNum = (p - 1) / 3 + 1
+    print search$, " is day number ", dayNum
+endif
+
+release

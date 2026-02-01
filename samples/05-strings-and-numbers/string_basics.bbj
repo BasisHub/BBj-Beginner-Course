@@ -1,0 +1,42 @@
+rem /**
+rem  * String Basics - BBj Tutorial Sample
+rem  *
+rem  * Demonstrates: LEN(), substring extraction, concatenation, CVS()
+rem  * Chapter: Strings and Numbers > String Basics
+rem  */
+
+rem --- LEN() - String length ---
+a$ = "Hello World"
+print "String: ", a$
+print "Length: ", len(a$)
+print ""
+
+rem --- Substring extraction (1-based) ---
+print "First 5 chars: ", a$(1,5)
+print "From position 7: ", a$(7)
+print "Character at 3: ", a$(3,1)
+print ""
+
+rem --- Concatenation ---
+first$ = "Hello"
+last$ = "World"
+full$ = first$ + " " + last$
+print "Concatenated: ", full$
+print ""
+
+rem --- CVS() - String cleanup ---
+b$ = "  hello world  "
+print "Original:    [", b$, "]"
+print "CVS(b$, 1):  [", cvs(b$, 1), "]  (strip leading)"
+print "CVS(b$, 2):  [", cvs(b$, 2), "]  (strip trailing)"
+print "CVS(b$, 3):  [", cvs(b$, 3), "]  (strip both)"
+print "CVS(b$, 4):  [", cvs(b$, 4), "]  (uppercase)"
+print "CVS(b$, 7):  [", cvs(b$, 7), "]  (strip + uppercase)"
+print "CVS(b$, 35): [", cvs(b$, 35), "]  (strip + lowercase)"
+print ""
+
+rem --- Case-insensitive comparison ---
+input$ = "  Yes  "
+if cvs(input$, 7) = "YES" then print "Confirmed!"
+
+release
