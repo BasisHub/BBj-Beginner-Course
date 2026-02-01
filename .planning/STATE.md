@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** A new developer assigned their first BBj task can follow this course start-to-finish and understand both the modern way to write BBj and how to read/navigate the legacy code they'll inherit.
-**Current focus:** Phase 4 - Core Language Chapters (error handling, strings/numbers, collections)
+**Current focus:** Phase 4 - Core Language Chapters -- Complete
 
 ## Current Position
 
-Phase: 4 of 6 (Core Language Chapters)
-Plan: 2 of 3 in current phase (04-02 remaining)
-Status: In progress
-Last activity: 2026-02-01 -- Completed 04-03-PLAN.md (Collections chapter with index + 3 subpages + 4 samples)
+Phase: 4 of 6 (Core Language Chapters) -- Complete
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-02-01 -- Completed 04-02-PLAN.md (Strings and Numbers chapter with index + 3 subpages + 4 samples)
 
-Progress: [███████████████░░░] ~61% (11/18 plans)
+Progress: [████████████████░░] ~67% (12/18 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 3 min
-- Total execution time: 31 min
+- Total execution time: 35 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [███████████████░░░] ~61% (11/18 p
 | 01-foundation | 2/2 | 6 min | 3 min |
 | 02-structure | 3/3 | 10 min | 3 min |
 | 03-existing-content | 3/3 | 8 min | 2.7 min |
-| 04-core-language | 2/3 | 5 min | 2.5 min |
+| 04-core-language | 3/3 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3 min), 03-03 (2 min), 03-02 (3 min), 04-01 (3 min), 04-03 (2 min)
-- Trend: consistent ~2.5 min per plan
+- Last 5 plans: 03-02 (3 min), 04-01 (3 min), 04-03 (2 min), 04-02 (4 min)
+- Trend: consistent ~3 min per plan
 
 *Updated after each plan completion*
 
@@ -73,6 +73,9 @@ Recent decisions affecting current work:
 - [04-01]: No try/catch in BBj -- trap-and-branch model exclusively (SETERR, ERR=, THROW)
 - [04-01]: Error trapping priority: END= > DOM= > function ERR= > statement ERR= > SETERR
 - [04-01]: Sample .bbj file pattern: rem comment headers with expected output, self-contained runnable
+- [04-02]: MID$/LEFT$/RIGHT$ mentioned only as "BBj does not use these" -- explicit callout for BASIC dialect migrants
+- [04-02]: BBjString::length() for Unicode-aware length, LEN() returns bytes -- footnote-level guidance
+- [04-02]: NUM() error handling cross-links to error handling chapter (ERR= pattern)
 - [04-03]: BBjHashMap mentioned only as deprecated -- java.util.HashMap is the replacement
 - [04-03]: contains() type sensitivity documented as gotcha (Java .equals() behavior)
 - [04-03]: VECTOR() function noted as BBj 16.0+ feature for version awareness
@@ -88,5 +91,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 04-03-PLAN.md -- Collections chapter (index + 3 subpages + 4 samples)
+Stopped at: Completed 04-02-PLAN.md -- Phase 4 complete (all 3 core language chapters written)
 Resume file: None
