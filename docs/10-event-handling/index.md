@@ -31,3 +31,14 @@ BBj event handling evolved through three generations. **READ RECORD** polling lo
 | Remove handler | `btn.removeActionListener(l)` | `btn.unbind("<Click>")` | `btn.Click -= handler;` | `btn!.clearCallback(btn!.ON_BUTTON_PUSH)` |
 
 BBj uses `setCallback` with a string method name and an object reference. The event handler method receives a typed event parameter (e.g., `BBjButtonPushEvent`). For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/10-event-handling/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/10-event-handling):
+
+- `setcallback_labels.bbj` -- Label-based setCallback with getLastEvent()
+- `setcallback_methods.bbj` -- Method-based setCallback with typed event parameters
+- `event_types.bbj` -- Multiple event types (button push, edit modify, focus)
+- `contact_form.bbj` -- Complete contact form with shared callback pattern
+
+See [Running Samples](/samples) for setup instructions.
+:::

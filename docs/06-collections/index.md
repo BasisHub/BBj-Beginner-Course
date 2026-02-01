@@ -31,3 +31,14 @@ BBj gives you two families of collections: its own BBjVector (a dynamic list cre
 | Collection size | `list.size()` | `len(list)` | `list.Count` | `vec!.size()` |
 
 BBj uses `BBjVector` for ordered lists and `java.util.HashMap` for key-value maps. Since BBj runs on the JVM, you can use Java collection classes directly. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/06-collections/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/06-collections):
+
+- `bbjvector_basics.bbj` -- BBjVector creation, adding items, and iteration
+- `arraylist_usage.bbj` -- java.util.ArrayList creation and iteration
+- `hashmap_iterator.bbj` -- java.util.HashMap with keySet().iterator()
+- `array_to_vector.bbj` -- DIM array to BBjVector conversion with VECTOR()
+
+See [Running Samples](/samples) for setup instructions.
+:::

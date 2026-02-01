@@ -32,3 +32,15 @@ This chapter covers three tiers: **basics** (importing and using Java classes), 
 | Get Java exception | N/A (native) | N/A | N/A | `BBjAPI().getLastJavaException()` |
 
 Since BBj runs on the JVM, you use Java classes directly -- no bridge or FFI layer needed. `use` statements work like Java imports, and `new` creates Java objects the same way. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/09-java-interop/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/09-java-interop):
+
+- `java_basics.bbj` -- Creating Java objects, calling methods, iterating collections
+- `java_interfaces.bbj` -- Implementing java.util.Comparator in a BBj class
+- `http_request.bbj` -- HTTP GET request with java.net.HttpURLConnection
+- `json_example.bbj` -- JSON parsing with org.json (bundled with BBj 25.x)
+- `utility_examples.bbj` -- Base64, SHA-256 hashing, and UUID generation
+
+See [Running Samples](/samples) for setup instructions.
+:::

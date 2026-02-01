@@ -33,3 +33,14 @@ BBj's string and numeric functions are more powerful than they first appear. A s
 | Regex match | `Pattern.matches(p, s)` | `re.match(p, s)` | `Regex.IsMatch(s, p)` | `mask(s$, p$)` |
 
 BBj string positions are 1-based, not 0-based. `pos()` uses the syntax `pos(needle$ = haystack$)` with the needle on the left side of the `=` sign. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/05-strings-and-numbers/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/05-strings-and-numbers):
+
+- `string_basics.bbj` -- LEN(), substring extraction, concatenation, CVS()
+- `pos_searching.bbj` -- POS() basic search, backward scan, occurrence counting
+- `str_num_formatting.bbj` -- STR() and NUM() formatting and conversion
+- `mask_regex.bbj` -- MASK() with Perl 5 regex patterns
+
+See [Running Samples](/samples) for setup instructions.
+:::

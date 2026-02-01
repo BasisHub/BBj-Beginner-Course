@@ -35,3 +35,13 @@ BBj debugging is interactive. You are inside the running interpreter with full a
 | Dump all variables | Heap dump | `locals()` | Debugger locals window | `DUMP(chan)` to file |
 
 BBj's debugger is built into the interpreter console -- no IDE plugin required. You break into a running program and interact with it as a live REPL. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/11-debugging/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/11-debugging):
+
+- `settrace_example.bbj` -- SETTRACE/ENDTRACE to record line-by-line execution
+- `dump_example.bbj` -- DUMP verb to write all variables to a file
+- `logging_example.bbj` -- System.out.println and PRINT-based logging techniques
+
+See [Running Samples](/samples) for setup instructions.
+:::

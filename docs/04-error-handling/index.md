@@ -31,3 +31,14 @@ BBj uses a **trap-and-branch** model for error handling: you set error traps (`S
 | Cleanup | `finally { }` | `finally:` | `finally { }` | Fall-through to cleanup label |
 
 BBj does not have try/catch blocks. All error handling uses `seterr` to set a handler label, `err=` on individual statements for inline trapping, and `throw` to raise custom errors. For the complete cross-language reference, see [BBj for Java, Python, and C# Developers](/introduction/translation-tables).
+
+:::tip[Complete Runnable Examples]
+This chapter's code snippets illustrate individual concepts. For complete, runnable programs you can open directly in the BBj IDE, see the sample files in [`samples/04-error-handling/`](https://github.com/BasisHub/BBj-Beginner-Course/tree/master/samples/04-error-handling):
+
+- `seterr_basic.bbj` -- Basic SETERR error trapping
+- `err_clause.bbj` -- ERR= clause on individual statements
+- `throw_validation.bbj` -- THROW from a class method
+- `java_error_handling.bbj` -- Handling Java exceptions in BBj
+
+See [Running Samples](/samples) for setup instructions.
+:::
