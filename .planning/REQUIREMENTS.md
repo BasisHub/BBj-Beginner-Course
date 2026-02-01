@@ -31,9 +31,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content -- New Chapters
 
-- [ ] **CONT-05**: Error handling chapter covering SETERR, THROW, ON ERR, error codes, try/catch patterns
-- [ ] **CONT-06**: String and numeric functions chapter (LEN, MID, POS, CVS, STR, NUM, MASK with examples)
-- [ ] **CONT-07**: Collections chapter (BBjVector, BBjHashMap, Java collections interop, iteration patterns)
+- [x] **CONT-05**: Error handling chapter covering SETERR, THROW, ON ERR, error codes, and error trapping patterns
+- [x] **CONT-06**: String and numeric functions chapter (LEN, substrings, POS, CVS, STR, NUM, MASK with examples)
+- [x] **CONT-07**: Collections chapter (BBjVector, java.util.HashMap, Java collections interop, iteration patterns)
 - [ ] **CONT-08**: Event handling chapter (setCallback model, event objects, common events, process_events loop)
 - [ ] **CONT-09**: Database/SQL access chapter (SQLOPEN/SQLPREP/SQLEXEC, BBjRecordSet, Data Dictionary)
 - [ ] **CONT-10**: Java interop chapter (calling Java from BBj, using Java libraries, extending Java interfaces)
@@ -105,9 +105,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-02 | Phase 3 | Complete |
 | CONT-03 | Phase 3 | Complete |
 | CONT-04 | Phase 3 | Complete |
-| CONT-05 | Phase 4 | Pending |
-| CONT-06 | Phase 4 | Pending |
-| CONT-07 | Phase 4 | Pending |
+| CONT-05 | Phase 4 | Complete |
+| CONT-06 | Phase 4 | Complete |
+| CONT-07 | Phase 4 | Complete |
 | CONT-08 | Phase 5 | Pending |
 | CONT-09 | Phase 5 | Pending |
 | CONT-10 | Phase 5 | Pending |
@@ -128,4 +128,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-02-01 after Phase 3 completion*
+*Last updated: 2026-02-01 after Phase 4 completion*

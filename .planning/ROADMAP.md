@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - TypeScript migration, plugins, and build infrastructure matching DWC tutorial
 - [x] **Phase 2: Structure** - Content reorganization into numbered chapters, homepage components, and sample code directory
 - [x] **Phase 3: Existing Content** - Review and improve the 4 existing content sections for modern-first framing
-- [ ] **Phase 4: Core Language Chapters** - Error handling, string/numeric functions, and collections chapters
+- [x] **Phase 4: Core Language Chapters** - Error handling, string/numeric functions, and collections chapters
 - [ ] **Phase 5: Data and Application Chapters** - Database/SQL, Java interop, event handling, and debugging chapters
 - [ ] **Phase 6: Differentiators and Quality** - Legacy code sidebars, generation mapping, translation tables, exercises, and code quality
 
@@ -83,8 +83,8 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md -- Error handling chapter (SETERR, ERR=, THROW, patterns)
-- [ ] 04-02-PLAN.md -- Strings and numbers chapter (LEN, substrings, CVS, POS, MASK, STR, NUM)
-- [ ] 04-03-PLAN.md -- Collections chapter (BBjVector, java.util.HashMap, DIM arrays, VECTOR())
+- [x] 04-02-PLAN.md -- Strings and numbers chapter (LEN, substrings, CVS, POS, MASK, STR, NUM)
+- [x] 04-03-PLAN.md -- Collections chapter (BBjVector, java.util.HashMap, DIM arrays, VECTOR())
 
 ### Phase 5: Data and Application Chapters
 **Goal**: Readers can access databases via SQL, call Java from BBj, handle events systematically, and debug their programs -- completing the full skill set for independent BBj development
@@ -131,6 +131,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 1. Foundation | 2/2 | Complete | 2026-01-31 |
 | 2. Structure | 3/3 | Complete | 2026-02-01 |
 | 3. Existing Content | 3/3 | Complete | 2026-02-01 |
-| 4. Core Language Chapters | 1/3 | In progress | - |
+| 4. Core Language Chapters | 3/3 | Complete | 2026-02-01 |
 | 5. Data and Application Chapters | 0/4 | Not started | - |
 | 6. Differentiators and Quality | 0/3 | Not started | - |
