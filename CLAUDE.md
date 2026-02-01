@@ -47,3 +47,7 @@ GIT_USER=<username> npm run deploy
 **External Resources** (referenced in footer/navbar):
 - BBj Documentation: https://documentation.basis.cloud/BASISHelp/WebHelp/bbjobjects/bbjobjects.htm
 - DWC Components: https://basishub.github.io/basis-next/#/dwc/
+
+## BBj Development
+
+@~/.claude/bbj-claude-template.md
