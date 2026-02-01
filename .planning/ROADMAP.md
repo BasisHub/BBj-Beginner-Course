@@ -79,12 +79,12 @@ Plans:
   2. A reader can find and use the daily string/numeric functions (LEN, MID, POS, CVS, STR, NUM, MASK) with copy-paste examples
   3. A reader can create, populate, iterate, and convert between BBjVector, BBjHashMap, and Java collections
   4. Each chapter has "Reading Legacy Code" callouts showing how the same operation looked in older BBj generations
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Error handling chapter
-- [ ] 04-02: String and numeric functions chapter
-- [ ] 04-03: Collections chapter
+- [ ] 04-01-PLAN.md -- Error handling chapter (SETERR, ERR=, THROW, patterns)
+- [ ] 04-02-PLAN.md -- Strings and numbers chapter (LEN, substrings, CVS, POS, MASK, STR, NUM)
+- [ ] 04-03-PLAN.md -- Collections chapter (BBjVector, java.util.HashMap, DIM arrays, VECTOR())
 
 ### Phase 5: Data and Application Chapters
 **Goal**: Readers can access databases via SQL, call Java from BBj, handle events systematically, and debug their programs -- completing the full skill set for independent BBj development
